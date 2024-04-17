@@ -1,2 +1,0 @@
-n is 5
-1. There are 9999360 bases
