@@ -1,0 +1,9 @@
+1. There are 5 ways in which the set can be partitioned.
+
+2. The partitions are the following: 
+
+{a1, a2, a3} -> A × A
+{ {a1, a2}, {a3} } -> dA U {(a1, a2), (a2, a1)}
+{ {a1, a3}, {a2} } -> dA U {(a1, a3), (a3, a1)}
+{ {a1}, {a2, a3} } -> dA U {(a2, a3), (a3, a2)}
+{ {a1}, {a2}, {a3} } -> dA
