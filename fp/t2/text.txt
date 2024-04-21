@@ -1,0 +1,13 @@
+100, Alice, 45
+101, Bob, 66
+102, Terry, 23
+103, Cristi, 15
+104, Luca, 77
+105, Denis, 84
+106, David, 31
+107, Serban, 99
+108, Mihai, 57
+109, Vasile, 15
+110, Alexia, 43
+111, Maria, 34
+112, abc, 59
