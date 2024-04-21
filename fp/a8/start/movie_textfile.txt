@@ -1,0 +1,21 @@
+158,The Batman,fast-paced dark surface-level minimalist,adventure
+323,Love Sick,fast-paced dark surface-level visually-stunning,action
+992,Laurence Anyways,fast-paced dark surface-level minimalist,action
+527,The Last Duel,slow-burn dark surface-level minimalist,drama
+434,Sound of Metal,fast-paced light-hearted though-provoking minimalist,adventure
+943,Ex Machina,slow-burn dark surface-level minimalist,musical
+951,Don't Look Up,slow-burn light-hearted though-provoking minimalist,action
+532,Fresh,fast-paced light-hearted surface-level visually-stunning,musical
+938,The Oak,slow-burn light-hearted though-provoking visually-stunning,western
+712,American Psycho,fast-paced light-hearted surface-level minimalist,fantasy
+525,The Northman,fast-paced dark though-provoking visually-stunning,documentary
+840,Whiplash,slow-burn dark though-provoking minimalist,documentary
+385,Trainspotting,fast-paced light-hearted surface-level visually-stunning,biographic
+924,La Haine,slow-burn dark though-provoking minimalist,musical
+546,Fight Club,slow-burn light-hearted though-provoking visually-stunning,comedy
+519,T2 Trainspotting,fast-paced dark though-provoking visually-stunning,comedy
+30,The Invisible Man,fast-paced light-hearted though-provoking minimalist,fantasy
+9,Lady Bird,slow-burn light-hearted surface-level minimalist,action
+964,Her,fast-paced dark though-provoking visually-stunning,fantasy
+337,Chaos Walking,slow-burn light-hearted though-provoking minimalist,biographic
+423,luca,fknmdsf fsdkfmnjsd ,dfsfds
