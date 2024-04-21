@@ -5,11 +5,7 @@ dictionary = {
     8: "8", 9: "9", 10: "A", 11: "B", 12: "C", 13: "D", 14: "E", 15: "F"
 }
 
-# simple functions that deal with individual numbers
-
-
 def is_power_of_two(number):
-    # calculates whether a number is a power of two or not
     while number > 1:
         number /= 2
 
@@ -17,7 +13,6 @@ def is_power_of_two(number):
 
 
 def digit_number(number):
-    # calculates the number of digits of a number
     counter = 0
     while number > 0:
         counter += 1
@@ -27,7 +22,6 @@ def digit_number(number):
 
 
 def calculate_power_of_two(power):
-    # calculates what power of two a given number is
     counter = 0
     while power > 1:
         power //= 2
@@ -37,7 +31,6 @@ def calculate_power_of_two(power):
 
 
 def is_number_valid_for_base(number, base):
-    # checks whether number can exist in given base
     hex_digits = "0123456789ABCDEF"[:base]
 
     for char in number.upper():
@@ -46,16 +39,11 @@ def is_number_valid_for_base(number, base):
 
     return True
 
-
-# functions that convert strings, lists and numbers
-
 def string_to_digit_list(number_string):
-    # converts from char's to int's
     return [int(char, 16) for char in number_string.upper()]
 
 
 def integer_to_digit_list(number, length):
-    # converts from integer to list with corresponding digits
     digit_list = [0] * (length + 1)
     while number > 0:
         digit_list[length] = number % 10
@@ -66,7 +54,6 @@ def integer_to_digit_list(number, length):
 
 
 def digit_list_to_string(digit_list):
-    # converts from digit list to string containing the digits in hexa
     if digit_list is None:
         pass
 
@@ -74,7 +61,6 @@ def digit_list_to_string(digit_list):
 
     number_string = ""
     unnecessary_zeros = 1
-    # remove unnecessary zeros
     for digit in digit_list:
         if digit != 0:
             unnecessary_zeros = 0
@@ -91,18 +77,13 @@ def digit_list_to_string(digit_list):
 
 
 def digit_list_to_integer(number_digit_list):
-    # converts from digit list to integer with given digits
     number_value = 0
     for digit in number_digit_list:
         number_value = number_value * 10 + digit
 
     return number_value
 
-
-# operations: addition, subtraction, multiplication and division by one digit
-
 def addition(first_number, second_number, base):
-    # calculates the sum of two numbers in given base
     first_number_digit_list = string_to_digit_list(first_number)
     second_number_digit_list = string_to_digit_list(second_number)
 
@@ -126,7 +107,6 @@ def addition(first_number, second_number, base):
 
 
 def subtraction(first_number, second_number, base):
-    # calculates the difference between two numbers in given base
     first_number_digit_list = string_to_digit_list(first_number)
     second_number_digit_list = string_to_digit_list(second_number)
 
@@ -162,8 +142,6 @@ def subtraction(first_number, second_number, base):
 
 
 def multiplication_by_one_digit(first_number, second_number, base):
-    # calculates the product between two numbers, of which at least one has one digit (the second one),
-    # in given base
     first_number_digit_list = string_to_digit_list(first_number)
     second_number_value = int(second_number, 16)
 
@@ -183,8 +161,6 @@ def multiplication_by_one_digit(first_number, second_number, base):
 
 
 def division_by_one_digit(first_number, second_number, base):
-    # calculates the quotient and remainder obtain by dividing a number by another one-digit number,
-    # in given base
     first_number_digit_list = string_to_digit_list(first_number)
     second_number_value = int(second_number, base)
 
@@ -200,14 +176,7 @@ def division_by_one_digit(first_number, second_number, base):
     return result_digit_list, last_remainder
 
 
-# conversions:
-# base_b_to_base_2 <-> base_2_to_base_b
-# base_b_to_base_10 <-> base-10-to-base
-# substitution method
-# successive divisions method
-
 def compute_binary_value(digit_string):
-    # returns binary value of hexadecimal digit
     int_value = int(digit_string, 16)
     result = ""
 
@@ -219,7 +188,6 @@ def compute_binary_value(digit_string):
 
 
 def base_b_to_base_2(number_string, base):
-    # converts from any valid base to base 2
     result = ""
     digit_group = int(math.log2(base))
     for digit in number_string:
@@ -233,7 +201,6 @@ def base_b_to_base_2(number_string, base):
 
 
 def base_2_to_base_b(value, base):
-    # converts from base 2 to any valid base
     digit_group = int(math.log2(base))
 
     while len(value) % digit_group != 0:
@@ -269,7 +236,6 @@ def base_2_to_base_b(value, base):
 
 
 def base_b_to_base_10(number, base):
-    # converts from any valid given base to base 10
     number_digit_list = string_to_digit_list(number)
     base = int(base)
 
@@ -284,7 +250,6 @@ def base_b_to_base_10(number, base):
 
 
 def base_10_to_base_b(number, base):
-    # converts from base 10 to any value given base
     hex_digits = "0123456789ABCDEF"
     result = ""
 
@@ -301,8 +266,6 @@ def base_10_to_base_b(number, base):
 
 
 def substitution_method(number, source_base, destination_base):
-    # converts a number from source base to destination base, using the substitution method, considering
-    # that source base < destination base
     source_base = int(source_base, 10)
     source_base = format(source_base, 'X')
     destination_base = int(destination_base)
@@ -321,8 +284,6 @@ def substitution_method(number, source_base, destination_base):
 
 
 def successive_divisions_method(number, source_base, destination_base):
-    # converts a number from source base to destination base, using the successive divisions method, considering
-    # that source base > destination base
     destination_base = int(destination_base, 10)
     destination_base = format(destination_base, 'X')
     source_base = int(source_base)
