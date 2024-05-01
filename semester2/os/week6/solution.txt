@@ -1,0 +1,22 @@
+(E)
+1. 
+	awk 'NR % 2 == 0 {print $1, $2, $3, $4}' file // FNR - line number in file, NR - line number globally
+
+2.
+	grep -E -v "[a-zA-z0-9]" file
+	grep -E "^[a-zA-Z0-9]" file
+	grep -E -v "[[:alnum:]]" file
+
+3. 
+	sed -E "s/([0-9]+)/\1\1/g" file
+
+4.
+	sed -E "s/^([^:]*):([^:]*):([^:]*)/\1:\3:\2/g" file
+
+
+(M)
+5.
+	grep -E "^([^i]*i[^i]*){2, 4}$" file
+
+6.
+	sed -E "s/ [^ ]*$//" file

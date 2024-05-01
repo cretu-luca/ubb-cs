@@ -1,0 +1,21 @@
+#!/bin/bash
+# write a bash script that receives at the command line
+# pairs containing filename and word 
+# for every pair print an appropriate message if the word
+# appears in the file at least 3 times
+
+while [ $# -gt 1 ]; do
+	file=$1
+	word=$2
+
+	if [ -f $file ]; then
+		if [ $(grep -E -o "\<$word\>" $file | grep -E -c ".*") -ge 3 ]; then
+			echo "$word appears in file $file at least 3 times"
+		fi
+	fi
+	shift 2
+done
+
+if [ $# -eq 1 ]; then
+	echo "final pair is incomplete"
+fi

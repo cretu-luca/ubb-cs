@@ -1,0 +1,9 @@
+what gets copied from one process to another when forking: 
+	- stack segment 
+	- heap
+	- data segment 
+	- EIP
+	- code segment
+
+what gets copied to a thread:
+	- thread stack (used for execution and local variables)

@@ -1,0 +1,10 @@
+what reads whole lines - what reads whole files
+open file table -> std input/output/err with according indices
+where output goes: 2> file.txt / 2>&1 (redirections)
+
+truth value is the process exit code
+0 = True
+!0 = False
+
+lazy evaluation of the boolean expressions
+> true || eho "this is soooo wrong" -> true/no printing

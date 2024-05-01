@@ -1,0 +1,3 @@
+${...} - var/par expansion
+$(...) - function expansion
+$((...)) - expression expansion

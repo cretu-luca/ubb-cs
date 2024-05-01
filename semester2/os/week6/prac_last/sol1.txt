@@ -1,0 +1,3 @@
+awk '$2 % 2 == 1 {print NR, $0}' test1.txt | awk '{sum = 0; for(i = 2; i <= NF; i++) sum += $i; {print $1, sum}}'
+
+sed -E 's/([ ]){2,}/\1/gi' test3.txt
