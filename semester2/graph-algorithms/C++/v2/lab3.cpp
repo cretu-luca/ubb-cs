@@ -194,7 +194,7 @@ void Graph::solveBridgeTorch(int numberOfPeople, std::vector<int> timeNeeded) {
     int lastState = (1 << numberOfPeople) - 1;
     std::pair<int, std::vector<int>> solution = getFloydWarshallPath(0, lastState, graph);
 
-    std::cout << "The time needed is " << solution.first << '\n';
+    std::cout << "The cost is " << solution.first << '\n';
     std::cout << "The solution is:\n";
 
     for(auto node: solution.second)

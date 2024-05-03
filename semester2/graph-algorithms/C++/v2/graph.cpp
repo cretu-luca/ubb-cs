@@ -80,11 +80,13 @@ int Graph::getNumberOfNodes() const {
 }
 
 int Graph::getInDegree(int node) const {
-    return this->inEdges.at(node).size();
+    auto it = this->inEdges.find(node);
+    return it != this->inEdges.end() ? it->second.size() : 0;
 }
 
 int Graph::getOutDegree(int node) const {
-    return this->outEdges.at(node).size();
+    auto it = this->outEdges.find(node);
+    return it != this->outEdges.end() ? it->second.size() : 0;
 }
 
 int Graph::getEdgeCost(int node1, int node2) const {

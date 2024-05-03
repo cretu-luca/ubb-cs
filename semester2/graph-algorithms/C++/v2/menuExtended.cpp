@@ -61,10 +61,14 @@ void menu() {
                  "15. SSC\n"
                  "16. Biconnected components\n";
     */
+    /*
     std::cout << "17. Find path with minimal cost (Floyd-Warshall)\n"
                  "18. Find number of paths (Backtracking)\n"
                  "19. Find number of costs with minimal cost (F-W + BT)\n"
                  "20. Solve Bridge and Torch problem\n"
+                 ">";
+    */
+    std::cout << "21. Check if DAG.\n"
                  ">";
 }
 
@@ -209,16 +213,9 @@ void findShortestPath(Graph& graph) {
     std::cout << "Destination:";
     std::cin >> node2;
 
-    /*
-    int cost = graph.Floyd_Warshall(node1, node2);
-    if(cost == 1e9)
-        std::cout << "There is no path between " << node1 << " and " << node2 << '\n';
-    else
-        std::cout << "Distance from " << node1 << " to " << node2 << " is " << cost << "\n\n";
-    */
     std::pair<int, std::vector<int>> solution = graph.getFloydWarshallPath(node1, node2, graph);
 
-    std::cout << "The time needed is " << solution.first << '\n';
+    std::cout << "The cost is " << solution.first << '\n';
     std::cout << "The solution is:\n";
 
     for(auto node: solution.second)
@@ -267,9 +264,20 @@ void solveBridgeTorchUI(Graph& graph) {
     graph.solveBridgeTorch(numberOfPeople, timeNeeded);
 }
 
+void checkIfDAGUI(Graph& graph) {
+    if(!graph.checkIfDAG()) {
+        std::cout << "Graph is not DAG.\n";
+    } else {
+        std::cout << "Graph is DAG.\n";
+        findShortestPath(graph);
+    }
+}
+
+/*
 int main(){
     int option;
-    Graph graph = getGraph();
+    //Graph graph = getGraph();
+    Graph graph();
 
     while(true){
         menu();
@@ -338,6 +346,10 @@ int main(){
             case 20:
                 solveBridgeTorchUI(graph);
                 break;
+            case 21:
+                checkIfDAGUI(graph);
+                break;
         }
     }
 }
+*/

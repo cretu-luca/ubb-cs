@@ -11,4 +11,5 @@ add_executable(v2
         lab2.cpp
         lab3.cpp
         lab4.cpp
-        menu.cpp)
+        algorithms.cpp
+        menuReduced.cpp)
