@@ -1,0 +1,3 @@
+C:/Users/lucac/ubb-cs/semester2/graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/v2.dir
+C:/Users/lucac/ubb-cs/semester2/graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/lucac/ubb-cs/semester2/graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
