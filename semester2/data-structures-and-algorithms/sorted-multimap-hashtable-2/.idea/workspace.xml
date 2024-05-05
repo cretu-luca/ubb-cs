@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated />
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d2ea9e18-79d4-4153-9c38-eb9fd34313ba" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../semester1/computational-logic/operations-conversions/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/computational-logic/operations-conversions/functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/computational-logic/operations-conversions/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/computational-logic/operations-conversions/ui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a1/p1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a1/p1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a1/p2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a1/p2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a1/p3.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a1/p3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a10/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a10/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a10/domain/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a10/domain/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a10/domain/plane.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a10/domain/plane.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a10/repository/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a10/repository/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a10/repository/board_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a10/repository/board_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a10/services/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a10/services/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a10/services/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a10/services/services.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a10/tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a10/tests/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a10/tests/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a10/tests/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a10/ui/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a10/ui/GUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a10/ui/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a10/ui/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a10/ui/planes.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a10/ui/planes.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a10/ui/ui_exception.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a10/ui/ui_exception.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a10/ui/user_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a10/ui/user_interface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a2/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a2/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a3/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a3/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a4/a4.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a4/a4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a4/euler.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a4/euler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a5/program.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a5/program.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a6/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a6/functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a6/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a6/start.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a6/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a6/ui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/domain/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/domain/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/domain/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/domain/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/domain/movie.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/domain/movie.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/domain/rental.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/domain/rental.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/repository/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/repository/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/repository/client_repositories/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/repository/client_repositories/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/repository/client_repositories/client_binaryfile_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/repository/client_repositories/client_binaryfile_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/repository/client_repositories/client_memory_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/repository/client_repositories/client_memory_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/repository/client_repositories/client_textfile_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/repository/client_repositories/client_textfile_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/repository/movie_repositories/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/repository/movie_repositories/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/repository/movie_repositories/movie_binaryfile_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/repository/movie_repositories/movie_binaryfile_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/repository/movie_repositories/movie_memory_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/repository/movie_repositories/movie_memory_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/repository/movie_repositories/movie_textfile_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/repository/movie_repositories/movie_textfile_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/repository/rental_repositories/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/repository/rental_repositories/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/repository/rental_repositories/rental_binaryfile_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/repository/rental_repositories/rental_binaryfile_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/repository/rental_repositories/rental_memory_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/repository/rental_repositories/rental_memory_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/repository/rental_repositories/rental_textfile_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/repository/rental_repositories/rental_textfile_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/services/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/services/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/services/service_exception.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/services/service_exception.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/services/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/services/services.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/services/undo_redo_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/services/undo_redo_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/start/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/start/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/start/client.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/start/client.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/start/client_textfile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/start/client_textfile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/start/conversion.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/start/conversion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/start/magic_numbers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/start/magic_numbers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/start/movie.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/start/movie.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/start/movie_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/start/movie_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/start/movie_textfile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/start/movie_textfile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/start/rental.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/start/rental.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/start/rental_textfile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/start/rental_textfile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/start/settings.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/start/settings.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/start/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/start/start.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/tests/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/tests/a8_tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/tests/a8_tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/tests/a9_tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/tests/a9_tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/ui/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/ui/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/ui/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/a8/ui/ui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/exam/repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/exam/repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/exam/service.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/exam/service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/exam/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/exam/start.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/exam/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/exam/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/exam/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/exam/ui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/t1/program.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/t1/program.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/t2/domain.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/t2/domain.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/t2/repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/t2/repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/t2/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/t2/services.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/t2/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/t2/text.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/t2/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/fundamentals-of-programming/t2/ui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project1/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project1/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project1/tests/1_in.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project1/tests/1_in.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project1/tests/1_out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project1/tests/1_out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project1/tests/2_in.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project1/tests/2_in.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project1/tests/2_out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project1/tests/2_out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project1/tests/3_in.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project1/tests/3_in.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project1/tests/3_out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project1/tests/3_out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project1/tests/4_in.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project1/tests/4_in.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project1/tests/4_out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project1/tests/4_out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project1/tests/5_in.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project1/tests/5_in.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project1/tests/5_out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project1/tests/5_out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project2/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project2/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project2/tests/input1.in" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project2/tests/input1.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project2/tests/input1.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project2/tests/input1.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project2/tests/input2.in" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project2/tests/input2.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project2/tests/input2.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project2/tests/input2.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project2/tests/input3.in" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project2/tests/input3.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project2/tests/input3.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project2/tests/input3.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project3/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project3/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project3/tests/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project3/tests/1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project3/tests/2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project3/tests/2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project3/tests/3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project3/tests/3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project3/tests/4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project3/tests/4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project3/tests/5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project3/tests/5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/1_in.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/1_in.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/1_out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/1_out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/2_in.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/2_in.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/2_out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/2_out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/3_in.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/3_in.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/3_out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/3_out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/4_in.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/4_in.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/4_out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/4_out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/5_in.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/5_in.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/5_out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/5_out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/6_in.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/6_in.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/6_out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/6_out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/7_in.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/7_in.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/7_out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/7_out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/8_in.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/8_in.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/8_out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project4/tests/8_out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project5/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project5/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project5/tests/input1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project5/tests/input1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project5/tests/input2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project5/tests/input2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project5/tests/input3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project5/tests/input3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project5/tests/input4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project5/tests/input4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project5/tests/input5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project5/tests/input5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project5/tests/input6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project5/tests/input6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project5/tests/output1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project5/tests/output1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project5/tests/output2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project5/tests/output2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project5/tests/output3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project5/tests/output3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project5/tests/output4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project5/tests/output4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project5/tests/output5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project5/tests/output5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/linear-algebra/project5/tests/output6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/linear-algebra/project5/tests/output6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw10/hw10.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw10/hw10.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw10/hw10.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw10/hw10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw11/hw11.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw11/hw11.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw11/hw11.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw11/hw11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw12/hw12.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw12/hw12.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw12/hw12.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw12/hw12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw4/hw4.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw4/hw4.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw4/hw4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw4/hw4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw5/hw5.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw5/hw5.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw5/hw5.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw5/hw5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw5/hw5_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw5/hw5_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw6/hw6.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw6/hw6.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw6/hw6.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw6/hw6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw7/hw7.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw7/hw7.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw7/hw7.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw7/hw7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw8/hw8.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw8/hw8.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw8/hw8.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../semester1/mathematical-analysis/hw8/hw8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../map-sll/App.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../map-sll/App.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../map-sll/ExtendedTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../map-sll/ExtendedTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../map-sll/ExtendedTest.h" beforeDir="false" afterPath="$PROJECT_DIR$/../map-sll/ExtendedTest.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../map-sll/Map.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../map-sll/Map.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../map-sll/Map.h" beforeDir="false" afterPath="$PROJECT_DIR$/../map-sll/Map.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../map-sll/MapIterator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../map-sll/MapIterator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../map-sll/MapIterator.h" beforeDir="false" afterPath="$PROJECT_DIR$/../map-sll/MapIterator.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../map-sll/ShortTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../map-sll/ShortTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../map-sll/ShortTest.h" beforeDir="false" afterPath="$PROJECT_DIR$/../map-sll/ShortTest.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matrix-slla/App.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../matrix-slla/App.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matrix-slla/ExtendedTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../matrix-slla/ExtendedTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matrix-slla/ExtendedTest.h" beforeDir="false" afterPath="$PROJECT_DIR$/../matrix-slla/ExtendedTest.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matrix-slla/Matrix.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../matrix-slla/Matrix.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matrix-slla/Matrix.h" beforeDir="false" afterPath="$PROJECT_DIR$/../matrix-slla/Matrix.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matrix-slla/ShortTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../matrix-slla/ShortTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matrix-slla/ShortTest.h" beforeDir="false" afterPath="$PROJECT_DIR$/../matrix-slla/ShortTest.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/.idea/sorted-multimap-hashtable.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/.idea/sorted-multimap-hashtable.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/App.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/App.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/ExtendedTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/ExtendedTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/ExtendedTest.h" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/ExtendedTest.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/SMMIterator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/SMMIterator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/SMMIterator.h" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/SMMIterator.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/ShortTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/ShortTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/ShortTest.h" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/ShortTest.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/SortedMultiMap.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/SortedMultiMap.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/SortedMultiMap.h" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/SortedMultiMap.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/.cmake/api/v1/query/cache-v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/.cmake/api/v1/reply/cache-v2-5f5893dae200aa8a8328.json" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/.cmake/api/v1/reply/cache-v2-5f5893dae200aa8a8328.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-3457f91dd99336b24f97.json" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-3457f91dd99336b24f97.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-b78bd9f891598f57433a.json" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-b78bd9f891598f57433a.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/.cmake/api/v1/reply/index-2024-05-05T09-38-11-0615.json" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/.cmake/api/v1/reply/index-2024-05-05T09-38-11-0615.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/.cmake/api/v1/reply/target-sorted_multimap_hashtable-Debug-89172093c7fbd8c26f05.json" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/.cmake/api/v1/reply/target-sorted_multimap_hashtable-Debug-89172093c7fbd8c26f05.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-657116ad74dadacfb498.json" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-657116ad74dadacfb498.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/3.28.1/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/3.28.1/CMakeCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/3.28.1/CMakeRCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/3.28.1/CMakeRCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/3.28.1/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/3.28.1/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdCXX/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdCXX/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/App.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/App.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/App.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/App.cpp.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/ExtendedTest.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/ExtendedTest.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/ExtendedTest.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/ExtendedTest.cpp.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/SMMIterator.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/SMMIterator.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/SMMIterator.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/SMMIterator.cpp.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/ShortTest.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/ShortTest.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/ShortTest.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/ShortTest.cpp.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/SortedMultiMap.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/SortedMultiMap.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/SortedMultiMap.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/SortedMultiMap.cpp.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/compiler_depend.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/compiler_depend.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/includes_CXX.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/includes_CXX.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/linkLibs.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/linkLibs.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/objects1.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/sorted_multimap_hashtable.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/sorted_multimap_hashtable.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/sorted_multimap_hashtable.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-multimap-hashtable/cmake-build-debug/sorted_multimap_hashtable.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-set/App.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-set/App.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-set/ExtendedTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-set/ExtendedTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-set/ExtendedTest.h" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-set/ExtendedTest.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-set/ShortTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-set/ShortTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-set/ShortTest.h" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-set/ShortTest.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-set/SortedSet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-set/SortedSet.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-set/SortedSet.h" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-set/SortedSet.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-set/SortedSetIterator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-set/SortedSetIterator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sorted-set/SortedSetIterator.h" beforeDir="false" afterPath="$PROJECT_DIR$/../sorted-set/SortedSetIterator.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dynamical-systems/lab1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../dynamical-systems/lab1.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dynamical-systems/lab4.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../dynamical-systems/lab4.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v1/graph.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v1/graph.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v1/graph.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v1/graph.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v1/read_write.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v1/read_write.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v1/read_write.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v1/read_write.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v1/ui.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v1/ui.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/.idea/v2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/.idea/v2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/DAG.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/DAG.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/DAG.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/DAG.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/algorithms.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/algorithms.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/.cmake/api/v1/query/cache-v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/.cmake/api/v1/reply/cache-v2-88612305d4e5687d7533.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-df03fef3a160062a4342.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-df03fef3a160062a4342.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-f50627a7367afa30a1e2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/.cmake/api/v1/reply/index-2024-05-03T15-28-46-0083.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/.cmake/api/v1/reply/target-v2-Debug-5209a033af2e917d08a9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-af93b67b788c93364498.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-af93b67b788c93364498.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/3.26.4/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/3.26.4/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/v2.dir/algorithms.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/v2.dir/algorithms.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/v2.dir/graph.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/v2.dir/graph.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/v2.dir/lab2.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/v2.dir/lab2.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/v2.dir/lab3.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/v2.dir/lab3.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/v2.dir/lab4.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/v2.dir/lab4.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/v2.dir/menuReduced.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/CMakeFiles/v2.dir/menuReduced.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/v2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/cmake-build-debug/v2.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/graph.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/graph.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/graph.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/graph.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/lab2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/lab2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/lab3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/lab3.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/lab4.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/lab4.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/menuExtended.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/menuExtended.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/menuReduced.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/menuReduced.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/nDAG.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C++/v2/nDAG.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C/graph.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C/graph.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C/graph.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C/graph.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C/main.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C/main.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C/read.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C/read.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/C/read.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/C/read.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/Python/graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/Python/graph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/Python/user_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/Python/user_interface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/input/graph1k.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/input/graph1k.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/input/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/input/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/input/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/input/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/input/test_biconnected.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/input/test_biconnected.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/input/test_connected.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/input/test_connected.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../graph-algorithms/input/test_scc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../graph-algorithms/input/test_scc.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a1/task3.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/a1/task3.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/controller/controller.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/controller/controller.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/controller/controller.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/controller/controller.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/domain/date.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/domain/date.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/domain/date.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/domain/date.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/domain/material.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/domain/material.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/domain/material.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/domain/material.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/repository/dynamicalArray.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/repository/dynamicalArray.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/repository/dynamicalArray.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/repository/dynamicalArray.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/repository/repository.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/repository/repository.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/repository/repository.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/repository/repository.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/start/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/start/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/start/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/start/test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/tests/tests.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/tests/tests.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/tests/tests.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/tests/tests.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/ui/ui.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/ui/ui.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/ui/ui.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/a2-3/ui/ui.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a4-5/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/a4-5/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a4-5/.idea/QtSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/a4-5/.idea/QtSettings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a4-5/.idea/a4-5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/a4-5/.idea/a4-5.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a4-5/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/a4-5/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a4-5/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/a4-5/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a4-5/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/a4-5/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a4-5/src/controller/controller.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a4-5/src/controller/controller.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a4-5/src/domain/movie.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a4-5/src/domain/movie.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a4-5/src/exception.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a4-5/src/movies.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a4-5/src/movies.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a4-5/src/repository/CSVRepository.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a4-5/src/repository/HTMLRepository.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a4-5/src/repository/repository.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a4-5/src/repository/repository.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a4-5/src/start.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a4-5/src/userInterface/userInterface.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/a4-5/src/userInterface/userInterface.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/t1/controller/controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/t1/controller/controller.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/t1/controller/controller.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/t1/controller/controller.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/t1/domain/task.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/t1/domain/task.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/t1/domain/task.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/t1/domain/task.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/t1/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/t1/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/t1/repository/repository.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/t1/repository/repository.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/t1/repository/repository.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/t1/repository/repository.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/t1/userInterface/userInterface.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/t1/userInterface/userInterface.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/t1/userInterface/userInterface.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/t1/userInterface/userInterface.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/t2/controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/t2/controller.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/t2/domain.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/t2/domain.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/t2/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/t2/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../object-oriented-programming/t2/userinterface.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../object-oriented-programming/t2/userinterface.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week1/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week1/a.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week1/cub" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week1/cub" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week1/cub.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week1/cub.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week1/pointes_for_dummy.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week1/pointes_for_dummy.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week10/2" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week10/2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week10/2.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week10/2.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week2/Linux Tutorial for Beginners.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week2/Linux Tutorial for Beginners.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week2/Linux Tutorial for Beginners.pdf:Zone.Identifier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week2/awk/angajati.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week2/awk/angajati.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week2/awk/angajati.txt:Zone.Identifier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week2/awk/exercitii.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week2/awk/exercitii.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week2/awk/exercitii.txt:Zone.Identifier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week2/awk/script_1" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week2/awk/script_1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week2/awk/script_1:Zone.Identifier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week2/awk/script_2" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week2/awk/script_2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week2/awk/script_2:Zone.Identifier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week2/awk/solutii.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week2/awk/solutii.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week2/awk/solutii.txt:Zone.Identifier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week2/grep/angajati.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week2/grep/angajati.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week2/grep/angajati.txt:Zone.Identifier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week2/grep/exercitii.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week2/grep/exercitii.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week2/grep/exercitii.txt:Zone.Identifier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week2/grep/solutii.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week2/grep/solutii.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week2/grep/solutii.txt:Zone.Identifier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week2/lab1_notite.doc" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week2/lab1_notite.doc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week2/sed/angajati.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week2/sed/angajati.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week2/sed/angajati.txt:Zone.Identifier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week2/sed/exercitii.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week2/sed/exercitii.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week2/sed/exercitii.txt:Zone.Identifier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week2/sed/script_1" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week2/sed/script_1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week2/sed/script_1:Zone.Identifier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week2/sed/solutii.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week2/sed/solutii.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week2/sed/solutii.txt:Zone.Identifier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week2/sed/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week2/sed/text.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week2/sed/text.txt:Zone.Identifier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week3/lecture2/ex1" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week3/lecture2/ex1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week3/lecture2/ex1.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week3/lecture2/ex1.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week3/lecture2/imp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week3/lecture2/imp.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week3/lecture2/shell_prog.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week3/lecture2/shell_prog.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week4/a.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week4/a.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week4/b.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week4/b.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week4/c.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week4/c.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week4/d.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week4/d.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week4/e.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week4/e.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week4/f.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week4/f.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week4/gsa/ls.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week4/gsa/ls.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week4/gsa/ps.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week4/gsa/ps.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week4/gsa/pw.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week4/gsa/pw.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week5/a.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week5/a.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week5/a.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week5/a.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week5/b.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week5/b.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week5/c.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week5/c.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week5/easy1.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week5/easy1.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week5/essentials.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week5/essentials.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week5/exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week5/exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week5/lect4.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week5/lect4.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week6/5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week6/5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week6/lecture5_1.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week6/lecture5_1.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week6/lecture5_2.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week6/lecture5_2.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week6/lecture5_3.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week6/lecture5_3.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week6/lecture5_4.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week6/lecture5_4.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week6/prac_last/last.fake" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week6/prac_last/last.fake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week6/prac_last/passwd.fake" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week6/prac_last/passwd.fake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week6/prac_last/ps.fake" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week6/prac_last/ps.fake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week6/prac_last/sol.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week6/prac_last/sol.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week6/prac_last/sol1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week6/prac_last/sol1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week6/prac_last/sol3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week6/prac_last/sol3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week6/prac_last/test1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week6/prac_last/test1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week6/prac_last/test3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week6/prac_last/test3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week6/prac_last/testi.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week6/prac_last/testi.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week6/signals/signal" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week6/signals/signal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week6/signals/signal1" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week6/signals/signal1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week6/signals/signal2" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week6/signals/signal2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week6/signals/signal2_2" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week6/signals/signal2_2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week6/signals/signal3" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week6/signals/signal3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week6/solution.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week6/solution.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week6/week6" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week6/week6" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week7/.lab3.sh.swp" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week7/.lab3.sh.swp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week7/fifo1.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week7/fifo1.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week7/file_10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week7/file_10.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week7/folder1/luca" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week7/folder1/luca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week7/lab1.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week7/lab1.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week7/lab2.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week7/lab2.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week7/lab3.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week7/lab3.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week7/lab4.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week7/lab4.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week7/pipes1" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week7/pipes1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week7/pipes1.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week7/pipes1.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week7/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week7/test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week7/test_pass.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week7/test_pass.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week7/test_ps.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week7/test_ps.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week7/threads1" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week7/threads1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week7/threads1.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week7/threads1.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week7/threads2" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week7/threads2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week7/threads2.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week7/threads2.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week8/antefinal.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week8/antefinal.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week8/final.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week8/final.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week8/practice_t1/8.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week8/practice_t1/8.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week8/practice_t1/8_2.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week8/practice_t1/8_2.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week8/practice_t1/9.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week8/practice_t1/9.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week8/practice_t1/test1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week8/practice_t1/test1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week8/practice_t1/test2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week8/practice_t1/test2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week8/textf.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week8/textf.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week8/to_do.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week8/to_do.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week9/messi.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week9/messi.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week9/p1" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week9/p1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week9/p1_2" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week9/p1_2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week9/p1_2.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week9/p1_2.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week9/p2" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week9/p2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week9/p2.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week9/p2.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week9/process.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week9/process.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week9/t1" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week9/t1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week9/t2" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week9/t2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week9/theory.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week9/theory.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week9/thread1.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week9/thread1.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../operating-systems/week9/thread2.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../operating-systems/week9/thread2.c" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "CMake Application.sorted_multimap_hashtable.executor": "Run",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d2ea9e18-79d4-4153-9c38-eb9fd34313ba" name="Changes" comment="" />
+      <created>1714901880762</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714901880762</updated>
+      <workItem from="1714901881721" duration="490000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+</project>

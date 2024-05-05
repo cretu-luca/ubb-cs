@@ -1,27 +1,33 @@
 #include "SMMIterator.h"
 #include "SortedMultiMap.h"
+#include <iostream>
 
 SMMIterator::SMMIterator(const SortedMultiMap& d) : map(d) {
     this->heap = new Heap(d.relation, d.capacity);
-    for(int i = 0; i < d.capacity; i++)
-        if(d.elements[i])
-            heap->add(make_pair(d.elements[i]->key, d.elements[i]->values[0]));
+    for(int i = 0; i < map.capacity; i++) {
+        if(map.elements[i]) {
+            heap->add(make_pair(map.elements[i]->key, map.elements[i]->values[0]));
+            this->heap->valueIndices[i] = 1;
+        }
+    }
 }
 
-void SMMIterator::first(){
+void SMMIterator::first() {
     delete heap;
     this->heap = new Heap(map.relation, map.capacity);
-    for(int i = 0; i < map.capacity; i++)
-        if(map.elements[i])
+    for(int i = 0; i < map.capacity; i++) {
+        if(map.elements[i]) {
             heap->add(make_pair(map.elements[i]->key, map.elements[i]->values[0]));
+            this->heap->valueIndices[i] = 1;
+        }
+    }
 }
 
 void SMMIterator::next() {
-    if(!valid())
+    if (!valid())
         throw std::exception();
 
     TElem currentMin = this->heap->getMinAndRemove();
-
     int key = currentMin.first;
     int hashKey = map.hashFunction(key, map.capacity);
     Node* currentNode = map.elements[hashKey];
@@ -30,21 +36,24 @@ void SMMIterator::next() {
         currentNode = currentNode->next;
 
     if (currentNode != nullptr) {
-        if (currentNode->next != nullptr) {
-            heap->add(make_pair(currentNode->next->key, currentNode->next->values[0]));
-        } else if (currentMin.second < currentNode->values[currentNode->numberOfValues - 1]) {
-            for (int i = 0; i < currentNode->numberOfValues; i++) {
-                if (currentNode->values[i] == currentMin.second && i < currentNode->numberOfValues - 1) {
-                    heap->add(make_pair(currentNode->key, currentNode->values[i + 1]));
-                    break;
-                }
+        int valueIndex = this->heap->valueIndices[hashKey];
+        if (valueIndex < currentNode->numberOfValues) {
+            heap->add(make_pair(currentNode->key, currentNode->values[valueIndex]));
+            this->heap->valueIndices[hashKey]++;
+        } else {
+            if (currentNode->next != nullptr) {
+                currentNode = currentNode->next;
+                this->heap->valueIndices[currentNode->key % this->map.capacity] = 0;
+                heap->add(make_pair(currentNode->key, currentNode->values[0]));
+                this->heap->valueIndices[currentNode->key % this->map.capacity]++;
             }
         }
     }
 }
 
+
 bool SMMIterator::valid() const {
-    return this->heap->length != 0;
+    return this->heap->length > 0;
 }
 
 TElem SMMIterator::getCurrent() const {

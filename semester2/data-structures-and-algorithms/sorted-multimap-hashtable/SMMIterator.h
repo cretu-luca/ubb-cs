@@ -1,8 +1,4 @@
 #pragma once
-
-#include <pthread.h>
-#include <bits/error_constants.h>
-
 #include "SortedMultiMap.h"
 
 class Heap;
@@ -26,11 +22,13 @@ class Heap {
 public:
 	int capacity;
 	int length;
+	int* valueIndices;
 	TElem* elements;
 	Relation relation;
 
 	Heap(Relation r, int capacity): relation(r), length(0), capacity(capacity) {
 		elements = new TElem[this->capacity + 1];
+		valueIndices = new int[this->capacity + 1];
 	}
 
 	~Heap() {
@@ -55,7 +53,7 @@ public:
 	void bubbleUp(int position) {
 		TElem newTElem = this->elements[position];
 		int parent = position / 2;
-		while(position > 1 && !relation(newTElem.first, this->elements[parent].first)) {
+		while(position > 1 && relation(newTElem.first, this->elements[parent].first)) {
 			this->elements[position] = this->elements[parent];
 			position = parent;
 			parent = position / 2;
@@ -74,7 +72,7 @@ public:
 			if(position * 2 + 1 <= this->length && relation(this->elements[2 * position + 1].first, this->elements[2 * position].first))
 				maxChild = position * 2 + 1;
 
-			if(maxChild != -1 && !relation(this->elements[maxChild].first, elem.first)) {
+			if(maxChild != -1 && relation(this->elements[maxChild].first, elem.first)) {
 				TElem temp = this->elements[position];
 				this->elements[position] = this->elements[maxChild];
 				this->elements[maxChild] = temp;

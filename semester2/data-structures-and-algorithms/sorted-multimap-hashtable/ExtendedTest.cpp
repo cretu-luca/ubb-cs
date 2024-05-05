@@ -52,7 +52,9 @@ void testIteratorSteps(SortedMultiMap& m) {
     SMMIterator smmi = m.iterator();
     int count = m.size();
     for (int i = 0; i < count / 2; i++) {
-        smmi.next();
+    	// cout << smmi.heap->length << " ";
+	    // this is where it throws the exception
+	    smmi.next();
     }
 	smmi.first();
 	int c = 0;
@@ -82,7 +84,7 @@ void testRelation(Relation r) {
 		assert(r(first, current));
 		first = current;
 		smit.next();
-	}	
+	}
 	testIteratorSteps(smm);
 }
 

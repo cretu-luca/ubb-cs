@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable-2/sorted-multimap-hashtable/cmake-build-debug"
+			"value" : "c:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -643,7 +643,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable-2/sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -715,7 +715,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable-2/sorted-multimap-hashtable"
+			"value" : "C:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1363,7 +1363,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable-2/sorted-multimap-hashtable/cmake-build-debug"
+			"value" : "C:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable/cmake-build-debug"
 		},
 		{
 			"name" : "sorted_multimap_hashtable_IS_TOP_LEVEL",
@@ -1387,7 +1387,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable-2/sorted-multimap-hashtable"
+			"value" : "C:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable"
 		}
 	],
 	"kind" : "cache",

@@ -1,5 +1,5 @@
 CMakeFiles/sorted_multimap_hashtable.dir/ShortTest.cpp.obj: \
- C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable\ShortTest.cpp \
+ C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable\ShortTest.cpp \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/assert.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/crtdefs.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/corecrt.h \
@@ -23,7 +23,7 @@ CMakeFiles/sorted_multimap_hashtable.dir/ShortTest.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/errno.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_abs.h \
- C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable\SortedMultiMap.h \
+ C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable\SortedMultiMap.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/math.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cmath \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h \
@@ -71,28 +71,12 @@ CMakeFiles/sorted_multimap_hashtable.dir/ShortTest.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/vector.tcc \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/utility \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_relops.h \
- C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable\SMMIterator.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/pthread.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stddef.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/stddef.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/sys/types.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/_mingw_off_t.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/process.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/corecrt_startup.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/signal.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/pthread_signal.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/time.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/sys/timeb.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/_timeval.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/pthread_time.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/pthread_compat.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/pthread_unistd.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h \
- C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cerrno \
+ C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable\SMMIterator.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/exception \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_ptr.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cxxabi_init_exception.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stddef.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/stddef.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/typeinfo \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/nested_exception.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
@@ -104,6 +88,7 @@ CMakeFiles/sorted_multimap_hashtable.dir/ShortTest.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cwchar \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/_mingw_off_t.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/_mingw_stat64.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
@@ -120,6 +105,19 @@ CMakeFiles/sorted_multimap_hashtable.dir/ShortTest.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/atomicity.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/pthread.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/sys/types.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/process.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/corecrt_startup.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/signal.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/pthread_signal.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/time.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/sys/timeb.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/_timeval.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/pthread_time.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/pthread_compat.h \
+ C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/x86_64-w64-mingw32/include/pthread_unistd.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_classes.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/string \
@@ -128,10 +126,12 @@ CMakeFiles/sorted_multimap_hashtable.dir/ShortTest.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/string_conversions.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdio \
+ C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cerrno \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/charconv.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.tcc \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_classes.tcc \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/system_error \
+ C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/stdexcept \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/streambuf \
  C:/Program\ Files/JetBrains/CLion\ 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/streambuf.tcc \

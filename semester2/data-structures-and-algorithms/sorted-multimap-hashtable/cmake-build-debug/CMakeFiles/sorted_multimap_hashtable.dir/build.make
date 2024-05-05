@@ -52,10 +52,10 @@ RM = "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe"
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable
+CMAKE_SOURCE_DIR = C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/sorted_multimap_hashtable.dir/depend.make
@@ -70,78 +70,78 @@ include CMakeFiles/sorted_multimap_hashtable.dir/flags.make
 
 CMakeFiles/sorted_multimap_hashtable.dir/App.cpp.obj: CMakeFiles/sorted_multimap_hashtable.dir/flags.make
 CMakeFiles/sorted_multimap_hashtable.dir/App.cpp.obj: CMakeFiles/sorted_multimap_hashtable.dir/includes_CXX.rsp
-CMakeFiles/sorted_multimap_hashtable.dir/App.cpp.obj: C:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable-2/sorted-multimap-hashtable/App.cpp
+CMakeFiles/sorted_multimap_hashtable.dir/App.cpp.obj: C:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable/App.cpp
 CMakeFiles/sorted_multimap_hashtable.dir/App.cpp.obj: CMakeFiles/sorted_multimap_hashtable.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sorted_multimap_hashtable.dir/App.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sorted_multimap_hashtable.dir/App.cpp.obj -MF CMakeFiles\sorted_multimap_hashtable.dir\App.cpp.obj.d -o CMakeFiles\sorted_multimap_hashtable.dir\App.cpp.obj -c C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable\App.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sorted_multimap_hashtable.dir/App.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sorted_multimap_hashtable.dir/App.cpp.obj -MF CMakeFiles\sorted_multimap_hashtable.dir\App.cpp.obj.d -o CMakeFiles\sorted_multimap_hashtable.dir\App.cpp.obj -c C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable\App.cpp
 
 CMakeFiles/sorted_multimap_hashtable.dir/App.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sorted_multimap_hashtable.dir/App.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable\App.cpp > CMakeFiles\sorted_multimap_hashtable.dir\App.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable\App.cpp > CMakeFiles\sorted_multimap_hashtable.dir\App.cpp.i
 
 CMakeFiles/sorted_multimap_hashtable.dir/App.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sorted_multimap_hashtable.dir/App.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable\App.cpp -o CMakeFiles\sorted_multimap_hashtable.dir\App.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable\App.cpp -o CMakeFiles\sorted_multimap_hashtable.dir\App.cpp.s
 
 CMakeFiles/sorted_multimap_hashtable.dir/ExtendedTest.cpp.obj: CMakeFiles/sorted_multimap_hashtable.dir/flags.make
 CMakeFiles/sorted_multimap_hashtable.dir/ExtendedTest.cpp.obj: CMakeFiles/sorted_multimap_hashtable.dir/includes_CXX.rsp
-CMakeFiles/sorted_multimap_hashtable.dir/ExtendedTest.cpp.obj: C:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable-2/sorted-multimap-hashtable/ExtendedTest.cpp
+CMakeFiles/sorted_multimap_hashtable.dir/ExtendedTest.cpp.obj: C:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable/ExtendedTest.cpp
 CMakeFiles/sorted_multimap_hashtable.dir/ExtendedTest.cpp.obj: CMakeFiles/sorted_multimap_hashtable.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sorted_multimap_hashtable.dir/ExtendedTest.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sorted_multimap_hashtable.dir/ExtendedTest.cpp.obj -MF CMakeFiles\sorted_multimap_hashtable.dir\ExtendedTest.cpp.obj.d -o CMakeFiles\sorted_multimap_hashtable.dir\ExtendedTest.cpp.obj -c C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable\ExtendedTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sorted_multimap_hashtable.dir/ExtendedTest.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sorted_multimap_hashtable.dir/ExtendedTest.cpp.obj -MF CMakeFiles\sorted_multimap_hashtable.dir\ExtendedTest.cpp.obj.d -o CMakeFiles\sorted_multimap_hashtable.dir\ExtendedTest.cpp.obj -c C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable\ExtendedTest.cpp
 
 CMakeFiles/sorted_multimap_hashtable.dir/ExtendedTest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sorted_multimap_hashtable.dir/ExtendedTest.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable\ExtendedTest.cpp > CMakeFiles\sorted_multimap_hashtable.dir\ExtendedTest.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable\ExtendedTest.cpp > CMakeFiles\sorted_multimap_hashtable.dir\ExtendedTest.cpp.i
 
 CMakeFiles/sorted_multimap_hashtable.dir/ExtendedTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sorted_multimap_hashtable.dir/ExtendedTest.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable\ExtendedTest.cpp -o CMakeFiles\sorted_multimap_hashtable.dir\ExtendedTest.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable\ExtendedTest.cpp -o CMakeFiles\sorted_multimap_hashtable.dir\ExtendedTest.cpp.s
 
 CMakeFiles/sorted_multimap_hashtable.dir/ShortTest.cpp.obj: CMakeFiles/sorted_multimap_hashtable.dir/flags.make
 CMakeFiles/sorted_multimap_hashtable.dir/ShortTest.cpp.obj: CMakeFiles/sorted_multimap_hashtable.dir/includes_CXX.rsp
-CMakeFiles/sorted_multimap_hashtable.dir/ShortTest.cpp.obj: C:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable-2/sorted-multimap-hashtable/ShortTest.cpp
+CMakeFiles/sorted_multimap_hashtable.dir/ShortTest.cpp.obj: C:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable/ShortTest.cpp
 CMakeFiles/sorted_multimap_hashtable.dir/ShortTest.cpp.obj: CMakeFiles/sorted_multimap_hashtable.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/sorted_multimap_hashtable.dir/ShortTest.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sorted_multimap_hashtable.dir/ShortTest.cpp.obj -MF CMakeFiles\sorted_multimap_hashtable.dir\ShortTest.cpp.obj.d -o CMakeFiles\sorted_multimap_hashtable.dir\ShortTest.cpp.obj -c C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable\ShortTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/sorted_multimap_hashtable.dir/ShortTest.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sorted_multimap_hashtable.dir/ShortTest.cpp.obj -MF CMakeFiles\sorted_multimap_hashtable.dir\ShortTest.cpp.obj.d -o CMakeFiles\sorted_multimap_hashtable.dir\ShortTest.cpp.obj -c C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable\ShortTest.cpp
 
 CMakeFiles/sorted_multimap_hashtable.dir/ShortTest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sorted_multimap_hashtable.dir/ShortTest.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable\ShortTest.cpp > CMakeFiles\sorted_multimap_hashtable.dir\ShortTest.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable\ShortTest.cpp > CMakeFiles\sorted_multimap_hashtable.dir\ShortTest.cpp.i
 
 CMakeFiles/sorted_multimap_hashtable.dir/ShortTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sorted_multimap_hashtable.dir/ShortTest.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable\ShortTest.cpp -o CMakeFiles\sorted_multimap_hashtable.dir\ShortTest.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable\ShortTest.cpp -o CMakeFiles\sorted_multimap_hashtable.dir\ShortTest.cpp.s
 
 CMakeFiles/sorted_multimap_hashtable.dir/SMMIterator.cpp.obj: CMakeFiles/sorted_multimap_hashtable.dir/flags.make
 CMakeFiles/sorted_multimap_hashtable.dir/SMMIterator.cpp.obj: CMakeFiles/sorted_multimap_hashtable.dir/includes_CXX.rsp
-CMakeFiles/sorted_multimap_hashtable.dir/SMMIterator.cpp.obj: C:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable-2/sorted-multimap-hashtable/SMMIterator.cpp
+CMakeFiles/sorted_multimap_hashtable.dir/SMMIterator.cpp.obj: C:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable/SMMIterator.cpp
 CMakeFiles/sorted_multimap_hashtable.dir/SMMIterator.cpp.obj: CMakeFiles/sorted_multimap_hashtable.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/sorted_multimap_hashtable.dir/SMMIterator.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sorted_multimap_hashtable.dir/SMMIterator.cpp.obj -MF CMakeFiles\sorted_multimap_hashtable.dir\SMMIterator.cpp.obj.d -o CMakeFiles\sorted_multimap_hashtable.dir\SMMIterator.cpp.obj -c C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable\SMMIterator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/sorted_multimap_hashtable.dir/SMMIterator.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sorted_multimap_hashtable.dir/SMMIterator.cpp.obj -MF CMakeFiles\sorted_multimap_hashtable.dir\SMMIterator.cpp.obj.d -o CMakeFiles\sorted_multimap_hashtable.dir\SMMIterator.cpp.obj -c C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable\SMMIterator.cpp
 
 CMakeFiles/sorted_multimap_hashtable.dir/SMMIterator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sorted_multimap_hashtable.dir/SMMIterator.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable\SMMIterator.cpp > CMakeFiles\sorted_multimap_hashtable.dir\SMMIterator.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable\SMMIterator.cpp > CMakeFiles\sorted_multimap_hashtable.dir\SMMIterator.cpp.i
 
 CMakeFiles/sorted_multimap_hashtable.dir/SMMIterator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sorted_multimap_hashtable.dir/SMMIterator.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable\SMMIterator.cpp -o CMakeFiles\sorted_multimap_hashtable.dir\SMMIterator.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable\SMMIterator.cpp -o CMakeFiles\sorted_multimap_hashtable.dir\SMMIterator.cpp.s
 
 CMakeFiles/sorted_multimap_hashtable.dir/SortedMultiMap.cpp.obj: CMakeFiles/sorted_multimap_hashtable.dir/flags.make
 CMakeFiles/sorted_multimap_hashtable.dir/SortedMultiMap.cpp.obj: CMakeFiles/sorted_multimap_hashtable.dir/includes_CXX.rsp
-CMakeFiles/sorted_multimap_hashtable.dir/SortedMultiMap.cpp.obj: C:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable-2/sorted-multimap-hashtable/SortedMultiMap.cpp
+CMakeFiles/sorted_multimap_hashtable.dir/SortedMultiMap.cpp.obj: C:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable/SortedMultiMap.cpp
 CMakeFiles/sorted_multimap_hashtable.dir/SortedMultiMap.cpp.obj: CMakeFiles/sorted_multimap_hashtable.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/sorted_multimap_hashtable.dir/SortedMultiMap.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sorted_multimap_hashtable.dir/SortedMultiMap.cpp.obj -MF CMakeFiles\sorted_multimap_hashtable.dir\SortedMultiMap.cpp.obj.d -o CMakeFiles\sorted_multimap_hashtable.dir\SortedMultiMap.cpp.obj -c C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable\SortedMultiMap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/sorted_multimap_hashtable.dir/SortedMultiMap.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sorted_multimap_hashtable.dir/SortedMultiMap.cpp.obj -MF CMakeFiles\sorted_multimap_hashtable.dir\SortedMultiMap.cpp.obj.d -o CMakeFiles\sorted_multimap_hashtable.dir\SortedMultiMap.cpp.obj -c C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable\SortedMultiMap.cpp
 
 CMakeFiles/sorted_multimap_hashtable.dir/SortedMultiMap.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sorted_multimap_hashtable.dir/SortedMultiMap.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable\SortedMultiMap.cpp > CMakeFiles\sorted_multimap_hashtable.dir\SortedMultiMap.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable\SortedMultiMap.cpp > CMakeFiles\sorted_multimap_hashtable.dir\SortedMultiMap.cpp.i
 
 CMakeFiles/sorted_multimap_hashtable.dir/SortedMultiMap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sorted_multimap_hashtable.dir/SortedMultiMap.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable\SortedMultiMap.cpp -o CMakeFiles\sorted_multimap_hashtable.dir\SortedMultiMap.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable\SortedMultiMap.cpp -o CMakeFiles\sorted_multimap_hashtable.dir\SortedMultiMap.cpp.s
 
 # Object files for target sorted_multimap_hashtable
 sorted_multimap_hashtable_OBJECTS = \
@@ -163,7 +163,7 @@ sorted_multimap_hashtable.exe: CMakeFiles/sorted_multimap_hashtable.dir/build.ma
 sorted_multimap_hashtable.exe: CMakeFiles/sorted_multimap_hashtable.dir/linkLibs.rsp
 sorted_multimap_hashtable.exe: CMakeFiles/sorted_multimap_hashtable.dir/objects1.rsp
 sorted_multimap_hashtable.exe: CMakeFiles/sorted_multimap_hashtable.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable sorted_multimap_hashtable.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable sorted_multimap_hashtable.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\sorted_multimap_hashtable.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -175,6 +175,6 @@ CMakeFiles/sorted_multimap_hashtable.dir/clean:
 .PHONY : CMakeFiles/sorted_multimap_hashtable.dir/clean
 
 CMakeFiles/sorted_multimap_hashtable.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable\cmake-build-debug C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable\cmake-build-debug C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable-2\sorted-multimap-hashtable\cmake-build-debug\CMakeFiles\sorted_multimap_hashtable.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable\cmake-build-debug C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable\cmake-build-debug C:\Users\lucac\uni\ubb-cs\semester2\data-structures-and-algorithms\sorted-multimap-hashtable\cmake-build-debug\CMakeFiles\sorted_multimap_hashtable.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/sorted_multimap_hashtable.dir/depend
 

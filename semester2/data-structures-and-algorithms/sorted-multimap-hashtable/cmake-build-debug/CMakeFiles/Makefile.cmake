@@ -112,7 +112,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/JetBrains/CLion 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows.cmake"
   "C:/Program Files/JetBrains/CLion 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake"
   "C:/Program Files/JetBrains/CLion 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/ProcessorCount.cmake"
-  "C:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable-2/sorted-multimap-hashtable/CMakeLists.txt"
+  "C:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable/CMakeLists.txt"
   "CMakeFiles/3.28.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.28.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.28.1/CMakeRCCompiler.cmake"

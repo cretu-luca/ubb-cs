@@ -27,7 +27,7 @@ void testAll(){
 	assert(!smm.isEmpty());
 	vector<TValue> v= smm.search(1);
 	assert(v.size()==2);
-	v= smm.search(3);
+	v = smm.search(3);
     assert(v.size()==0);
     SMMIterator it = smm.iterator();
     it.first();

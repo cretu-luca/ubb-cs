@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable-2/sorted-multimap-hashtable
+# Install script for directory: C:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable-2/sorted-multimap-hashtable/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
