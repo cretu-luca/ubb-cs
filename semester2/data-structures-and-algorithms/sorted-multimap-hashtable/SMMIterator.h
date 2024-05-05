@@ -13,7 +13,7 @@ public:
 	Heap* heap = nullptr;
 
 	void first();
-	void next();
+	void next() const;
 	bool valid() const;
    	TElem getCurrent() const;
 };
@@ -26,7 +26,7 @@ public:
 	TElem* elements;
 	Relation relation;
 
-	Heap(Relation r, int capacity): relation(r), length(0), capacity(capacity) {
+	Heap(Relation relation, int capacity): relation(relation), length(0), capacity(capacity) {
 		elements = new TElem[this->capacity + 1];
 		valueIndices = new int[this->capacity + 1];
 	}
@@ -36,7 +36,8 @@ public:
 	}
 
 	void add(TElem e) {
-		// TODO resize
+		if(this->length == this->capacity - 1)
+			this->resize();
 
 		this->elements[++this->length] = e;
 		this->bubbleUp(this->length);
@@ -50,7 +51,7 @@ public:
 		return deletedTElem;
 	}
 
-	void bubbleUp(int position) {
+	void bubbleUp(int position) const {
 		TElem newTElem = this->elements[position];
 		int parent = position / 2;
 		while(position > 1 && relation(newTElem.first, this->elements[parent].first)) {
@@ -62,7 +63,7 @@ public:
 		this->elements[position] = newTElem;
 	}
 
-	void bubbleDown(int position) {
+	void bubbleDown(int position) const {
 		TElem elem = this->elements[position];
 		while(position < this->length) {
 			int maxChild = -1;
@@ -81,5 +82,15 @@ public:
 				position = this->length + 1;
 			}
 		}
+	}
+
+	void resize() {
+		auto* newElements = new TElem[this->capacity * 2];
+		for(int i = 0; i < this->capacity; i++)
+			newElements[i] = this->elements[i];
+
+		delete[] this->elements;
+		this->elements = newElements;
+		this->capacity = this->capacity * 2;
 	}
 };

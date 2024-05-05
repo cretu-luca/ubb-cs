@@ -23,7 +23,7 @@ void SMMIterator::first() {
     }
 }
 
-void SMMIterator::next() {
+void SMMIterator::next() const {
     if (!valid())
         throw std::exception();
 
@@ -43,9 +43,9 @@ void SMMIterator::next() {
         } else {
             if (currentNode->next != nullptr) {
                 currentNode = currentNode->next;
-                this->heap->valueIndices[currentNode->key % this->map.capacity] = 0;
+                this->heap->valueIndices[map.hashFunction(currentNode->key, map.capacity)] = 0;
                 heap->add(make_pair(currentNode->key, currentNode->values[0]));
-                this->heap->valueIndices[currentNode->key % this->map.capacity]++;
+                this->heap->valueIndices[map.hashFunction(currentNode->key, map.capacity)]++;
             }
         }
     }
