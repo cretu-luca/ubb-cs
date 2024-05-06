@@ -23,12 +23,14 @@ public:
 	int capacity;
 	int length;
 	int* valueIndices;
+	Node** currentNodes;
 	TElem* elements;
 	Relation relation;
 
 	Heap(Relation relation, int capacity): relation(relation), length(0), capacity(capacity) {
 		elements = new TElem[this->capacity + 1];
 		valueIndices = new int[this->capacity + 1];
+		currentNodes = new Node*[this->capacity + 1];
 	}
 
 	~Heap() {

@@ -8,6 +8,7 @@ SMMIterator::SMMIterator(const SortedMultiMap& d) : map(d) {
         if(map.elements[i]) {
             heap->add(make_pair(map.elements[i]->key, map.elements[i]->values[0]));
             this->heap->valueIndices[i] = 1;
+            heap->currentNodes[map.hashFunction(map.elements[i]->key, map.capacity)] = map.elements[i];
         }
     }
 }
@@ -19,6 +20,7 @@ void SMMIterator::first() {
         if(map.elements[i]) {
             heap->add(make_pair(map.elements[i]->key, map.elements[i]->values[0]));
             this->heap->valueIndices[i] = 1;
+            heap->currentNodes[map.hashFunction(map.elements[i]->key, map.capacity)] = map.elements[i];
         }
     }
 }
@@ -30,22 +32,18 @@ void SMMIterator::next() const {
     TElem currentMin = this->heap->getMinAndRemove();
     int key = currentMin.first;
     int hashKey = map.hashFunction(key, map.capacity);
-    Node* currentNode = map.elements[hashKey];
 
-    while (currentNode != nullptr && currentNode->key != key)
-        currentNode = currentNode->next;
-
-    if (currentNode != nullptr) {
+    if (heap->currentNodes[hashKey] != nullptr) {
         int valueIndex = this->heap->valueIndices[hashKey];
-        if (valueIndex < currentNode->numberOfValues) {
-            heap->add(make_pair(currentNode->key, currentNode->values[valueIndex]));
+        if (valueIndex < heap->currentNodes[hashKey]->numberOfValues) {
+            heap->add(make_pair(heap->currentNodes[hashKey]->key, heap->currentNodes[hashKey]->values[valueIndex]));
             this->heap->valueIndices[hashKey]++;
         } else {
-            if (currentNode->next != nullptr) {
-                currentNode = currentNode->next;
-                this->heap->valueIndices[map.hashFunction(currentNode->key, map.capacity)] = 0;
-                heap->add(make_pair(currentNode->key, currentNode->values[0]));
-                this->heap->valueIndices[map.hashFunction(currentNode->key, map.capacity)]++;
+            if (heap->currentNodes[hashKey]->next != nullptr) {
+                heap->currentNodes[hashKey] = heap->currentNodes[hashKey]->next;
+                this->heap->valueIndices[map.hashFunction(heap->currentNodes[hashKey]->key, map.capacity)] = 0;
+                heap->add(make_pair(heap->currentNodes[hashKey]->key, heap->currentNodes[hashKey]->values[0]));
+                this->heap->valueIndices[map.hashFunction(heap->currentNodes[hashKey]->key, map.capacity)]++;
             }
         }
     }
