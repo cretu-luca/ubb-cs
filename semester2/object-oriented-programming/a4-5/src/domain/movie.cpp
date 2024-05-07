@@ -75,18 +75,6 @@ int Movie::getNumberOfLikes() const{
     return this->numberOfLikes;
 }
 
-void Movie::setGenre(const string newGenre){
-    this->genre = newGenre;
-}
-
-void Movie::setTrailerLink(const string newTrailerLink){
-    this->trailerLink = newTrailerLink;
-}
-
-void Movie::setReleaseYear(const int newReleaseYear){
-    this->releaseYear = newReleaseYear;
-}
-
 void Movie::setNumberOfLikes(const int newNumberOfLikes){
     this->numberOfLikes = newNumberOfLikes;
 }
