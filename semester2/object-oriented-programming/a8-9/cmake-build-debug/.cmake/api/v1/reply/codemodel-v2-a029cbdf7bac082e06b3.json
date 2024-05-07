@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "oop_a4_5_kpunkk_67",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "oop_a4_5_kpunkk_67::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-oop_a4_5_kpunkk_67-Debug-36ed3581b759125166f5.json",
+					"name" : "oop_a4_5_kpunkk_67",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "oop_a4_5_kpunkk_67_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-oop_a4_5_kpunkk_67_autogen-Debug-7b4a4e84e881a0fec0ca.json",
+					"name" : "oop_a4_5_kpunkk_67_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "oop_a4_5_kpunkk_67_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-oop_a4_5_kpunkk_67_autogen_timestamp_deps-Debug-57a39e015d5e6f855fa1.json",
+					"name" : "oop_a4_5_kpunkk_67_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/lucac/uni/ubb-cs/semester2/object-oriented-programming/a8-9/cmake-build-debug",
+		"source" : "C:/Users/lucac/uni/ubb-cs/semester2/object-oriented-programming/a8-9"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
