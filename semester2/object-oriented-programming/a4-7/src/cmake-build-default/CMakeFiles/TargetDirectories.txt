@@ -1,3 +1,0 @@
-C:/Users/lucac/uni/ubb-cs/semester2/object-oriented-programming/a4-5/src/cmake-build-default/CMakeFiles/a4-5.dir
-C:/Users/lucac/uni/ubb-cs/semester2/object-oriented-programming/a4-5/src/cmake-build-default/CMakeFiles/edit_cache.dir
-C:/Users/lucac/uni/ubb-cs/semester2/object-oriented-programming/a4-5/src/cmake-build-default/CMakeFiles/rebuild_cache.dir
