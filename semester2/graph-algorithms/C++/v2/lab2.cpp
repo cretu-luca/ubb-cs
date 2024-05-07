@@ -5,6 +5,7 @@
  * 3. Write a program that finds the connected components of an undirected
  *      graph using a depth-first traversal of the graph.
  */
+
 void Graph::DFS_components_iterative(Graph &graph, int node, int componentIndex) {
     std::stack<int> recursionStack;
     int currentNode;
@@ -53,6 +54,7 @@ void Graph::findConnectedComponents() {
  * 1B. Write a program that finds the strongly-connected components of a directed graph in O(n+m)
  *      (n=no. of vertices, m=no. of arcs)
  */
+
 Graph Graph::transposedGraph(Graph& other) {
     Graph transpose(other.getNumberOfNodes(), 0);
 

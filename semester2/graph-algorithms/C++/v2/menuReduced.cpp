@@ -7,6 +7,8 @@ void menu() {
             "2. Reconstruct tree.\n"
             "3. Check if DAG + find number of paths.\n"
             "4. Check if DAG + find number of shortest paths.\n"
+            "5. Reconstruct tree.\n"
+            "6. Find Hamiltonian cycle.\n"
             ">";
 }
 
@@ -82,6 +84,13 @@ int main() {
             case 4:
                 task4(graph);
                 break;
+            case 5:
+                graph.ReconstructTree();
+                break;
+            case 6:
+                graph.TSP();
+                break;
+            default: ;
         }
     }
 

@@ -1,5 +1,6 @@
 #pragma once
 #include "graph.h"
+#include <sstream>
 #include <utility>
 
 Graph::Graph(const std::string& filePath):
@@ -90,8 +91,16 @@ int Graph::getOutDegree(int node) const {
 }
 
 int Graph::getEdgeCost(int node1, int node2) const {
-    return this->edgeCost.at({node1, node2});
+    auto it = this->edgeCost.find({node1, node2});
+    if (it != this->edgeCost.end()) {
+        return it->second;
+    } else {
+        std::ostringstream msg;
+        msg << "Edge does not exist between nodes " << node1 << " and " << node2;
+        throw std::out_of_range(msg.str());
+    }
 }
+
 
 bool Graph::isEdge(int node1, int node2) {
     return this->edgeCost.find({node1, node2}) != this->edgeCost.end();

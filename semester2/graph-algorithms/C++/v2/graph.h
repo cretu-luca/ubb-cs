@@ -8,6 +8,15 @@
 #include <iostream>
 #include <fstream>
 #include <queue>
+using namespace std;
+
+struct Node {
+    int data;
+    Node* left;
+    Node* right;
+    explicit Node(int data): data(data), left(nullptr), right(nullptr) {}
+};
+
 
 class Graph {
 
@@ -41,6 +50,7 @@ public:
     std::pair<int, std::vector<int>> getFloydWarshallPath(int source, int destination, Graph graph);
     std::pair<int, int> numberOfLowestCostPaths(int source, int destination);
     std::stack<int> topSort();
+    vector<pair<int, int>> Kruskal(vector<pair<int, int>>& edges, vector<int> parent);
 
     bool isEdge(int node1, int node2);
     bool isNode(int node);
@@ -54,6 +64,7 @@ public:
     int getEdgeCost(int node1, int node2) const;
     int Dijkstra(int source, int destination);
     int numberOfPathsDP(int source, int destination);
+    int root(int a, std::vector<int> parent);
 
     void setEdgeCost(int node1, int node2, int cost);
     void addEdge(int node1, int node2, int cost);
@@ -79,6 +90,22 @@ public:
                                          int currentCost, int minimumCost);
     void solveBridgeTorch(int numberOfPeople, std::vector<int> timeNeeded);
     void topSortDFS(int current, std::vector<int>& visited, std::stack<int>& order);
+    void TSP();
+    vector<pair<int, int>>  getUndirectedEdges();
+
+    void ReconstructTree();
+    static Node* newNode(int data);
+    int search(vector<int> inOrder, int start, int end, int value);
+    Node* buildUtilFromInPost(vector<int>& inOrder, vector<int>& postOrder, int inStart, int inEnd, int* pIndex);
+    Node* buildPreOrder(vector<int>& inOrder, vector<int>& postOrder, int size);
+    Node* buildPostOrder(vector<int>& inOrder, vector<int>& postOrder, int size);
+    void printPreOrder(Node* root);
+    void printPostOrder(Node* root);
+    void printInOrder(Node* root);
+    Node* buildUtilFromPreIn(vector<int>& preOrder, vector<int>& inOrder, int inStart, int inEnd, int* pIndex);
+    Node* buildTreeFromPreIn(vector<int>& preOrder, vector<int>& inOrder, int size);
+    Node* buildFromPrePost(vector<int>& pre, vector<int>& post, int* preIndex, int l, int h, int size);
+    Node* buildTreePrePost(vector<int>& preOrder, vector<int>& postOrder, int size);
 
     class edgeIterator {
     private:

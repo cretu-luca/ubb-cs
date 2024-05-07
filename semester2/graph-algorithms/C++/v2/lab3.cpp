@@ -24,19 +24,6 @@ int Graph::Floyd_Warshall(int node1, int node2) {
         }
     }
 
-    /*
-    std::cout << "\nThis is the matrix of distances:";
-    for (int i = 1; i <= this->numberOfNodes; i++) {
-        std::cout << '\n';
-        for (int j = 1; j <= this->numberOfNodes; j++)
-            if (distance[i][j] == INF)
-                std::cout << 0 << " ";
-            else
-                std::cout << distance[i][j] << " ";
-    }
-    std::cout << "\n\n";
-    */
-
     return distance[node1][node2];
 }
 

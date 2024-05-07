@@ -60,8 +60,6 @@ void menu() {
                  "14. Connected components\n"
                  "15. SSC\n"
                  "16. Biconnected components\n";
-    */
-    /*
     std::cout << "17. Find path with minimal cost (Floyd-Warshall)\n"
                  "18. Find number of paths (Backtracking)\n"
                  "19. Find number of costs with minimal cost (F-W + BT)\n"
