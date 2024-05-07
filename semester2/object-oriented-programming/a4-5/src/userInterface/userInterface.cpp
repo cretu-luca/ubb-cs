@@ -16,9 +16,9 @@ void UserInterface::getFile() {
 
     cin >> option;
     if(option == 1) {
-        this->controller = new Controller(R"(C:\Users\lucac\uni\ubb-cs\semester2\object-oriented-programming\a4-5\src\movies.csv)", "CSV");
+        this->controller = new Controller(R"(C:\Users\lucac\uni\ubb-cs\semester2\object-oriented-programming\a4-5\src\input-output\movies.csv)", "CSV");
     } else {
-        this->controller = new Controller(R"(C:\Users\lucac\uni\ubb-cs\semester2\object-oriented-programming\a4-5\src\movies.html)", "HTML");
+        this->controller = new Controller(R"(C:\Users\lucac\uni\ubb-cs\semester2\object-oriented-programming\a4-5\src\input-output\movies.html)", "HTML");
     }
 }
 
