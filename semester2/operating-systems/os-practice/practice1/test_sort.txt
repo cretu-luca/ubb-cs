@@ -1,0 +1,3 @@
+a 2 salut
+b 1 luca
+c 0 mihnea

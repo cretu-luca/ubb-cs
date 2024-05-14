@@ -1,0 +1,3 @@
+integer comparison: 
+
+	-lt, -le, -eq, -ne, -ge, -gt 
