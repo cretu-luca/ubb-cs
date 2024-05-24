@@ -1,5 +1,0 @@
-C:/Users/lucac/uni/ubb-cs/semester2/object-oriented-programming/a8-9/cmake-build-debug/CMakeFiles/oop_a4_5_kpunkk_67.dir
-C:/Users/lucac/uni/ubb-cs/semester2/object-oriented-programming/a8-9/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/lucac/uni/ubb-cs/semester2/object-oriented-programming/a8-9/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-C:/Users/lucac/uni/ubb-cs/semester2/object-oriented-programming/a8-9/cmake-build-debug/CMakeFiles/oop_a4_5_kpunkk_67_autogen_timestamp_deps.dir
-C:/Users/lucac/uni/ubb-cs/semester2/object-oriented-programming/a8-9/cmake-build-debug/CMakeFiles/oop_a4_5_kpunkk_67_autogen.dir
