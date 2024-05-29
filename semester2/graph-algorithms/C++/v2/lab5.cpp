@@ -161,9 +161,9 @@ void Graph::unionSets(int u, int v) {
     int rootU = findRoot(u);
     int rootV = findRoot(v);
     if (rootU != rootV) {
-        if (rank[rootU] > rank[rootV]) {
+        if (rank[rootU] < rank[rootV]) {
             parent[rootV] = rootU;
-        } else if (rank[rootU] < rank[rootV]) {
+        } else if (rank[rootU] > rank[rootV]) {
             parent[rootU] = rootV;
         } else {
             parent[rootV] = rootU;
