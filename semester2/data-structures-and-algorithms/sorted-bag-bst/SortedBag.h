@@ -17,7 +17,7 @@ public:
 	int* left;
 	int* right;
 	int* nextEmpty;
-	int* parent;
+	// int* parent;
 	int capacity, sizeOfArray;
 	int firstEmpty;
 	int root;
@@ -52,6 +52,8 @@ public:
 	void resize();
 
 	int nrOccurrencesRecursive(int node, TComp e) const;
+
+	int getRange() const;
 
 	//destructor
 	~SortedBag();
