@@ -4,6 +4,7 @@
 #include <stdexcept>
 #include <iostream>
 
+// BC = WC = TC = Theta(initial capacity)
 SortedBag::SortedBag(Relation r) {
     this->capacity = 20;
     this->sizeOfArray = 0;
@@ -12,12 +13,12 @@ SortedBag::SortedBag(Relation r) {
     this->left = new int[this->capacity];
     this->right = new int[this->capacity];
     this->nextEmpty = new int[this->capacity];
-    this->parent = new int[this->capacity];
+    // this->parent = new int[this->capacity];
 
     for (int i = 0; i < this->capacity; ++i) {
         this->info[i] = NULL_TCOMP;
         this->left[i] = this->right[i] = -1;
-        this->parent[i] = -1;
+        // this->parent[i] = -1;
         this->nextEmpty[i] = i + 1;
     }
 
@@ -26,6 +27,7 @@ SortedBag::SortedBag(Relation r) {
     this->relation = r;
 }
 
+// BC = Theta(1), WC = Theta(number of nodes), TC = O(number of nodes)
 void SortedBag::add(TComp e) {
     if (this->sizeOfArray == capacity - 1) {
         resize();
@@ -36,7 +38,7 @@ void SortedBag::add(TComp e) {
 
     this->info[newNode] = e;
     this->left[newNode] = this->right[newNode] = -1;
-    this->parent[newNode] = -1;
+    // this->parent[newNode] = -1;
 
     if (this->root == -1) {
         this->root = newNode;
@@ -59,12 +61,13 @@ void SortedBag::add(TComp e) {
             this->right[currentParent] = newNode;
         }
 
-        this->parent[newNode] = currentParent;
+        // this->parent[newNode] = currentParent;
     }
 
     this->sizeOfArray++;
 }
 
+// BC = WC = TC = Theta(2 * capacity)
 void SortedBag::resize() {
     int newCapacity = 2 * this->capacity;
 
@@ -79,7 +82,7 @@ void SortedBag::resize() {
         newLeft[i] = this->left[i];
         newRight[i] = this->right[i];
         newNextEmpty[i] = this->nextEmpty[i];
-        newParent[i] = this->parent[i];
+        // newParent[i] = this->parent[i];
     }
 
     for (int i = this->capacity; i < newCapacity; ++i) {
@@ -95,17 +98,18 @@ void SortedBag::resize() {
     delete[] left;
     delete[] right;
     delete[] nextEmpty;
-    delete[] parent;
+    // delete[] parent;
 
     this->info = newInfo;
     this->left = newLeft;
     this->right = newRight;
     this->nextEmpty = newNextEmpty;
-    this->parent = newParent;
+    // this->parent = newParent;
     this->firstEmpty = this->capacity;
     this->capacity = newCapacity;
 }
 
+// BC = Theta(1), WC = Theta(log(number of nodes)), TC = O(log(number of nodes))
 bool SortedBag::remove(TComp e) {
     int current = this->root;
     int currentParent = -1;
@@ -154,7 +158,7 @@ bool SortedBag::remove(TComp e) {
                 this->right[currentParent] = child;
             }
         }
-        this->parent[child] = currentParent;
+        // this->parent[child] = currentParent;
 
     } else {
         currentParent = current;
@@ -175,9 +179,11 @@ bool SortedBag::remove(TComp e) {
             this->right[currentParent] = this->right[successor];
         }
 
+        /*
         if (this->right[successor] != -1) {
             this->parent[right[successor]] = currentParent;
         }
+        */
 
         current = successor;
     }
@@ -190,6 +196,7 @@ bool SortedBag::remove(TComp e) {
     return true;
 }
 
+// BC = Theta(1), WC = Theta(number of nodes), TC = O(number of nodes)
 bool SortedBag::search(TComp e) const {
     int current = this->root;
     while (current != -1) {
@@ -202,13 +209,26 @@ bool SortedBag::search(TComp e) const {
             current = this->right[current];
         }
     }
+
     return false;
 }
 
+// BC = WC = TC = Theta(number of nodes)
 int SortedBag::nrOccurrences(TComp e) const {
-    return nrOccurrencesRecursive(this->root, e);
+    // return nrOccurrencesRecursive(this->root, e);
+    int count = 0;
+
+    for(int i = 0; i < this->capacity; i++) {
+        if(this->info[i] == e) {
+            count++;
+        }
+    }
+
+    return count;
 }
 
+/*
+// BC = WC = TC = Theta(number of nodes)
 int SortedBag::nrOccurrencesRecursive(int node, TComp e) const {
     if (node == -1) {
         return 0;
@@ -217,23 +237,43 @@ int SortedBag::nrOccurrencesRecursive(int node, TComp e) const {
     return (this->info[node] == e) + nrOccurrencesRecursive(this->left[node], e) +
         nrOccurrencesRecursive(this->right[node], e);
 }
+*/
 
+// BC = WC = TC = Theta(1)
 int SortedBag::size() const {
     return this->sizeOfArray;
 }
 
+// BC = WC = TC = Theta(1)
 bool SortedBag::isEmpty() const {
     return this->sizeOfArray == 0;
 }
 
+// BC = WC = TC = Theta(1)
 SortedBagIterator SortedBag::iterator() const {
     return SortedBagIterator(*this);
 }
 
+int SortedBag::getRange() const {
+
+    int currentLeft = this->root, currentRight = this->root;
+
+    while(right[currentRight] != -1) {
+        currentRight = right[currentRight];
+    }
+
+    while(left[currentLeft] != -1) {
+        currentLeft = left[currentLeft];
+    }
+
+    return this->info[currentRight] - this->info[currentLeft];
+}
+
+// BC = WC = TC = Theta(1)
 SortedBag::~SortedBag() {
     delete[] this->info;
     delete[] this->left;
     delete[] this->right;
     delete[] this->nextEmpty;
-    delete[] this->parent;
+    // delete[] this->parent;
 }
