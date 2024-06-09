@@ -1,3 +1,0 @@
-C:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/sorted_multimap_hashtable.dir
-C:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/lucac/uni/ubb-cs/semester2/data-structures-and-algorithms/sorted-multimap-hashtable/cmake-build-debug/CMakeFiles/rebuild_cache.dir
