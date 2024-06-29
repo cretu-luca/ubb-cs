@@ -1,0 +1,7 @@
+bob;decebal;5;10;17;1
+darius;avram iancu;5;3;7;1
+denis;sucevei;4;4;20;0
+stanciu;memorandumului;8;20;12;0
+burebista;decebal;20;46;38;1
+hehe;memorandumului;88;23;54;0
+observer;decebal;29;20;32;1
