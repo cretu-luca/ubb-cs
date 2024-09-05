@@ -1,10 +1,12 @@
 #include "controller.h"
 
 Controller::Controller(const string& filepath, const string& filetype) {
-    if(filetype == "CSV") {
+    if (filetype == "CSV") {
         this->repository = new CSVRepository(filepath);
-    } else {
+    } else if (filetype == "HTML") {
         this->repository = new HTMLRepository(filepath);
+    } else if (filetype == "SQLITE") {
+        this->repository = new SQLiteRepository(filepath);
     }
     // this->generateMovies();
 }
