@@ -9,10 +9,9 @@ package repository;
 
 import model.Vehicle;
 
-public interface Repo {
-    public void add(Vehicle vehicle);
-
+public interface Repository {
+    public void add(Vehicle vehicle) throws CapacityExceededException;
     public void remove(Vehicle vehicle);
-
     public Vehicle[] getAll();
+    public int getSize();
 }

@@ -1,9 +1,9 @@
 package model;
 
-public class Car implements Vehicle {
+public class Bicycle implements Vehicle {
     String color;
 
-    public Car(String color) {
+    public Bicycle(String color) {
         this.color = color;
     }
 
@@ -14,11 +14,11 @@ public class Car implements Vehicle {
 
     @Override
     public String getModel() {
-        return "Car";
+        return "Bicycle";
     }
 
     @Override
     public String toString() {
-        return "Car {color='" + color + "'}";
+        return "Motorcycle{color='" + color + "'}";
     }
 }
