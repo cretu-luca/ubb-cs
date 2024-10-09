@@ -20,8 +20,9 @@ public class Console {
     private void printMenu() {
         System.out.println("0. Exit");
         System.out.println("1. Add vehicle");
-        System.out.println("2. Display all vehicles");
-        System.out.println("3. Display filtered vehicles");
+        System.out.println("2. Add vehicle");
+        System.out.println("3. Display all vehicles");
+        System.out.println("4. Display filtered vehicles");
         System.out.print("> ");
     }
 
@@ -48,9 +49,11 @@ public class Console {
                 this.service.addVehicleService(readVehicleInput());
                 break;
             case 2:
+                this.service.removeVehicleService(readVehicleInput());
+            case 3:
                 this.displayAllVehicles();
                 break;
-            case 3:
+            case 4:
                 this.displayFilteredVehicles();
                 break;
             default:
@@ -75,10 +78,13 @@ public class Console {
         System.out.println("Color:");
         String color = scanner.nextLine();
 
+        System.out.println("License plate:");
+        String licensePlate = scanner.nextLine();
+
         vehicle = switch (type) {
-            case 1 -> new Car(color);
-            case 2 -> new Motorcycle(color);
-            case 3 -> new Bicycle(color);
+            case 1 -> new Car(color, licensePlate);
+            case 2 -> new Motorcycle(color, licensePlate);
+            case 3 -> new Bicycle(color, licensePlate);
             default -> vehicle;
         };
 
@@ -98,7 +104,12 @@ public class Console {
     }
 
     private void displayFilteredVehicles() {
-        Vehicle[] vehicles = this.service.filter();
+        String filterKey;
+
+        System.out.print("Color to filter by:");
+        filterKey = scanner.nextLine();
+
+        Vehicle[] vehicles = this.service.filter(filterKey);
         if (vehicles.length == 0) {
             System.out.println("No red vehicles found.");
         } else {

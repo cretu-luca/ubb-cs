@@ -2,9 +2,11 @@ package model;
 
 public class Car implements Vehicle {
     String color;
+    String licensePlate;
 
-    public Car(String color) {
+    public Car(String color, String LicensePlate) {
         this.color = color;
+        this.licensePlate = LicensePlate;
     }
 
     @Override
@@ -18,7 +20,14 @@ public class Car implements Vehicle {
     }
 
     @Override
+    public String getLicensePlate() {
+        return this.licensePlate;
+    }
+
+    @Override
     public String toString() {
-        return "Car {color='" + color + "'}";
+        return "Model: " + this.getModel() + "\n" +
+                "License plate: " + this.getLicensePlate() + "\n" +
+                "Color: " + this.getColor() + "\n\n";
     }
 }
