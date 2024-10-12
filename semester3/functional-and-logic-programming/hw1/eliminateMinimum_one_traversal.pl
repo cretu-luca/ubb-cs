@@ -1,5 +1,10 @@
+% function wrapper
+
 eliminateMinimumWrapper([Head | Rest], Result):-
     eliminateMinimum(Head, Rest, [], Result).
+
+
+% eliminating the minimum by holding two buckets: one for those left to procees, another for the result so far
 
 eliminateMinimum(_, [], ListWithoutMinimum, ListWithoutMinimum).
 
