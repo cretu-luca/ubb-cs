@@ -1,12 +1,14 @@
 package model;
 
+import java.util.Objects;
+
 public class Bicycle implements Vehicle {
     String color;
-    String licencePlate;
+    String licensePlate;
 
-    public Bicycle(String color, String licencePlate) {
+    public Bicycle(String color, String licensePlate) {
         this.color = color;
-        this.licencePlate = licencePlate;
+        this.licensePlate = licensePlate;
     }
 
     @Override
@@ -21,7 +23,7 @@ public class Bicycle implements Vehicle {
 
     @Override
     public String getLicensePlate() {
-        return this.licencePlate;
+        return this.licensePlate;
     }
 
     @Override
@@ -29,5 +31,13 @@ public class Bicycle implements Vehicle {
         return "Model: " + this.getModel() + "\n" +
                 "License plate: " + this.getLicensePlate() + "\n" +
                 "Color: " + this.getColor() + "\n\n";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        Vehicle vehicle = (Vehicle) obj;
+        return Objects.equals(this.color, vehicle.getColor()) &&
+                Objects.equals(this.licensePlate, vehicle.getLicensePlate()) &&
+                Objects.equals(vehicle.getModel(), "Bicycle");
     }
 }

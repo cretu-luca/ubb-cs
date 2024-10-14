@@ -4,6 +4,7 @@ import model.Bicycle;
 import model.Car;
 import model.Motorcycle;
 import model.Vehicle;
+import repository.VechicleNotFoundException;
 import service.Service;
 
 import java.util.Scanner;
@@ -20,7 +21,7 @@ public class Console {
     private void printMenu() {
         System.out.println("0. Exit");
         System.out.println("1. Add vehicle");
-        System.out.println("2. Add vehicle");
+        System.out.println("2. Remove vehicle");
         System.out.println("3. Display all vehicles");
         System.out.println("4. Display filtered vehicles");
         System.out.print("> ");
@@ -49,7 +50,13 @@ public class Console {
                 this.service.addVehicleService(readVehicleInput());
                 break;
             case 2:
-                this.service.removeVehicleService(readVehicleInput());
+                try {
+                    this.service.removeVehicleService(readVehicleInput());
+                    System.out.println("Vehicle removed.");
+                } catch (VechicleNotFoundException e) {
+                    System.out.println(e.getMessage());
+                }
+                break;
             case 3:
                 this.displayAllVehicles();
                 break;
@@ -106,14 +113,14 @@ public class Console {
     private void displayFilteredVehicles() {
         String filterKey;
 
-        System.out.print("Color to filter by:");
+        System.out.print("Color to filter by: ");
         filterKey = scanner.nextLine();
 
         Vehicle[] vehicles = this.service.filter(filterKey);
         if (vehicles.length == 0) {
             System.out.println("No red vehicles found.");
         } else {
-            System.out.println("Filtered Vehicles (Red Color):");
+            System.out.println("Filtered Vehicles:");
             for (Vehicle vehicle : vehicles) {
                 System.out.println(vehicle);
             }

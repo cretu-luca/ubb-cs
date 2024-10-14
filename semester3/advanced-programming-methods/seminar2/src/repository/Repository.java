@@ -14,4 +14,5 @@ public interface Repository {
     public void remove(Vehicle vehicle);
     public Vehicle[] getAll();
     public int getSize();
+    public boolean exists(Vehicle vehicle);
 }

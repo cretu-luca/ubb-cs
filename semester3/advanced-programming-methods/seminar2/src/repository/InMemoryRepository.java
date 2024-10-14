@@ -7,7 +7,7 @@ public class InMemoryRepository implements Repository {
     private int size;
 
     public InMemoryRepository() {
-        this.vehicles = new Vehicle[3];
+        this.vehicles = new Vehicle[5];
         this.size = 0;
     }
 
@@ -26,7 +26,16 @@ public class InMemoryRepository implements Repository {
 
     @Override
     public void remove(Vehicle vehicle) {
-        // TODO: repository remove
+        for (int i = 0; i < size; i++) {
+            if (this.vehicles[i].equals(vehicle)) {
+                for (int j = i; j < size - 1; j++) {
+                    this.vehicles[j] = this.vehicles[j + 1];
+                }
+
+                this.vehicles[size - 1] = null;
+                size--;
+            }
+        }
     }
 
     @Override
@@ -39,5 +48,15 @@ public class InMemoryRepository implements Repository {
     @Override
     public int getSize() {
         return this.size;
+    }
+
+    @Override
+    public boolean exists(Vehicle vehicle) {
+        for (int i = 0; i < size; i++) {
+            if (this.vehicles[i].equals(vehicle))
+                return true;
+        }
+
+        return false;
     }
 }
