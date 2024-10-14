@@ -1,11 +1,10 @@
 package service;
 
-import com.sun.jdi.connect.VMStartException;
 import model.Car;
 import model.Vehicle;
 import repository.CapacityExceededException;
 import repository.Repository;
-import repository.VechicleNotFoundException;
+import repository.VechicleExistenceException;
 
 import java.util.Objects;
 
@@ -18,10 +17,14 @@ public class Service {
     }
 
     public void addVehicleService(Vehicle vehicle) {
-        try {
-            this.repository.add(vehicle);
-        } catch (CapacityExceededException e) {
-            System.out.println(e.getMessage());
+        if(this.repository.exists(vehicle)) {
+            throw new VechicleExistenceException("Vehicle already exists");
+        } else {
+            try {
+                this.repository.add(vehicle);
+            } catch (CapacityExceededException e) {
+                System.out.println(e.getMessage());
+            }
         }
     }
 
@@ -29,7 +32,7 @@ public class Service {
         if(this.repository.exists(vehicle)) {
             this.repository.remove(vehicle);
         } else {
-            throw new VechicleNotFoundException("Vehicle does not exist");
+            throw new VechicleExistenceException("Vehicle does not exist");
         }
     }
 

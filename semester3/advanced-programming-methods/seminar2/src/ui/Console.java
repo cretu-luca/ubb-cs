@@ -4,7 +4,7 @@ import model.Bicycle;
 import model.Car;
 import model.Motorcycle;
 import model.Vehicle;
-import repository.VechicleNotFoundException;
+import repository.VechicleExistenceException;
 import service.Service;
 
 import java.util.Scanner;
@@ -47,13 +47,18 @@ public class Console {
                 System.out.println("Exiting the application.");
                 break;
             case 1:
-                this.service.addVehicleService(readVehicleInput());
+                try {
+                    this.service.addVehicleService(readVehicleInput());
+                    System.out.println("Vehicle added.");
+                } catch (VechicleExistenceException e) {
+                    System.out.println(e.getMessage());
+                }
                 break;
             case 2:
                 try {
                     this.service.removeVehicleService(readVehicleInput());
                     System.out.println("Vehicle removed.");
-                } catch (VechicleNotFoundException e) {
+                } catch (VechicleExistenceException e) {
                     System.out.println(e.getMessage());
                 }
                 break;
