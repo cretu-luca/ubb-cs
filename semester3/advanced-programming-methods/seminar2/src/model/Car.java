@@ -34,8 +34,9 @@ public class Car implements Vehicle {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        Vehicle vehicle = (Vehicle) obj;
+    public boolean equals(Vehicle vehicle) {
+        // down-casting
+        // Vehicle vehicle = (Vehicle) obj;
         return Objects.equals(this.color, vehicle.getColor()) &&
                 Objects.equals(this.licensePlate, vehicle.getLicensePlate()) &&
                 Objects.equals(vehicle.getModel(), "Car");
