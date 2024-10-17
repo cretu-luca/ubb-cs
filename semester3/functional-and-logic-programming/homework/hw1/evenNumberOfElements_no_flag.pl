@@ -2,11 +2,11 @@
 % left with one element -> odd number of elements
 % left with no elements -> even number of elements
 
-% evenNumberOfElements (List, Boolean)
+% evenLength (List, Boolean)
 % (i, o) -> deterministic
 
-evenNumberOfElements([], true).
-evenNumberOfElements([_], false).
+evenLength([], true).
+evenLength([_], false).
 
-evenNumberOfElements([_ | [_ | Tail]], Ans):-
-    evenNumberOfElements(Tail, Ans).
+evenLength([_ | [_ | Tail]], Ans):-
+    evenLength(Tail, Ans).
