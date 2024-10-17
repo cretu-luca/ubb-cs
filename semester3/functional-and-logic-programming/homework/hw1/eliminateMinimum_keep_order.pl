@@ -1,29 +1,28 @@
-% Wrapper function
-
-eliminateMinimumWrapper([Head | Rest], Result):-
-    findMinimum(Rest, Head, Minimum),
-    eliminateMininum([Head | Rest], Minimum, Result).
+% wrapper function
+% eliminateMinimum(List, List)
+% (i, o) -> deterministic
+eliminateMinimum([Head | Tail], Result):-
+    findMinimum([Head | Tail], Minimum),
+    eliminateMinimumAux([Head | Tail], Minimum, Result).
 
 
 % eliminating the minimum
-
-eliminateMininum([], _, []). 
-
-eliminateMininum([Minimum | Rest], Minimum, Rest):- !.
-
-eliminateMininum([Head | Rest], Minimum, [Head | Result]):-
+% eliminateMininumAux(List, Element, List)
+% (i, i, o) -> deterministic
+eliminateMinimumAux([], _, []). 
+eliminateMinimumAux([Minimum | Rest], Minimum, Rest):- !.
+eliminateMinimumAux([Head | Rest], Minimum, [Head | Result]):-
     Head \= Minimum, 
-    eliminateMininum(Rest, Minimum, Result).
+    eliminateMinimumAux(Rest, Minimum, Result).
 
 
-% Finding the minimum    
-    
-findMinimum([], Current, Current).
-    
-findMinimum([Head | Rest], Current, Minimum):-
-	Head < Current,
-    findMinimum(Rest, Head, Minimum).
-
-findMinimum([Head | Rest], Current, Minimum):-
-    Head >= Current,
-    findMinimum(Rest, Current, Minimum).
+% finding the minimum
+% findMinimum(List, Element)
+% (i, o) -> deterministic
+findMinimum([Min], Min).
+findMinimum([Head | Tail], Head):-
+    findMinimum(Tail, TailMin),
+    Head =< TailMin.
+findMinimum([Head | Tail], TailMin):-
+    findMinimum(Tail, TailMin),
+    Head > TailMin.
