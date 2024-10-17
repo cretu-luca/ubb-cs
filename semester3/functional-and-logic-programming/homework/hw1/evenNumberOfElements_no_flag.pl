@@ -9,4 +9,4 @@ evenNumberOfElements([], true).
 evenNumberOfElements([_], false).
 
 evenNumberOfElements([_ | [_ | Tail]], Ans):-
-    evenNumberOfElements(Rest, Ans).
+    evenNumberOfElements(Tail, Ans).
