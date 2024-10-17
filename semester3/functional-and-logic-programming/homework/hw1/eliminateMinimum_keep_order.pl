@@ -2,7 +2,7 @@
 % eliminateMinimumWrapper(List, List)
 % (i, o) -> deterministic
 eliminateMinimumWrapper([Head | Tail], Result):-
-    findMinimum([Head | Tail], Minimum),
+    findMin([Head | Tail], Minimum),
     eliminateMin([Head | Tail], Minimum, Result).
 
 
