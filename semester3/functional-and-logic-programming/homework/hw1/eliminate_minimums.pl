@@ -4,17 +4,17 @@ elimMin(List, Ans):-
 % MinD -> minimum going down recursion spiral
 % MinU -> minimum coming up recursion spiral
     
-elimMin_aux([], M, M, []).
+elimMin_aux([], MinD, MinD, []).
     
 elimMin_aux([Head | Tail], MinD, MinU, [Head | Ans]):-
     Head =< MinD,
     elimMin_aux(Tail, Head, MinU, Ans),
-	  Head =\= MinU.
+    Head =\= MinU.
 
 elimMin_aux([Head | Tail], MinD, MinU, Ans):-
     Head =< MinD,
     elimMin_aux(Tail, Head, MinU, Ans),
-	  Head =:= MinU.
+    Head =:= MinU.
     
 elimMin_aux([Head | Tail], MinD, MinU, Ans):-
     Head > MinD,
