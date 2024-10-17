@@ -1,12 +1,12 @@
 import ui.Console;
 import repository.InMemoryRepository;
-import service.Service;
+import controller.Controller;
 
 public class Main {
     public static void main(String[] args) {
         InMemoryRepository repository = new InMemoryRepository();
-        Service service = new Service(repository);
-        Console console = new Console(service);
+        Controller controller = new Controller(repository);
+        Console console = new Console(controller);
         console.run();
     }
 }

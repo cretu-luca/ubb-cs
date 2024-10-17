@@ -1,4 +1,4 @@
-package service;
+package controller;
 
 import model.Car;
 import model.Vehicle;
@@ -8,10 +8,10 @@ import repository.VechicleExistenceException;
 
 import java.util.Objects;
 
-public class Service {
+public class Controller {
     private Repository repository;
 
-    public Service(Repository repository) {
+    public Controller(Repository repository) {
         this.repository = repository;
         this.populateRepository();
     }

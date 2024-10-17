@@ -5,16 +5,16 @@ import model.Car;
 import model.Motorcycle;
 import model.Vehicle;
 import repository.VechicleExistenceException;
-import service.Service;
+import controller.Controller;
 
 import java.util.Scanner;
 
 public class Console {
-    private Service service;
+    private Controller controller;
     private Scanner scanner;
 
-    public Console(Service service) {
-        this.service = service;
+    public Console(Controller controller) {
+        this.controller = controller;
         this.scanner = new Scanner(System.in);
     }
 
@@ -48,7 +48,7 @@ public class Console {
                 break;
             case 1:
                 try {
-                    this.service.addVehicleService(readVehicleInput());
+                    this.controller.addVehicleService(readVehicleInput());
                     System.out.println("Vehicle added.");
                 } catch (VechicleExistenceException e) {
                     System.out.println(e.getMessage());
@@ -56,7 +56,7 @@ public class Console {
                 break;
             case 2:
                 try {
-                    this.service.removeVehicleService(readVehicleInput());
+                    this.controller.removeVehicleService(readVehicleInput());
                     System.out.println("Vehicle removed.");
                 } catch (VechicleExistenceException e) {
                     System.out.println(e.getMessage());
@@ -104,7 +104,7 @@ public class Console {
     }
 
     private void displayAllVehicles() {
-        Vehicle[] vehicles = this.service.getAllVehiclesService();
+        Vehicle[] vehicles = this.controller.getAllVehiclesService();
         if (vehicles.length == 0) {
             System.out.println("No vehicles available.");
         } else {
@@ -121,9 +121,9 @@ public class Console {
         System.out.print("Color to filter by: ");
         filterKey = scanner.nextLine();
 
-        Vehicle[] vehicles = this.service.filter(filterKey);
+        Vehicle[] vehicles = this.controller.filter(filterKey);
         if (vehicles.length == 0) {
-            System.out.println("No red vehicles found.");
+            System.out.println("No such vehicles found.");
         } else {
             System.out.println("Filtered Vehicles:");
             for (Vehicle vehicle : vehicles) {
