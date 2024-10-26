@@ -1,11 +1,11 @@
-bubbleSortWrapper(List, SortedFinal):- 
-    bubbleSort(List, [], SortedFinal).
+bubbleSortWrapper(L, SortedFinal):- 
+      bubbleSortAux(L, [], SortedFinal).
 
-bubbleSort([], SortedSoFar, SortedSoFar).
+bubbleSortAux([], SortedSoFar, SortedSoFar).
 
-bubbleSort([Head | Rest], SortedSoFar, SortedFinal):- 
-    swap(Head, Rest, ListExceptMax, Max),
-    bubbleSort(ListExceptMax, [Max | SortedSoFar], SortedFinal).
+bubbleSortAux([H | T], SortedSoFar, SortedFinal):- 
+    swap(H, T, ListExceptMax, Max),
+    bubbleSortAux(ListExceptMax, [Max | SortedSoFar], SortedFinal).
 
 swap(X, [], [], X).
 
