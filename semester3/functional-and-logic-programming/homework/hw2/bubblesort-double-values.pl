@@ -17,14 +17,14 @@ bubbleSortAux([H | T], SortedSoFar, SortedFinal):-
 % swap (X - Element, L - List, L - List, Max - Element) 
 % flow model: (i, i, o, o)
 % deterministic
-swap(X, [], [], X).
-swap(X, [Y | T], [Y | ListExceptMax], Max):-
+isolateMax(X, [], [], X).
+isolateMax(X, [Y | T], [Y | ListExceptMax], Max):-
     X > Y, 
     !,
-    swap(X, T, ListExceptMax, Max).
-swap(X, [Y | T], [X | ListExceptMax], Max):-
-	swap(Y, T, ListExceptMax, Max).
+    isolateMax(X, T, ListExceptMax, Max).
+isolateMax(X, [Y | T], [X | ListExceptMax], Max):-
+	isolateMax(Y, T, ListExceptMax, Max).
 
-%swap(X, [Y | T], ListExceptMax, Max):-
+%isolateMax(X, [Y | T], ListExceptMax, Max):-
 %	X == Y,
-%	swap(Y, T, ListExceptMax, Max).
+%	isolateMax(Y, T, ListExceptMax, Max).
