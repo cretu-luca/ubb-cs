@@ -11,7 +11,7 @@ bubbleSort(L, SortedFinal):-
 % deterministic
 bubbleSortAux([], SortedSoFar, SortedSoFar).
 bubbleSortAux([H | T], SortedSoFar, SortedFinal):- 
-    swap(H, T, ListExceptMax, Max),
+    isolateMax(H, T, ListExceptMax, Max),
     bubbleSortAux(ListExceptMax, [Max | SortedSoFar], SortedFinal).
 
 % swap (X - Element, L - List, L - List, Max - Element) 
