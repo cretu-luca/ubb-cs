@@ -8,15 +8,12 @@
 #define PORT 1235
 #define BUFFER_SIZE 1024
 
-int client_socket;
+int client_socket, broadcast = 1, reuse = 1;
 char buffer[BUFFER_SIZE];
 
 int main() {
     struct sockaddr_in server_addr, client_addr;
     socklen_t addr_len = sizeof(server_addr);
-    
-    int broadcast = 1;
-    int reuse = 1;
 
     client_socket = socket(AF_INET, SOCK_DGRAM, 0);
     setsockopt(client_socket, SOL_SOCKET, SO_BROADCAST, &broadcast, sizeof(broadcast));
@@ -33,7 +30,7 @@ int main() {
 
     while (1) {
         memset(buffer, 0, BUFFER_SIZE);
-        int bytes_received = recvfrom(client_socket, buffer, BUFFER_SIZE, 0, (struct sockaddr*)&server_addr, &addr_len);
+        int bytes_received = recvfrom(client_socket, buffer, BUFFER_SIZE, 0, (struct sockaddr*) &server_addr, &addr_len);
         
         if (bytes_received < 0) {
             perror("Receive failed");
