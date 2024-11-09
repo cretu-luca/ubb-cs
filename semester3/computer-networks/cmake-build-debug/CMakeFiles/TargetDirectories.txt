@@ -1,3 +1,0 @@
-C:/Users/lucac/ubb-cs/semester3/computer-networks/cmake-build-debug/CMakeFiles/computer_networks.dir
-C:/Users/lucac/ubb-cs/semester3/computer-networks/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/lucac/ubb-cs/semester3/computer-networks/cmake-build-debug/CMakeFiles/rebuild_cache.dir
