@@ -16,7 +16,7 @@ def handle_tcp_client(client_socket, addr):
                 break
 
             sum_received = int.from_bytes(data, byteorder='little')
-            print(f"Received sum {sum_received} from {addr}")
+            print(f"Received {sum_received} from {addr}")
     except Exception as e:
         print(f"Error with client {addr}: {e}")
     finally:
@@ -41,12 +41,15 @@ def run_udp_server():
 
     try:
         while True:
-            num1 = random.randint(1, 100)
-            num2 = random.randint(1, 100)
-            numbers = f"{num1},{num2}"
 
-            server_socket.sendto(numbers.encode(), ('255.255.255.255', UDP_PORT))
-            print(f"Broadcasting: {numbers}")
+            N = random.randint(1, 10)
+            buffer = f"{N}"
+            for i in range(N):
+                val = random.randint(1, 10)
+                buffer = buffer + f";{val}"
+
+            server_socket.sendto(buffer.encode(), ('255.255.255.255', UDP_PORT))
+            print(f"Broadcasting: {buffer}")
 
             time.sleep(1)
     except Exception as e:
