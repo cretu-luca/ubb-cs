@@ -1,6 +1,6 @@
 # server broadcasts array of numbers
-# client sends back the sum over TCP with 1/3 chance of error
-# server sends back whether answer was right or not 
+# client sends back the sum over TCP
+# server sends back whether sum is prime or not 
 
 import threading
 import socket

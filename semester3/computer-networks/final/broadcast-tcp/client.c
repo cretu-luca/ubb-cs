@@ -1,5 +1,3 @@
-// does not work (there was some confusion around)
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
