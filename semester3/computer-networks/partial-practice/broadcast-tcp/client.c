@@ -45,7 +45,7 @@ int main() {
     }
 
     struct sockaddr_in tcp_addr;
-    memset(&udp_addr, 0, sizeof(tcp_addr));
+    memset(&tcp_addr, 0, sizeof(tcp_addr));tcp_addr
     tcp_addr.sin_family = AF_INET;
     tcp_addr.sin_port = htons(TCP_PORT);
     tcp_addr.sin_addr.s_addr = inet_addr(IP);
