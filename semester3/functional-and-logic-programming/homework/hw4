@@ -1,0 +1,37 @@
+; a) A linear list is given. Eliminate from the list all elements from N to N steps, N-given.
+; b) Write a function to test if a linear list of integer numbers has a "valley" aspect (a list has a valley
+; aspect if the items decrease to a certain point and then increase. Eg. 10 8 6 17 19 20). A list must have
+; at least 3 elements to fullfill this condition.
+; c) Build a function that returns the minimum numeric atom from a list, at any level.
+; d) Write a function that deletes from a linear list of all occurrences of the maximum element.
+
+; a) 
+(defun eliminate (my_list n)
+  (loop for x in my_list
+      for i from 1
+      when (not (zerop (mod i n)))
+      collect x))
+      
+; b)    
+  
+      
+; c) 
+  
+  
+      
+; d)
+(defun remove_max (my_list)
+  (let ((max (find_max my_list)))
+    (loop for x in my_list
+          when (/= x max)
+          collect x)))  
+
+(defun find_max (my_list)
+  (let ((max (car my_list)))
+    (loop for element in my_list
+          do (if (> element max)
+                 (setf max element))
+          finally (return max)))) 
+
+(print (remove_max '(1 5 3 9 8 2)))
+(print (eliminate '(1 2 3 4 5 6) 2))
