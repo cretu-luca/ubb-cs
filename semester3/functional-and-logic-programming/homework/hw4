@@ -8,30 +8,73 @@
 ; a) 
 (defun eliminate (my_list n)
   (loop for x in my_list
-      for i from 1
-      when (not (zerop (mod i n)))
-      collect x))
+    for i from 1
+    when (not (zerop (mod i n)))
+    collect x))
       
-; b)    
+(print (eliminate '(1 2 3 4 5 6) 2))
+
+; b)
+(defun is_valley (my_list)
+  (if (< (length my_list) 3)
+      nil
+      (let ((first_two_decrease (< (cadr my_list) (car my_list))))
+        (valley_helper (cdr my_list) (car my_list) first_two_decrease nil))))
+
+(defun valley_helper (my_list prev is_decreasing found_decrease)
+  (cond
+    ((null my_list) (and (not is_decreasing) found_decrease))
+    
+    (is_decreasing
+     (cond
+       ((< (car my_list) prev)
+        (valley_helper (cdr my_list) (car my_list) t t))
+       ((> (car my_list) prev)
+        (valley_helper (cdr my_list) (car my_list) nil t))
+       (t nil)))
+    
+    (t
+     (if (> (car my_list) prev)
+         (valley_helper (cdr my_list) (car my_list) nil found_decrease)
+         nil))))
   
+(print (is_valley '(10 8 6 17 19 20)))
+(print (is_valley '(1 2 3 4 5)))  
+(print (is_valley '(3 4 5 4 3 2 1)))    
       
 ; c) 
-  
-  
+(defun find_min_number (my_list)
+  (cond 
+    ((null my_list) nil)
+    ((numberp (car my_list))
+     (let ((rest_min (find_min_number (cdr my_list))))
+       (if (null rest_min) 
+           (car my_list)
+           (min (car my_list) rest_min))))
+    
+    ((listp (car my_list))
+     (let ((current_min (find_min_number (car my_list)))
+           (rest_min (find_min_number (cdr my_list))))
+       (cond 
+         ((null current_min) rest_min)
+         ((null rest_min) current_min)
+         (t (min current_min rest_min)))))
+    (t (find_min_number (cdr my_list)))))
+    
+(print (find_min_number '(1 2 3 (4 5 (0) 6) 7)))
       
 ; d)
 (defun remove_max (my_list)
   (let ((max (find_max my_list)))
     (loop for x in my_list
-          when (/= x max)
-          collect x)))  
+      when (/= x max)
+      collect x)))  
 
 (defun find_max (my_list)
   (let ((max (car my_list)))
     (loop for element in my_list
-          do (if (> element max)
-                 (setf max element))
-          finally (return max)))) 
+      do (if (> element max)
+             (setf max element))
+      finally (return max)))) 
 
 (print (remove_max '(1 5 3 9 8 2)))
-(print (eliminate '(1 2 3 4 5 6) 2))
