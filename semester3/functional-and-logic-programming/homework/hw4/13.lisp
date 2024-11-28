@@ -6,13 +6,16 @@
 ; d) Write a function that deletes from a linear list of all occurrences of the maximum element.
 
 ; a) 
-(defun eliminate (my_list n)
-  (loop for x in my_list
-    for i from 1
-    when (not (zerop (mod i n)))
-    collect x))
-      
-(print (eliminate '(1 2 3 4 5 6) 2))
+(defun eliminate_main (my_list n)
+  (eliminate my_list n 1))
+
+(defun eliminate (my_list n index)
+  (cond ((null my_list) nil)
+        ((zerop (mod index n)) (eliminate (cdr my_list) n (1+ index)))
+        (t (cons (car my_list) 
+                 (eliminate (cdr my_list) n (1+ index))))))
+
+(print (eliminate_main '(1 2 3 4 5) 3))
 
 ; b)
 (defun is_valley (my_list)
