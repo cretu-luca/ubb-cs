@@ -67,17 +67,19 @@
 (print (find_min_number '(1 2 3 (4 5 (0) 6) 7)))
       
 ; d)
+(defun find_max (my_list)
+  (cond ((null (cdr my_list)) (car my_list))
+        (t (max (car my_list)
+                (find_max (cdr my_list))))))
+
 (defun remove_max (my_list)
   (let ((max (find_max my_list)))
-    (loop for x in my_list
-      when (/= x max)
-      collect x)))  
+    (remove_max_helper my_list max)))
 
-(defun find_max (my_list)
-  (let ((max (car my_list)))
-    (loop for element in my_list
-      do (if (> element max)
-             (setf max element))
-      finally (return max)))) 
+(defun remove_max_helper (my_list max)
+  (cond ((null my_list) nil)
+        ((= (car my_list) max) (remove_max_helper (cdr my_list) max))
+        (t (cons (car my_list) 
+                 (remove_max_helper (cdr my_list) max)))))
 
 (print (remove_max '(1 5 3 9 8 2)))
