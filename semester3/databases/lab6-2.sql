@@ -43,7 +43,8 @@ BEGIN
 END;
 
 CREATE OR ALTER PROCEDURE runTest
-    @TestName VARCHAR(50)
+    @TestName VARCHAR(50),
+    @TableName VARCHAR(50)
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -61,9 +62,12 @@ BEGIN
     BEGIN
         DECLARE @DeleteStart DATETIME = GETDATE();
 
-        DELETE FROM Department;
-        DELETE FROM City;
-        DELETE FROM Budget;
+        IF @TableName = 'Department'
+            DELETE FROM Department;
+        ELSE IF @TableName = 'City'
+            DELETE FROM City;
+        ELSE IF @TableName = 'Budget'
+            DELETE FROM Budget;
 
         INSERT INTO TestRunTables (TestRunID, TableID, StartAt, EndAt)
         SELECT
@@ -85,9 +89,12 @@ BEGIN
         JOIN Tables t ON tt.TableID = t.TableID
         WHERE t.Name = 'Budget' AND tt.TestID = @TestID;
 
-        EXEC InsertTestBudget @RowCount;
-        EXEC InsertTestCity @RowCount;
-        EXEC InsertTestDepartment @RowCount;
+        IF @TableName = 'Budget'
+            EXEC InsertTestBudget @RowCount;
+        ELSE IF @TableName = 'City'
+            EXEC InsertTestCity @RowCount;
+        ELSE IF @TableName = 'Department'
+            EXEC InsertTestDepartment @RowCount;
 
         INSERT INTO TestRunTables (TestRunID, TableID, StartAt, EndAt)
         SELECT
@@ -101,14 +108,23 @@ BEGIN
 
     IF @TestName = 'select_view'
     BEGIN
+        DECLARE @ViewStart DATETIME = GETDATE();
+
         INSERT INTO TestRunViews (TestRunID, ViewID, StartAt, EndAt)
         SELECT
             @TestRunID,
             ViewID,
-            GETDATE(),
-            GETDATE()
+            @ViewStart,
+            @ViewStart
         FROM TestViews
         WHERE TestID = @TestID;
+
+        IF @TableName = 'CityPopulation'
+            SELECT * FROM CityPopulation;
+        ELSE IF @TableName = 'CityDepartments'
+            SELECT * FROM CityDepartments;
+        ELSE IF @TableName = 'CityDepartmentStats'
+            SELECT * FROM CityDepartmentStats;
     END
 
     UPDATE TestRuns
@@ -116,7 +132,9 @@ BEGIN
     WHERE TestRunID = @TestRunID;
 END;
 
-EXEC runTest 'delete_table_100';
+EXEC runTest 'delete_table_100', 'Department';
+EXEC runTest 'delete_table_100', 'City';
+EXEC runTest 'delete_table_100', 'Budget';
 
 SELECT 'Budget' as TableName, COUNT(*) as Count FROM Budget
 UNION ALL
@@ -124,7 +142,9 @@ SELECT 'City', COUNT(*) FROM City
 UNION ALL
 SELECT 'Department', COUNT(*) FROM Department;
 
-EXEC runTest 'insert_table_100';
+EXEC runTest 'insert_table_100', 'Budget';
+EXEC runTest 'insert_table_100', 'City';
+EXEC runTest 'insert_table_100', 'Department';
 
 SELECT 'Budget' as TableName, COUNT(*) as Count FROM Budget
 UNION ALL
@@ -132,7 +152,9 @@ SELECT 'City', COUNT(*) FROM City
 UNION ALL
 SELECT 'Department', COUNT(*) FROM Department;
 
-EXEC runTest 'select_view';
+EXEC runTest 'select_view', 'CityPopulation';
+EXEC runTest 'select_view', 'CityDepartments';
+EXEC runTest 'select_view', 'CityDepartmentStats';
 
 SELECT * FROM CityPopulation;
 SELECT * FROM CityDepartments;
