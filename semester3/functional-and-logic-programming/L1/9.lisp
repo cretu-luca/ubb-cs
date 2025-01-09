@@ -60,38 +60,63 @@
 (defun two-sum (l p)
   (two-sum-aux (reverse l) (reverse p) 0)
 )
+
 (defun two-sum-aux (l p tr)
-  (cond
-    ((AND (null l) (null p))  
-      (if (equal tr 1)
-        (list 1)
+  (cond 
+    ((and (null l) (null p)) 
+      (if (> tr 0) 
+        (list tr)
         nil
       )
     )
-    ((null l) 
-      (let ((tr2 (floor (+ (car p) tr) 10 ))
-            (c (mod (+ (car p) tr) 10))
-           )
-        (if 
-          (= tr2 1)
-          (list c)
-          (list c 1)
-        )
+    ((null l)
+      (append
+        (two-sum-aux nil (cdr p) (floor (+ (car p) tr) 10))
+        (list (mod (+ (car p) tr) 10))
       )
     )
-    (t 
-      (let ((tr2 (floor (+ (car p) (car l) tr) 10 ))
-            (c (mod (+ (car p) (car l) tr) 10))
-           )
-        (append
-          (two-sum-aux 
-            (cdr l) (cdr p) tr2 
-          )
-          (list c)
-        )
+    ((null p)
+      (append
+        (two-sum-aux (cdr l) nil (floor (+ (car l) tr) 10))
+        (list (mod (+ (car l) tr) 10))
+      )
+    )
+    (t
+      (append
+        (two-sum-aux (cdr l) (cdr p) (floor (+ (car l) (car p) tr) 10))
+        (list (mod (+ (car l) (car p) tr) 10))
       )
     )
   )
 )
 
-(print (two-sum '(1 5) '(9 9)))
+; (print (two-sum '(9) '(2)))
+
+; d)
+(defun gcd-lst (l)
+  (cond 
+    ((null l) nil)
+    ((null (cadr l)) (cadr l))
+    ((null (cddr l)) (my-gcd (car l) (cadr l)))
+    (t 
+      (my-gcd 
+        (car l)
+        (gcd-lst (cdr l))
+      )
+    )
+  )
+)
+
+(defun my-gcd (m n)
+  (cond
+    ((= m n) n)
+    ((> m n) 
+      (my-gcd (- m n) n)
+    )
+    (t 
+      (my-gcd m (- n m))
+    )
+  )
+)
+
+(print (gcd-lst '(198 154 44)))
