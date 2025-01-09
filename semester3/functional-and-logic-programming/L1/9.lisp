@@ -55,3 +55,43 @@
 )
 
 ; (print (replace-l '(1 2 3 2 4) '2 '(99 99 99))); => (1 (99 99 99) 3 (99 99 99) 4)
+
+; c)
+(defun two-sum (l p)
+  (two-sum-aux (reverse l) (reverse p) 0)
+)
+(defun two-sum-aux (l p tr)
+  (cond
+    ((AND (null l) (null p))  
+      (if (equal tr 1)
+        (list 1)
+        nil
+      )
+    )
+    ((null l) 
+      (let ((tr2 (floor (+ (car p) tr) 10 ))
+            (c (mod (+ (car p) tr) 10))
+           )
+        (if 
+          (= tr2 1)
+          (list c)
+          (list c 1)
+        )
+      )
+    )
+    (t 
+      (let ((tr2 (floor (+ (car p) (car l) tr) 10 ))
+            (c (mod (+ (car p) (car l) tr) 10))
+           )
+        (append
+          (two-sum-aux 
+            (cdr l) (cdr p) tr2 
+          )
+          (list c)
+        )
+      )
+    )
+  )
+)
+
+(print (two-sum '(1 5) '(9 9)))
