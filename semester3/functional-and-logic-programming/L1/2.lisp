@@ -62,6 +62,47 @@
   )
 )
 
+; --------------------------------------------
+
+(defun my-subseq (lst start end)
+  (cond
+    ((or (null lst) (= end 0)) nil)
+    ((= start 0)
+      (cons
+        (car lst)
+        (my-subseq (cdr lst) start (- end 1)) 
+      )
+    )
+    (t
+      (my-subseq (cdr lst) (- start 1) (- end 1))
+    )
+  )
+)
+
+(defun merge-lists (list1 list2)
+  (cond ((null list1) list2)
+        ((null list2) list1)
+        ((< (car list1) (car list2))
+         (cons (car list1) (merge-lists (cdr list1) list2)))
+        (t
+         (cons (car list2) (merge-lists list1 (cdr list2)))
+        )
+  )
+)
+
+(defun merge-sort (lst)
+  (if (or (null lst) (null (cdr lst)))
+      lst
+      (let* ((len (length lst))
+             (mid (floor len 2))
+             (left (my-subseq lst 0 mid))
+             (right (my-subseq lst mid len)))
+        (merge-lists (merge-sort left) (merge-sort right)))
+  )
+)
+        
+(print (merge-sort '(10 -2 42 -3 2 1 4 5 3 6)))
+
 ; (print (sortare '(-2 5 3 -3 4 1 2 0 -1)))
 
 ; d)
