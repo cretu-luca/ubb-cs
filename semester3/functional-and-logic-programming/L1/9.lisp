@@ -90,6 +90,42 @@
   )
 )
 
+; -------------------------------------------------------------
+
+(defun two-dif-aux (l p br)
+  (cond 
+    ((and (null l) (null p)) 
+      (if (< br 0) 
+          (list br)
+          nil))
+    
+    ((null p)
+      (append
+        (two-dif-aux (cdr l) nil (floor (- (car l) br) 10))
+        (list (mod (- (car l) br) 10))))
+    
+    ((null l)
+      (append
+        (two-dif-aux nil (cdr p) (floor (- 0 (car p) br) 10))
+        (list (mod (- 0 (car p) br) 10))))
+    
+    (t
+      (let ((diff (- (car l) (car p) br)))
+        (if (< diff 0)
+            (append 
+              (two-dif-aux (cdr l) (cdr p) 1)
+              (list (+ diff 10)))
+            (append
+              (two-dif-aux (cdr l) (cdr p) 0)
+              (list diff)))))))
+
+(defun two-dif (l p)
+  (two-dif-aux (reverse l) (reverse p) 0))
+
+(print (two-dif '(1 2 3) '(4 5)))
+(print (two-dif '(1 0 0) '(9 9)))
+(print (two-dif '(1 0) '(8)))
+
 ; (print (two-sum '(9) '(2)))
 
 ; d)
