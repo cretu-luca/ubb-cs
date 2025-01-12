@@ -1,0 +1,12 @@
+(setq car 'cdr)
+
+(car '(1 2 3 4))
+se face o variabila cu numele cdr 
+cand car e folosit ca primul element, se foloseste functia 
+
+(print ((eval car) '(1 2 3 4 5)))
+eval incearca sa evalueze valoarea unei variabile
+aici, car -> cdr 
+eval ia o variabila si incearca sa i afle valoarea, nu aplica nimic
+
+
