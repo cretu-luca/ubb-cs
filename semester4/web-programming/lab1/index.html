@@ -1,0 +1,132 @@
+<!-- <img>,<a>,<table>,<br>,<hr>,<p>,<b>,<div>,<ul>, <li>,<section>,<article>,<footer>,<header>,<aside>,<nav>, <svg>,<audio>,<video>,<figure>,<figurecaption>,<main> -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="This is a topology website.">
+        <title> Topology </title>
+    </head>
+    <body>
+        <header>
+            <h1>Topology</h1>
+            <nav>
+                <ul>
+                    <li><a href="#introduction"> Introduction </a></li>
+                    <li><a href="#manifolds"> Manifolds </a></li>
+                    <li><a href="#sphere-eversion"> Sphere Eversion </a></li>
+                    <li><a href="#resources"> Resources </a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <hr>
+        <main>
+            <article> 
+                <section id="introduction">
+                    <h2> Introduction to topology </h2>
+                    <p>
+                        <b>Topology</b> (from the Greek words τόπος, 'place, location', and λόγος, 'study') is the branch of mathematics <br> concerned with
+                        the properties of a geometric object that are preserved under continuous deformations, such <br> as stretching, twisting, crumpling, 
+                        and bending; that is, without closing holes, opening holes, tearing, gluing, <br> or passing through itself. 
+                    </p>
+
+                    <div>
+                        <figure>
+                            <img src="doughnut-to-cup.png" alt="doughnut to cup" width="500" height="100"> 
+                            <figcaption> Topological equivalence of a doughnut and a coffee cup </figcaption>
+                        </figure>
+                    </div>
+
+                    <p>In topology, a circle is a simple closed curve with no intersections.</p>
+                    <svg width="100" height="100">
+                        <circle cx="50" cy="50" r="40" stroke="green" fill="white" />
+                    </svg>
+                </section>
+                <section id="expert-insight">
+                    <h2> Expert  Insight </h2>
+                    <p> This is Sir Michael Francis Atiyah, a British-Lebanese mathematician, talking about topology. </p>
+                    <audio controls>
+                        <source src="audio.mp3">
+                    </audio>
+                </section>
+
+                <hr>
+                <section id="manifolds">
+                    <h2> Common manifolds </h2>
+                    <table> 
+                        <caption> Properties of Different Manifolds </caption>
+                        <thead>
+                            <tr>
+                                <th>Manifold</th>
+                                <th>Euler Number</th>
+                                <th>Shape</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr> 
+                                <td>Sphere</td>
+                                <td>2</td>
+                                <td>
+                                    <img src="sphere.png" alt="Sphere" width="40" height="40">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Torus</td>
+                                <td>0</td>
+                                <td>
+                                    <img src="torus.png" alt="Torus" width="40" height="30">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2-holed Torus</td>
+                                <td>-2</td>
+                                <td>
+                                    <img src="2-holed-torus.png" alt="2-holed Torus" width="40" height="30">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <hr>
+                <section id="sphere-eversion">
+                    <h2> Sphere eversion </h2>
+                    <p>
+                        In differential topology, sphere eversion is a theoretical process of turning a sphere inside out in a <br> three-dimensional space (the word eversion means "turning inside out"). 
+                        It is possible to smoothly and <br> continuously turn a sphere inside out in this way (allowing self-intersections of the sphere's surface) <br> without cutting or tearing it or creating any crease. 
+                        This is surprising, both to non-mathematicians and <br> to those who understand regular homotopy, and can be regarded as a veridical paradox; that is something <br> that, while being true, on first 
+                        glance seems false.
+                    </p>
+                    <p> While eversing the sphere, a half-way model is obtained, called a Morin surface. </p>
+
+                    <figure>
+                        <img src="morin-surface.png">
+                        <figcaption > Morin surface, seen from above. </figcaption>
+                    </figure>
+            
+                    <div>
+                        <h3> Visual Demonstration </h3>
+                        <video width="300" controls> 
+                            <source src="turning-the-sphere-inside-out.mp4">
+                        </video>
+                    </div>
+                </section>
+            </article>
+            <hr>
+            <aside id="resources">
+                <h2>Additional Resources</h2>
+                <ul>
+                    <li><a href="https://en.wikipedia.org/wiki/Topology" target="_blank">Wikipedia: Topology</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=CIQN7H6Km34" target="_blank">Recommended Books</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Geometry" target="_blank">Related concepts</a></li>
+                </ul>
+            </aside>
+
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Cretu Luca. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
