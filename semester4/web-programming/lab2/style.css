@@ -1,0 +1,29 @@
+.main-section {
+    display: flex;
+    gap: 3rem;
+}
+
+.main-section.link-nav.link:hover section {
+    display: inline;
+}
+
+#link-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.section {
+    position: absolute;
+    display: hidden;
+}
+
+/*#title2 {
+    position: absolute;
+    left: 50px;
+    top: 10px;     
+}
+#title1 {
+    position: absolute;
+    left: 5px;
+    top: 10px;     
+}*/

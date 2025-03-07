@@ -1,0 +1,35 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    max-width: fit-content;
+}
+
+.item {
+    max-width: fit-content;
+    padding: 20px;
+    z-index: 10;
+    border: 1px solid #ddd
+}
+
+.item-and-menu {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    margin-left: 90px;
+}
+
+.item-and-menu:hover .menu {
+    display: block;
+    max-width: fit-content;
+    border: 1px solid #ddd;
+}
+
+.command {
+    padding: 12px;
+    border: 1px solid #ddd
+}
