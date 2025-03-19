@@ -1,0 +1,59 @@
+Data cycle:
+1. Connect to the data source
+2. Prepeare the app to receive the data
+3. Fetch the data
+4. Display the data
+5. Modify the data & validate
+6. Save
+
+DataSet:
+- local in-memory cache
+- working even if the DB connection is closed
+- relational structure
+Properties: Tables, Relations
+Methods: Clear(), HasChanges()
+
+SqlConnection:
+- Properties: ConnectionString, ConnectionTimeout
+- Methods: Open(), Close()
+
+SqlConnection sqlConn = new SqlConnection("Data Source=nameSQLServer; Initial Catalog=nameDB;
+Integrated Security=True, TrustServerCertificate=True")
+
+SSPI (Security Support Provider Interface)
+
+User_ID=user; Password=pass
+
+Try {
+    SqlConnection sqlConn = new SqlConnection("Data Source...")
+    SqlConn.Open();
+} catch (SqlException err)
+{ 
+    ... 
+} Finally {
+    sqlConn.Close();
+}
+
+Using (SqlConnection sqlConn = new SqlConnection("Data Source ...") {
+    sqlConn.Open();
+    ...
+}
+
+if the SqlException has severity > 19 -> the db connection is automatically closed
+
+Sql Command
+- executes sql statements and stored procedures
+- Properties: CommandType.Text, CommandType.StoredProcedure
+
+CommandText, CommandTimeout
+
+- Methods: ExecuteScalar() - returns first row first column
+ExecuteNonQuery()
+ExecuteReader() - returns a DataReader to iterate over the result set
+
+SqlDataAdapter
+- bridge between the sql server database and the C# app (DataSet class)
+- Properties: SelectCommand(used fot the Fill method)
+InsertCommand, UpdateCommand, DeleteCommand
+
+Methods: Fill(), Update();

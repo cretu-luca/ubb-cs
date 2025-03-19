@@ -1,0 +1,49 @@
+try {
+	SqlConnection sqlConn = new SqlConnection("Data Source=nameSQLServer; Initial Catalog=nameDB; Integrated Security=True, TrustServerCertificate=True"); 
+	sqlConn.Open();
+	SqlCommand sqlComm = new SqlCommand("SELECT COUNT (*) from Spies", sqlConn); 
+	Console.WriteLine(sqlComm.ExecuteScalar().ToString());
+
+	SqlCommand sqlComm2 = new SqlCommand("SELECT * FROM Spies, sqlConn");
+	SqlDataReader sqlRead = sqlComm2.ExecuteReader();
+	
+	while(sqlRead.Read()){
+		Console.WriteLine(sqlRead[0]);
+	} 
+	if(sqlRead != null) {
+		sqlRead.Close();
+	}
+
+	// sqlComm.CommandText = "Insert INTO Spies Values(200, 'John', 'James Bond', 35, 2.1, 90);
+	// sqlComm.ExecuteNonQuery();
+
+	DataSet dataset = new DataSet(); 
+	SqlDataAdapter dataAdapt = new SqlDataAdapter(); 
+	dataAdapt.Fill(dataset, "Spies");
+
+	DataTable table1 = dataset.Tables["Spies"];
+	
+	foreach (DataRow drow in talbe1.Rows) {
+		Console.WriteLine(drow[0]);
+	}
+
+	SqlCommand sqlComm3 = new SqlCommand("DELETE FROM Spies WHERE id = @id", sqlConn);
+	sqlComm4.Parameters.Add("@id", SqlDbType.Int, 4, id);
+	dataAdapt.DeleteCommand = sqlComm4;
+	
+	table1.Row[3].Delete(); 
+	dataAdapt.Update(dataSet, "Spies");
+
+	DataRow dataRow = table1.NewRow();
+	dataRow[0] = 4; 
+	dataRow[1] = "Luca"; 
+	dataRow[2] = "cod" 
+	dataRow[3] = 20; 
+	dataRow[4] = 1.85; 
+	dataRow[5] = 85; 
+	
+	SqlCommandBuilder sqlBuilder = new SqlCommandBuilder(dataAdapt); 
+
+	table1.Rows.Add(dataRow);
+	dataAdapt.Update(dataSet, "Spies"); 
+}
