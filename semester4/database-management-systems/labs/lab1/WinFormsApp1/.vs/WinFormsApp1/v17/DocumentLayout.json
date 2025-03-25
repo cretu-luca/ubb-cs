@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{3A7B4840-4CBD-448A-BB8D-340E0B485FCC}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A7B4840-4CBD-448A-BB8D-340E0B485FCC}|WinFormsApp1\\WinFormsApp1.csproj|x:\\ubb-cs\\semester4\\database-management-systems\\labs\\lab1\\winformsapp1\\winformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{3A7B4840-4CBD-448A-BB8D-340E0B485FCC}|WinFormsApp1\\WinFormsApp1.csproj|X:\\ubb-cs\\semester4\\database-management-systems\\labs\\lab1\\WinFormsApp1\\winformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3A7B4840-4CBD-448A-BB8D-340E0B485FCC}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -21,12 +21,25 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 274,
-          "SelectedChildIndex": 3,
+          "DockedHeight": 286,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "X:\\ubb-cs\\semester4\\database-management-systems\\labs\\lab1\\WinFormsApp1\\WinFormsApp1\\Form1.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Form1.cs",
+              "ToolTip": "X:\\ubb-cs\\semester4\\database-management-systems\\labs\\lab1\\WinFormsApp1\\WinFormsApp1\\Form1.cs",
+              "RelativeToolTip": "WinFormsApp1\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T17:07:11.791Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -36,7 +49,7 @@
               "RelativeDocumentMoniker": "WinFormsApp1\\Form1.Designer.cs",
               "ToolTip": "X:\\ubb-cs\\semester4\\database-management-systems\\labs\\lab1\\WinFormsApp1\\WinFormsApp1\\Form1.Designer.cs",
               "RelativeToolTip": "WinFormsApp1\\Form1.Designer.cs",
-              "ViewState": "AgIAAAYAAACYmZmZmZkhwB4AAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAA78zMzMz8vwsAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-19T17:48:39.678Z",
               "EditorCaption": ""
@@ -52,24 +65,11 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-19T17:33:55.112Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "X:\\ubb-cs\\semester4\\database-management-systems\\labs\\lab1\\WinFormsApp1\\WinFormsApp1\\Form1.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\Form1.cs",
-              "ToolTip": "X:\\ubb-cs\\semester4\\database-management-systems\\labs\\lab1\\WinFormsApp1\\WinFormsApp1\\Form1.cs",
-              "RelativeToolTip": "WinFormsApp1\\Form1.cs",
-              "ViewState": "AgIAACUAAAAACwAAAAAowD0AAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T17:07:11.791Z",
-              "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedHeight": 126,
+          "DockedHeight": 114,
           "SelectedChildIndex": -1,
           "Children": [
             {

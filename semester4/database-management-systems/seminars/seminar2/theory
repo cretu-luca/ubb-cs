@@ -1,0 +1,26 @@
+For data bound controls:
+- DataBindings property on GUI controls - bind any property of the control with a property of the object
+- Binding class - (propName, dataSource, dataMember)
+
+
+DataSet
+- initially it is empty
+- typed/untyped
+
+SqlDataAdapter - Update(), Fill()
+Update() - check the RowState ({Added, Modified, Deleted, Detached, Unchanged})
+- execute the corresponding command (InsertCommand, DeleteCommand, UpdateCommand)
+- Fill() using the SelectCommand tot retrieve data from the data source
+
+DataRelation: 
+- GetChildRows()
+- GetParentRow()
+- ForeignKeyConstraint automatically added
+
+Constraints:
+ForeignKeyConstraint, Unique Constraint
+DataTable.Constraints
+DataSet.EnforceConstraints = true (default)
+
+Entity Framework - ADO.NET technologies to support data-oriented apps
+- enables devs to work with domain specific objects and queries (LINQ) and the framework automatically translates them to data source specific language

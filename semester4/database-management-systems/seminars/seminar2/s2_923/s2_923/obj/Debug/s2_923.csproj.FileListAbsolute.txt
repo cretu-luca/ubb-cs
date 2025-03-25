@@ -1,0 +1,10 @@
+C:\Users\Ioana\Documents\DOCTORAT\PREDAT\DBSMs\2025\s2_923\s2_923\bin\Debug\s2_923.exe.config
+C:\Users\Ioana\Documents\DOCTORAT\PREDAT\DBSMs\2025\s2_923\s2_923\bin\Debug\s2_923.exe
+C:\Users\Ioana\Documents\DOCTORAT\PREDAT\DBSMs\2025\s2_923\s2_923\bin\Debug\s2_923.pdb
+C:\Users\Ioana\Documents\DOCTORAT\PREDAT\DBSMs\2025\s2_923\s2_923\obj\Debug\s2_923.csproj.AssemblyReference.cache
+C:\Users\Ioana\Documents\DOCTORAT\PREDAT\DBSMs\2025\s2_923\s2_923\obj\Debug\s2_923.Form1.resources
+C:\Users\Ioana\Documents\DOCTORAT\PREDAT\DBSMs\2025\s2_923\s2_923\obj\Debug\s2_923.Properties.Resources.resources
+C:\Users\Ioana\Documents\DOCTORAT\PREDAT\DBSMs\2025\s2_923\s2_923\obj\Debug\s2_923.csproj.GenerateResource.cache
+C:\Users\Ioana\Documents\DOCTORAT\PREDAT\DBSMs\2025\s2_923\s2_923\obj\Debug\s2_923.csproj.CoreCompileInputs.cache
+C:\Users\Ioana\Documents\DOCTORAT\PREDAT\DBSMs\2025\s2_923\s2_923\obj\Debug\s2_923.exe
+C:\Users\Ioana\Documents\DOCTORAT\PREDAT\DBSMs\2025\s2_923\s2_923\obj\Debug\s2_923.pdb
