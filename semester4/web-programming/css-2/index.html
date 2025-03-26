@@ -2,6 +2,9 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Source+Sans+3:wght@300;400;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="top-nav">
@@ -42,10 +45,6 @@
         </div>
 
         <div class="code-picture-and-right-side-area"> 
-          <div class="code-picture">
-            <button class="shell-button"> <span class="shell-button-text"> >_ </span> <span class="shell-button-text-2"> Launch Interactive Shell </span> </button>
-            <img src="code-picture.png">
-          </div>
           <div class="right-side-area">
             <div class="title-and-text-area">
               <div class="title"> Functions Defined </div>
@@ -61,6 +60,22 @@
               <button class="button-right-side">4</button>
               <button class="button-right-side">5</button>
             </div>
+          </div>
+          
+          <div class="code-picture">
+            <button class="shell-button"> <span class="shell-button-text"> >_ </span> <span class="shell-button-text-2"> Launch Interactive Shell </span> </button>
+            
+            <pre class="code-block">
+<span class="comment"># Python 3: Fibonacci series up to n</span>
+<span class="prompt">></span><span class="prompt">></span><span class="prompt-space"> </span><span class="prompt">def fib(n):</span>
+<span class="prompt">></span><span class="prompt">></span><span class="prompt-space"> </span><span class="indent-1 prompt">a, b = 0, 1</span>
+<span class="prompt">></span><span class="prompt">></span><span class="prompt-space"> </span><span class="indent-1 prompt">while a < n:</span>
+<span class="prompt">></span><span class="prompt">></span><span class="prompt-space"> </span><span class="indent-2 prompt">print(a, end=' ')</span>
+<span class="prompt">></span><span class="prompt">></span><span class="prompt-space"> </span><span class="indent-2 prompt">a, b = b, a + b</span>
+<span class="prompt">></span><span class="prompt">></span><span class="prompt-space"> </span><span class="indent-1 prompt">print()</span>
+<span class="prompt">></span><span class="prompt">></span><span class="prompt-space"> </span><span class="prompt">fib(1000)</span>
+<span class="output">0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987</span></pre>
+            <!-- <img src="code-picture.png"> -->
           </div>
         </div>
 
@@ -94,7 +109,7 @@
             </div>
 
             <div class="box-footer">
-              <span style="color: #74acd4;"> Start with our Beginner’s Guide </span>
+              <span style="color: #74acd4;"> Start with our Beginner's Guide </span>
             </div>
           </div> 
           <div class="box">

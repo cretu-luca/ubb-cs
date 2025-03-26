@@ -201,20 +201,64 @@ body {
   box-sizing: border-box;
 }
 
+.code-block {
+  font-family: 'Fira Mono', monospace;
+  line-height: 1.8;
+  color: #e0e0e0;
+  margin: 0;
+  white-space: pre-wrap;
+  font-size: 16px;
+  tab-size: 8;
+  -moz-tab-size: 8;
+  letter-spacing: 0.05em;
+  word-break: break-word;
+}
+
+.code-block .comment {
+  color: #4a5056;
+}
+
+.code-block .prompt {
+  color: #17961a;
+}
+
+.code-block .output {
+  color: #d2d3d3;
+  display: inline-block;
+  white-space: normal;
+  word-spacing: 0.5em;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+.code-block .indent-1 {
+  margin-left: 35px;
+  display: inline-block;
+}
+
+.code-block .indent-2 {
+  margin-left: 70px;
+  display: inline-block;
+}
+
+.code-block .prompt-space {
+  display: inline-block;
+  width: 10px;
+}
+
 .code-picture {
-  background-color: #1e2933;
+  background-color: #181e26;
   border-radius: 5px;
   padding: 20px;
   width: 50%;
   box-shadow: inset 12px 12px 12px rgba(0, 0, 0, 0.2), inset 0 -12px 12px rgba(0, 0, 0, 0.2);
   position: relative;
   box-sizing: border-box;
+  overflow-wrap: break-word;
 }
 
 .code-picture img {
-  width: 100%;
-  height: auto;
-  display: block;
+  display: none;
 }
 
 .right-side-area {  
@@ -469,18 +513,23 @@ body {
     background-color: #202932;
   }
 
-  /* shell button enlarges */
+  /* shell button enlarges and moves to top */
   .shell-button {
+    position: absolute;
     width: auto;
+    max-width: 90%;
     min-width: 250px;
     padding: 10px 20px;
     font-size: 16px;
-    right: 50%;
-    transform: translateX(50%);
-    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;
+    border-radius: 5px;
     background: linear-gradient(#ffd342, #f8d665);
     border: 1px solid #d5ad3c;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    margin: 0;
   }
 
   .shell-button .shell-button-text {
@@ -491,20 +540,27 @@ body {
     display: block;
   }
 
+  /* add more padding to the code picture to make room for button */
+  .code-picture {
+    padding-top: 60px;
+  }
+  
   /* code picture and text area layout */
   .code-picture-and-right-side-area {
     flex-direction: column;
     width: 100%;
     max-width: 800px;
     margin: 20px auto;
-    padding: 0 20px;
+    padding: 0;
     gap: 20px;
     box-sizing: border-box;
   }
 
   .code-picture {
     width: 100%;
-    margin: 0 auto;
+    margin: 0;
+    padding: 20px;
+    padding-top: 60px;
     box-sizing: border-box;
   }
 
@@ -527,10 +583,17 @@ body {
   /* top nav wraps */ 
   .top-nav {
     flex-direction: column;
+    position: relative;
   }
   
   .top-nav-item {
     width: 100%;
+  }
+
+  .shell-button {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   /* logo + donate + search wrap */
@@ -588,6 +651,13 @@ body {
 @media screen and (max-width: 550px) {
   .shell-button {
     width: 100%;
+    left: 0;
+    right: 0;
+    transform: none;
+    top: 0;
+    border-radius: 0;
+    margin: 0;
+    padding: 10px 0;
   }
 
   .shell-button .shell-button-text {
@@ -599,8 +669,10 @@ body {
   }
 
   .code-picture {
-    width: calc(100% - 40px);
-    margin: 0 20px;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    padding-top: 60px;
   }
 }
 
