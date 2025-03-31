@@ -18,7 +18,7 @@ namespace WinFormsApp1
         private Button button2;
         private System.ComponentModel.IContainer components = null;
 
-        SqlConnection conn = new SqlConnection("Data Source=np:\\\\.\\pipe\\LOCALDB#C859562D\\tsql\\query;" +
+        SqlConnection conn = new SqlConnection("Data Source=np:\\\\.\\pipe\\LOCALDB#35324E14\\tsql\\query;" +
             "Initial Catalog=CityPlanning;" +
             "Integrated Security=True");
         SqlDataAdapter city_data_adap = new SqlDataAdapter();
