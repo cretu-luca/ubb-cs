@@ -6,9 +6,10 @@ function handleSubmit() {
 }
 
 function populateTable(numbers) {
-    let table = document.getElementById("table")
-    table.innerHTML = ""
+    let table_div = document.getElementById("table-div")
+    table_div.innerHTML = ""
 
+/*
     let n = numbers.length / 5
     for (let i = 0; i < n; i++) {
         var rowNode = document.createElement("tr")
@@ -29,6 +30,41 @@ function populateTable(numbers) {
         }
 
         table.appendChild(rowNode)
+    }
+*/
+
+    let numberCount = numbers.length
+    let numberOfTables = parseInt(numberCount / 4)
+
+    // console.log("number count - ", numberCount)
+    // console.log("number of tables - ", numberOfTables)
+    
+    for (let tableIndex = 0; tableIndex <= numberOfTables; tableIndex++) {
+        var tableNode = document.createElement("table")
+
+        for (let i = 0; i < 2; i++) {
+            var rowNode = document.createElement("tr")
+
+            for (let j = 0; j < 2; j++) {
+                var cellNode = document.createElement("td")
+                var textNode
+
+                if (numberCount - (tableIndex * 4 + i * 2 + j) <= 0) {
+                    textNode = document.createTextNode(""); 
+                } else {  
+                    textNode = document.createTextNode(numbers[tableIndex * 4 + i * 2 + j]);
+                }
+
+                // console.log(numberOfTables * 4 + i * 2 + j);
+
+                cellNode.appendChild(textNode)
+                rowNode.appendChild(cellNode)
+            }
+
+            tableNode.appendChild(rowNode)
+        }
+
+        table_div.appendChild(tableNode)
     }
 }
 

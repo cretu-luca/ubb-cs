@@ -25,7 +25,7 @@ button {
 table {
   width: fit-content;
   border-collapse: collapse;
-  margin: auto;
+  margin: auto; 
 }
 
 td {
@@ -34,4 +34,10 @@ td {
   text-align: center;
   padding: 20px;
   margin: auto;
+}
+
+#table-div {
+  display: flex;
+  gap: 10px; 
+  flex-wrap: wrap;
 }
