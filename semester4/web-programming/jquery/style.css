@@ -1,0 +1,27 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slider-container {
+  width: 570px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-track {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  position: relative;
+  margin: auto;
+  max-width: 560px;
+}
+
+img {
+  width: 100px;
+  cursor: pointer;
+}
