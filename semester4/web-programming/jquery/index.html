@@ -2,21 +2,21 @@
  slide from the left to the right side of the browser window. Each image that exits the browser window on the right side should enter the browser window 
  on the left side. The sliding should be animated. If the user clicks on an image, the sliding is paused and a larger version of that window pops in the 
  center of the browser window (just like images appear in the Lightbox javascript library). If the user clicks anywhere on this large image, the image 
- dissapears and the sliding of the horizontal image bar is resumed. --> 
+ dissapears and the sliding of the horizontal image bar is resumed. -->
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="style.css" />
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="script.js"></script>
-    </head>
-
-    <body>
-        <div class="slider-container">
-            <div class="slider-track"> 
-                
-            </div>
-        </div>
-    </body>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="slider-container">
+      <div class="slider-track"></div>
+    </div>
+    <div class="pop-up-overlay">
+      <div class="pop-up-content"></div>
+    </div>
+  </body>
 </html>
