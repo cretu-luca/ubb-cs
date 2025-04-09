@@ -7,7 +7,6 @@ body {
   margin: 0;
 }
 .slider-container {
-  width: 570px;
   overflow: hidden;
   position: relative;
 }
@@ -17,7 +16,6 @@ body {
   gap: 15px;
   position: relative;
   margin: auto;
-  max-width: 560px;
 }
 img {
   width: 100px;
@@ -47,6 +45,26 @@ img {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.slider {
-  border: 1px solid red;
+.box-and-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
+}
+
+.image-selection-box {
+  width: 100px;
+  height: 200px;
+  margin: auto;
+}
+
+.box-and-button {
+  margin: auto;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  width: 100px;
 }

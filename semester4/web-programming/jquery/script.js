@@ -6,15 +6,41 @@ $(document).ready(function () {
     "images/3.png",
     "images/4.png",
   ];
+
   const $track = $(".slider");
   const $popUpOverlay = $(".pop-up-overlay");
   const $popUpContent = $(".pop-up-content");
+  const $selectionBox = $(".image-selection-box");
+  const $addButton = $(".add-button");
+
   let imageIndex = 0;
   let isRunning = true;
   let animationId = null;
+  let speed = 1;
+  let indices = [];
+
+  function animate() {
+    const currentLeft = parseInt($track.css("left"));
+    const $firstImage = $track.find(".image").first();
+    const imageWidth = $firstImage.outerWidth(true);
+    $track.css("left", currentLeft - speed + "px");
+
+    if (currentLeft <= -imageWidth) {
+      $firstImage.remove();
+      $track.css("left", "15px");
+      imageIndex = (imageIndex + 1) % images.length;
+      $track.append(
+        '<div class="image"><img src="' + images[imageIndex] + '" /></div>'
+      );
+    }
+
+    if (isRunning) {
+      animationId = requestAnimationFrame(animate);
+    }
+  }
 
   function setupSlider() {
-    for (let i = 0; i < images.length + 1; i++) {
+    for (let i = 0; i < 3 * images.length; i++) {
       const index = i % images.length;
       $track.append(
         '<div class="image"><img src="' + images[index] + '" /></div>'
@@ -31,6 +57,23 @@ $(document).ready(function () {
     $popUpOverlay.on("click", function () {
       hidePopUp();
     });
+
+    $addButton.on("click", function () {
+      $.each($("select option:selected"), function () {
+        images.push($(this).val());
+      });
+
+      console.log(images);
+    });
+
+    for (let i = 5; i < 15; i++) {
+      $selectionBox.append(
+        $("<option>", {
+          value: "images/" + i + ".png",
+          text: "images/" + i + ".png",
+        })
+      );
+    }
   }
 
   function showPopUp(imageSource) {
@@ -45,29 +88,6 @@ $(document).ready(function () {
   }
 
   function startAnimation() {
-    const speed = 1;
-
-    function animate() {
-      const currentLeft = parseInt($track.css("left") || "0");
-      const $firstImage = $track.find(".image").first();
-      const imageWidth = $firstImage.outerWidth(true);
-
-      $track.css("left", currentLeft - speed + "px");
-
-      if (currentLeft <= -imageWidth) {
-        $firstImage.remove();
-        $track.css("left", "15px");
-        imageIndex = (imageIndex + 1) % images.length;
-        $track.append(
-          '<div class="image"><img src="' + images[imageIndex] + '" /></div>'
-        );
-      }
-
-      if (isRunning) {
-        animationId = requestAnimationFrame(animate);
-      }
-    }
-
     animationId = requestAnimationFrame(animate);
   }
 
