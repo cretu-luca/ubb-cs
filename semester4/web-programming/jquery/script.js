@@ -6,7 +6,7 @@ $(document).ready(function () {
     "images/3.png",
     "images/4.png",
   ];
-  const $track = $(".slider-track");
+  const $track = $(".slider");
   const $popUpOverlay = $(".pop-up-overlay");
   const $popUpContent = $(".pop-up-content");
   let imageIndex = 0;
