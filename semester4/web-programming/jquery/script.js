@@ -63,6 +63,18 @@ $(document).ready(function () {
         images.push($(this).val());
       });
 
+      $selectionBox.html("");
+      for (let i = 0; i < 15; i++) {
+        if (!images.includes(`images/${i}.png`)) {
+          $selectionBox.append(
+            $("<option>", {
+              value: "images/" + i + ".png",
+              text: "images/" + i + ".png",
+            })
+          );
+        }
+      }
+
       console.log(images);
     });
 
@@ -78,7 +90,18 @@ $(document).ready(function () {
 
   function showPopUp(imageSource) {
     pauseAnimation();
-    $popUpContent.html('<img src="' + imageSource + '" />');
+
+    var image = document.createElement("img");
+    image.setAttribute("src", imageSource);
+    image.setAttribute("class", "image-class");
+    image.setAttribute("draggable", "true");
+
+    $popUpContent.empty();
+    $popUpContent.append(image);
+
+    const $jimage = $(".image-class");
+    $jimage.on("drag", dropImage);
+
     $popUpOverlay.css("display", "flex");
   }
 
@@ -99,6 +122,22 @@ $(document).ready(function () {
   function resumeAnimation() {
     isRunning = true;
     startAnimation();
+  }
+
+  function dropImage(event) {
+    let index = -1;
+
+    for (let i = 0; i < images.length; i++) {
+      if (images[i] == event.toElement.src.slice(22)) {
+        index = i;
+      }
+    }
+
+    delete images[index];
+  }
+
+  function dragoverHandler(ev) {
+    ev.preventDefault();
   }
 
   setupSlider();
