@@ -29,6 +29,9 @@ $(document).ready(function () {
       $firstImage.remove();
       $track.css("left", "15px");
       imageIndex = (imageIndex + 1) % images.length;
+
+      console.log(`PRINTING ${imageIndex} - ${images[imageIndex]}`);
+
       $track.append(
         '<div class="image"><img src="' + images[imageIndex] + '" /></div>'
       );
@@ -40,6 +43,22 @@ $(document).ready(function () {
   }
 
   function setupSlider() {
+    document.addEventListener("dragover", function (event) {
+      event.preventDefault();
+    });
+
+    let target = document.getElementsByClassName("pop-up-overlay")[0];
+    target.addEventListener("dragover", (event) => {
+      console.log("overlay");
+      event.preventDefault();
+    });
+
+    target = document.getElementsByClassName("pop-up-content")[0];
+    target.addEventListener("dragover", (event) => {
+      console.log("content");
+      event.preventDefault();
+    });
+
     for (let i = 0; i < 3 * images.length; i++) {
       const index = i % images.length;
       $track.append(
@@ -99,8 +118,10 @@ $(document).ready(function () {
     $popUpContent.empty();
     $popUpContent.append(image);
 
-    const $jimage = $(".image-class");
-    $jimage.on("drag", dropImage);
+    image.addEventListener("drop", (event) => {
+      dropImage(event);
+      console.log("dropped");
+    });
 
     $popUpOverlay.css("display", "flex");
   }
@@ -125,19 +146,34 @@ $(document).ready(function () {
   }
 
   function dropImage(event) {
+    console.log(images);
+
     let index = -1;
 
     for (let i = 0; i < images.length; i++) {
       if (images[i] == event.toElement.src.slice(22)) {
+        console.log(`FOUND INDEX = ${i}`);
         index = i;
       }
     }
 
-    delete images[index];
-  }
+    images.splice(index, 1);
 
-  function dragoverHandler(ev) {
-    ev.preventDefault();
+    $selectionBox.html("");
+    for (let i = 0; i < 15; i++) {
+      if (!images.includes(`images/${i}.png`)) {
+        $selectionBox.append(
+          $("<option>", {
+            value: "images/" + i + ".png",
+            text: "images/" + i + ".png",
+          })
+        );
+      }
+    }
+
+    console.log(images);
+
+    hidePopUp();
   }
 
   setupSlider();
