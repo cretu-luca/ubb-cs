@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="../Add">Add recipe</a>
+        <a href="../Browse">Browse recipes</a>
+      </nav>
+    </header>
+
+    <form id="add-recipe-form" onsubmit="addRecipe(event)">
+      <div id="text-and-input">
+        <label> Name: </label>
+        <input type="text" id="name" readonly />
+      </div>
+
+      <div id="text-and-input">
+        <label> Author: </label>
+        <input type="text" id="author" readonly />
+      </div>
+
+      <div id="text-and-input">
+        <label> Type: </label>
+        <input type="text" id="type" readonly />
+      </div>
+
+      <div id="text-and-big-input">
+        <label> Instructions: </label>
+        <textarea id="instructions" readonly></textarea>
+      </div>
+
+      <div id="text-and-big-input">
+        <label> Ingredients: </label>
+        <textarea id="ingredients" readonly></textarea>
+      </div>
+
+      <div id="buttons-div">
+        <button id="update-button" type="button"> Update </button>
+        <button id="delete-button" type="button"> Delete </button>
+      </div>
+    </form>
+  </body>
+</html>

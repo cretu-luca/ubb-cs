@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b40b69db-1bee-4a20-8b03-3c16ae251247" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/recipes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Datalink/DataLink.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/Recipe.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pages/Add/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pages/Add/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pages/Add/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pages/Browse/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pages/Browse/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pages/Browse/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pages/Details/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pages/Details/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Repository/RecipeRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Service/service.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../artificial-intelligence/assingment-6/AI_lab_6_2023.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../artificial-intelligence/assingment-6/models/01_pytorch_perceptron.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../artificial-intelligence/assingment-6/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/.vs/lab2/FileContentIndex/9b94d23c-5650-4903-a2d3-5972a32da7d9.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/.vs/lab2/v17/.wsuo" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/.vs/lab2/v17/.wsuo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/.vs/slnx.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/.vs/slnx.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/.vs/ProjectEvaluation/winformsapp1.metadata.v9.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/.vs/ProjectEvaluation/winformsapp1.metadata.v9.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/.vs/ProjectEvaluation/winformsapp1.projects.v9.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/.vs/ProjectEvaluation/winformsapp1.projects.v9.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/.vs/ProjectEvaluation/winformsapp1.strings.v9.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/.vs/ProjectEvaluation/winformsapp1.strings.v9.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/.vs/WinFormsApp1/FileContentIndex/180c49df-872e-4c28-9749-45aec06e2693.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/.vs/WinFormsApp1/FileContentIndex/3c176713-8615-4812-9f8e-cf1e0a82d788.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/.vs/WinFormsApp1/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/.vs/WinFormsApp1/v17/.futdcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/.vs/WinFormsApp1/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/.vs/WinFormsApp1/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/.vs/WinFormsApp1/v17/DocumentLayout.backup.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/.vs/WinFormsApp1/v17/DocumentLayout.backup.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/.vs/WinFormsApp1/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/.vs/WinFormsApp1/v17/DocumentLayout.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/App.config" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/App.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/Form1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/bin/Debug/net8.0-windows/WinFormsApp1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/bin/Debug/net8.0-windows/WinFormsApp1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/bin/Debug/net8.0-windows/WinFormsApp1.dll.config" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/bin/Debug/net8.0-windows/WinFormsApp1.dll.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/bin/Debug/net8.0-windows/WinFormsApp1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/bin/Debug/net8.0-windows/WinFormsApp1.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/bin/Debug/net8.0-windows/WinFormsApp1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/bin/Debug/net8.0-windows/WinFormsApp1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/WinFormsApp1.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/WinFormsApp1.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/WinFormsApp1.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/WinFormsApp1.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/WinFormsApp1.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/WinFormsApp1.csproj.GenerateResource.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/WinFormsApp1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/WinFormsApp1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/WinFormsApp1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/WinFormsApp1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/WinFormsApp1.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/WinFormsApp1.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/ref/WinFormsApp1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/ref/WinFormsApp1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/refint/WinFormsApp1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/refint/WinFormsApp1.dll" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2wKYKQosXb7t6wXRmfMLnIXT0g9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/cretuluca&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+</project>
