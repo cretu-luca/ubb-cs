@@ -35,15 +35,8 @@
       <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/ref/WinFormsApp1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/ref/WinFormsApp1.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/refint/WinFormsApp1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/refint/WinFormsApp1.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/48ffad90-fef9-46a9-9b78-556a655603e1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/48ffad90-fef9-46a9-9b78-556a655603e1/storage_v2/_src_/schema/RecipesDatabase.IBWa1w.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/ingredients.php" beforeDir="false" afterPath="$PROJECT_DIR$/API/ingredients.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pages/Details/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Details/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Details/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Details/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Details/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Details/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/IngredientRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/IngredientRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/service.php" beforeDir="false" afterPath="$PROJECT_DIR$/Service/service.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
