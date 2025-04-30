@@ -1000,7 +1000,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Charset>utf8mb4</Charset>
     </collation>
     <schema id="288" parent="1" name="RecipesDatabase">
-      <LastIntrospectionLocalTimestamp>2025-04-29.22:57:45</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-04-30.08:11:55</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="289" parent="1" name="information_schema">

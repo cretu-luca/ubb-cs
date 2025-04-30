@@ -9,10 +9,10 @@ class IngredientRepository {
         $this->dataLink = new DataLink();
     }
 
-    public function create($ingredient) {
+    public function create($ingredientName, $ingredientQuantity, $ingredientMeasurementUnit, $ingredientRecipeId) {
         $query = "INSERT INTO Ingredient (Name, Quantity, MeasurementUnit, RecipeID) VALUES (?, ?, ?, ?)";
         $statement = $this->dataLink->prepare($query);
-        $statement->bind_param("sisi", $ingredient->Name, $ingredient->Quantity, $ingredient->MeasurementUnit, $ingredient->RecipeID);
+        $statement->bind_param("sisi", $ingredientName, $ingredientQuantity, $ingredientMeasurementUnit, $ingredientRecipeId);
 
         return $statement->execute();
     }

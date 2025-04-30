@@ -2,6 +2,7 @@
     require_once __DIR__ . '/../Repository/RecipeRepository.php';
     require_once __DIR__ . '/../Repository/IngredientRepository.php';
     require_once __DIR__ . '/../Model/Recipe.php';
+    require_once __DIR__ . '/../Model/Ingredient.php';
 
     class Service {
         public $ingredientRepository;
@@ -78,6 +79,17 @@
             }
             
             return $this->ingredientRepository->getByRecipeId($recipeId);
+        }
+        
+        function createIngredient($ingredientName, $ingredientQuantity, $ingredientMeasurementUnit, $ingredientRecipeId) {
+            if (empty($ingredientName) || 
+                empty($ingredientQuantity) || 
+                empty($ingredientMeasurementUnit) || 
+                empty($ingredientRecipeId)) {
+                return false;
+            }
+            
+            return $this->ingredientRepository->create($ingredientName, $ingredientQuantity, $ingredientMeasurementUnit, $ingredientRecipeId);
         }
     }
 ?>
