@@ -74,21 +74,22 @@
                 response(true, $recipes);
                 break;
 
-            case 'getByName':
+            case 'getByID':
                 if ($method !== 'GET') {
                     response(false, 'Method not allowed', 405);
                 }
 
-                $name = $_GET['name'] ?? null;
-                if (!$name) {
-                    response(false, 'Name required', 400);
+                $id = $_GET['id'] ?? null;
+                if (!$id) {
+                    response(false, 'ID required', 400);
                 }
 
-                $recipe = $service->getRecipeByName($name);
+                $recipe = $service->getRecipeByID($id);
                 response(true, $recipe);
                 break;
 
             case 'create':
+                // error_log(print_r("am intrat in api haha", true));
                 if ($method !== 'POST') {
                     response(false, 'Method not allowed', 405);
                 }
@@ -99,9 +100,10 @@
                     $data['name'] ?? '',
                     $data['author'] ?? '',
                     $data['type'] ?? '',
-                    $data['instructions'] ?? ''
+                    $data['instructions'] ?? '',
+                    $data['date'] ?? ''
                 );
-                
+
                 if (!$result) {
                     response(false, 'Failed to create recipe', 400);
                 }
@@ -110,6 +112,8 @@
                 break;
                 
             case 'update':
+                error_log(print_r("update in api", true));
+                
                 if ($method !== 'PUT') {
                     response(false, 'Method not allowed', 405);
                 }
@@ -125,6 +129,7 @@
                 $recipe->Author = $data['Author'] ?? '';
                 $recipe->Type = $data['Type'] ?? '';
                 $recipe->Instructions = $data['Instructions'] ?? '';
+                $recipe->Date = $data['Date'] ?? '';
                 
                 if (!$recipe->isValid()) {
                     response(false, 'Invalid recipe data', 400);

@@ -9,10 +9,10 @@ class RecipeRepository {
     }
 
     // create
-    function createRecipe($name, $author, $type, $instructions) {
-        $query = "INSERT INTO Recipe (Name, Author, Type, Instructions) VALUES (?, ?, ?, ?)";
+    function createRecipe($name, $author, $type, $instructions, $date) {
+        $query = "INSERT INTO Recipe (Name, Author, Type, Instructions, Date) VALUES (?, ?, ?, ?, ?)";
         $statement = $this->datalink->prepare($query);
-        $statement->bind_param("ssss", $name, $author, $type, $instructions);
+        $statement->bind_param("sssss", $name, $author, $type, $instructions, $date);
 
         return $statement->execute();
     }
@@ -53,20 +53,11 @@ class RecipeRepository {
         return $statement->get_result()->fetch_all(MYSQLI_ASSOC);
     }
 
-    function getRecipeByName($name) {
-        $query = "SELECT * FROM Recipe WHERE Name = ?";
-        $statement = $this->datalink->prepare($query);
-        $statement->bind_param("s", $name);
-        $statement->execute();
-
-        return $statement->get_result()->fetch_assoc();
-    }
-    
     // update        
     function updateRecipe($recipe) {
-        $query = "UPDATE Recipe SET Name = ?, Author = ?, Type = ?, Instructions = ? WHERE RecipeID = ?";
+        $query = "UPDATE Recipe SET Name = ?, Author = ?, Type = ?, Instructions = ?, Date = ? WHERE RecipeID = ?";
         $statement = $this->datalink->prepare($query);
-        $statement->bind_param("ssssi", $recipe->Name, $recipe->Author, $recipe->Type, $recipe->Instructions, $recipe->RecipeID);
+        $statement->bind_param("sssssi", $recipe->Name, $recipe->Author, $recipe->Type, $recipe->Instructions, $recipe->Date, $recipe->RecipeID);
 
         return $statement->execute();
     }
@@ -82,9 +73,9 @@ class RecipeRepository {
 
     // 
     function exists($recipe) {
-        $query = "SELECT COUNT(*) as count FROM Recipe WHERE Name = ? AND Author = ? AND Type = ? AND Instructions = ?";
+        $query = "SELECT COUNT(*) as count FROM Recipe WHERE Name = ? AND Author = ? AND Type = ? AND Instructions = ? AND Date = ?";
         $statement = $this->datalink->prepare($query);
-        $statement->bind_param("ssss", $recipe->Name, $recipe->Author, $recipe->Type, $recipe->Instructions);
+        $statement->bind_param("ssss", $recipe->Name, $recipe->Author, $recipe->Type, $recipe->Instructions, $recipe->Date);
         $statement->execute();
 
         $result = $statement->get_result();

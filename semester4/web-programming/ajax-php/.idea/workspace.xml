@@ -35,8 +35,19 @@
       <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/ref/WinFormsApp1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/ref/WinFormsApp1.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/refint/WinFormsApp1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../database-management-systems/labs/lab2/WinFormsApp1/WinFormsApp1/obj/Debug/net8.0-windows/refint/WinFormsApp1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/62200b8b-ad70-4432-a52f-b393c36debb4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/62200b8b-ad70-4432-a52f-b393c36debb4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/recipes.php" beforeDir="false" afterPath="$PROJECT_DIR$/API/recipes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Recipe.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Recipe.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Add/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Add/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Add/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Add/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Browse/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Browse/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Browse/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Browse/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Browse/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Browse/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pages/Details/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Details/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Details/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Details/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repository/RecipeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/RecipeRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Service/service.php" beforeDir="false" afterPath="$PROJECT_DIR$/Service/service.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

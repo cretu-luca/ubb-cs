@@ -1,28 +1,22 @@
 $(document).ready(function () {
   const urlParams = new URLSearchParams(window.location.search);
-  const recipeName = urlParams.get("name");
-  let recipeId;
+  const recipeId = urlParams.get("id");
   let editMode = false;
 
-  // Add a timestamp parameter to prevent browser caching
   const timestamp = new Date().getTime();
 
-  // Function to load recipe data
   function loadRecipeData() {
-    fetch(
-      `http://localhost:8000/API/recipes.php?action=getByName&name=${recipeName}&_=${timestamp}`
-    )
+    fetch(`http://localhost:8000/API/recipes.php?action=getByID&id=${recipeId}`)
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {
           const recipe = data.data;
-          recipeId = recipe.RecipeID;
           $("#name").val(recipe.Name);
           $("#author").val(recipe.Author);
           $("#type").val(recipe.Type);
           $("#instructions").val(recipe.Instructions);
-          
-          // Also load the ingredients for this recipe
+          $("#date").val(recipe.Date);
+
           loadIngredients(recipe.RecipeID);
         }
       })
@@ -30,11 +24,10 @@ $(document).ready(function () {
         console.error("Failed to fetch recipe details:", error);
       });
   }
-  
-  // Function to load ingredients
+
   function loadIngredients(recipeId) {
     fetch(
-      `http://localhost:8000/API/ingredients.php?action=getIngredientsByRecipeId&recipeId=${recipeId}&_=${timestamp}`
+      `http://localhost:8000/API/ingredients.php?action=getIngredientsByRecipeId&recipeId=${recipeId}`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -52,15 +45,12 @@ $(document).ready(function () {
         console.error("Failed to fetch ingredients:", error);
       });
   }
-  
-  // Load the recipe data when page loads
+
   loadRecipeData();
 
   $("#update-button").click(function () {
     if (!editMode) {
-      $("#name, #author, #type, #instructions").prop("readonly", false);
-
-      $("#name, #author, #type, #instructions").prop("color", "red");
+      $("#name, #author, #type, #instructions, #date").prop("readonly", false);
 
       $(this).css("color", "red");
       $(this).text("Save");
@@ -72,6 +62,7 @@ $(document).ready(function () {
         Author: $("#author").val(),
         Type: $("#type").val(),
         Instructions: $("#instructions").val(),
+        Date: $("#date").val(),
       };
 
       fetch("http://localhost:8000/API/recipes.php?action=update", {
@@ -102,7 +93,6 @@ $(document).ready(function () {
   });
 
   $("#delete-button").click(function (e) {
-    // Prevent any default behavior
     e.preventDefault();
 
     if (confirm("Are you sure you want to delete this recipe?")) {
@@ -129,14 +119,14 @@ $(document).ready(function () {
   });
 
   $("#ingredients-update-button").click(function (e) {
-    // Prevent any default behavior
     e.preventDefault();
     window.location.href = `../AddIngredient/index.html?RecipeID=${recipeId}`;
   });
 
-  // Add click handler for Add Ingredient button
-  $('#add-ingredient-button').click(function(e) {
+  $("#add-ingredient-button").click(function (e) {
     e.preventDefault();
-    window.location.href = `../AddIngredient/index.html?RecipeID=${recipeId}&recipeName=${encodeURIComponent($("#name").val())}`;
+    window.location.href = `../AddIngredient/index.html?RecipeID=${recipeId}&recipeName=${encodeURIComponent(
+      $("#name").val()
+    )}`;
   });
 });

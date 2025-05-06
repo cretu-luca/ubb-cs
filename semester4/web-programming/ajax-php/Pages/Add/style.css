@@ -64,3 +64,7 @@ nav a {
 nav a:hover {
   text-decoration: underline;
 }
+
+#add-recipe-form .recipe-id {
+  display: none;
+}

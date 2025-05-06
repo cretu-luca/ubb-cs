@@ -14,7 +14,8 @@ body {
   margin-bottom: 10px;
 }
 
-#filter-by-author, #filter-by-type {
+#filter-by-author,
+#filter-by-type {
   padding: 6px 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -58,3 +59,13 @@ nav a:hover {
   text-decoration: underline;
 }
 
+#filtering-with-history {
+  display: flex;
+  flex-direction: row;
+  margin-left: 65px;
+  margin-right: 65px;
+}
+
+.recipe-id {
+  display: none;
+}

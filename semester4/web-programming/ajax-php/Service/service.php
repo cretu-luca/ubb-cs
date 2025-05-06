@@ -29,16 +29,12 @@
             return $this->recipeRepository->getRecipeByType($type);
         }
 
-        function getRecipeByName($name) {
-            return $this->recipeRepository->getRecipeByName($name);
-        }
-
-        function createRecipe($name, $author, $type, $instructions) {
-            if (empty($name) || empty($author) || empty($type) || empty($instructions)) {
+        function createRecipe($name, $author, $type, $instructions, $date) {
+            if (empty($name) || empty($author) || empty($type) || empty($instructions) || empty($date)) {
                 return false;
             }
             
-            return $this->recipeRepository->createRecipe($name, $author, $type, $instructions);
+            return $this->recipeRepository->createRecipe($name, $author, $type, $instructions, $date);
         }
         
         function updateRecipe($recipe) {

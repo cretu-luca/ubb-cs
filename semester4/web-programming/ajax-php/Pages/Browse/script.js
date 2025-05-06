@@ -1,4 +1,7 @@
 $(document).ready(function () {
+  var lastFilter = "";
+  const lastFilterInput = $("#history-input");
+
   fetch("http://localhost:8000/API/recipes.php?action=all")
     .then((response) => response.json())
     .then((result) => {
@@ -31,6 +34,9 @@ $(document).ready(function () {
         });
       return;
     }
+
+    lastFilterInput.val(lastFilter);
+    lastFilter = author;
 
     fetch(
       `http://localhost:8000/API/recipes.php?action=getByAuthor&author=${author}`
@@ -71,6 +77,9 @@ $(document).ready(function () {
       return;
     }
 
+    lastFilterInput.val(lastFilter);
+    lastFilter = type;
+
     fetch(`http://localhost:8000/API/recipes.php?action=getByType&type=${type}`)
       .then((response) => response.json())
       .then((result) => {
@@ -87,16 +96,11 @@ $(document).ready(function () {
       });
   });
 
-  $("#browsing-table").on("click", "td", function() {
-    const row = $(this).closest('tr');
-    const recipe = {
-      Name: row.find('td').eq(0).text(),
-      Author: row.find('td').eq(1).text(), 
-      Type: row.find('td').eq(2).text(),
-      Instructions: row.find('td').eq(3).text()
-    };
-
-    window.location.href = `../Details/index.html?name=${recipe.Name}`;
+  $("#browsing-table").on("click", "tr", function () {
+    const recipeID = $(this).find("td.recipe-id").text();
+    if (recipeID) {
+      window.location.href = `../Details/index.html?id=${recipeID}`;
+    }
   });
 
   function createTable(data) {
@@ -104,25 +108,24 @@ $(document).ready(function () {
     $table.empty();
 
     $table.append(
-      "<tr><th>Name</th><th>Author</th><th>Type</th><th>Instructions</th></tr>"
+      "<tr><th>Name</th><th>Author</th><th>Type</th><th>Instructions</th><th>Date</th></tr>"
     );
 
     if (!data || data.length === 0) {
-      $table.append("<tr><td colspan='4'>No recipes found</td></tr>");
+      $table.append("<tr><td colspan='5'>No recipes found</td></tr>");
       return;
     }
 
     data.forEach((recipe) => {
       $table.append(
-        "<tr><td>" +
-          recipe.Name +
-          "</td><td>" +
-          recipe.Author +
-          "</td><td>" +
-          recipe.Type +
-          "</td><td>" +
-          recipe.Instructions +
-          "</td></tr>"
+        `<tr>
+          <td class="recipe-id">${recipe.RecipeID}</td>
+          <td>${recipe.Name}</td>
+          <td>${recipe.Author}</td>
+          <td>${recipe.Type}</td>
+          <td>${recipe.Instructions}</td>
+          <td>${recipe.Date}</td>
+        </tr>`
       );
     });
   }
