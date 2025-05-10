@@ -30,9 +30,6 @@ namespace WinFormsApp1
         BindingSource parentBindingSource = new BindingSource();
         BindingSource childBindingSource = new BindingSource();
 
-        SqlCommandBuilder parentCommandBuilder = new SqlCommandBuilder();
-        SqlCommandBuilder childCommandBuilder = new SqlCommandBuilder();
-
         private Dictionary<string, TextBox> childTextBoxes = new Dictionary<string, TextBox>();
 
         private DataGridView dataGridView1;
@@ -70,19 +67,40 @@ namespace WinFormsApp1
             DataColumn parentPK = dataSet.Tables[parentTable].Columns[parentPrimaryKey];
             DataColumn childFK = dataSet.Tables[childTable].Columns[childForeignKey];
 
-            DataRelation relation = new DataRelation("FK__Departmen__CityI__74AE54BC", parentPK, childFK);
-            dataSet.Relations.Add(relation);
+            // DataRelation relation = new DataRelation("FK__Departmen__CityI__74AE54BC", parentPK, childFK);
+            // dataSet.Relations.Add(relation);
 
             parentBindingSource.DataSource = dataSet;
             parentBindingSource.DataMember = parentTable;
 
-            childBindingSource.DataSource = parentBindingSource;
-            childBindingSource.DataMember = "FK__Departmen__CityI__74AE54BC";
+            // childBindingSource.DataSource = parentBindingSource;
+            // childBindingSource.DataMember = "FK__Departmen__CityI__74AE54BC";
+
+            childBindingSource.DataSource = dataSet;
+            childBindingSource.DataMember = childTable;
 
             dataGridView1.DataSource = parentBindingSource;
             dataGridView2.DataSource = childBindingSource;
         }
 
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataGridView1.CurrentRow != null)
+                {
+                    int parentId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[parentPrimaryKey].Value);
+
+                    childBindingSource.Filter = $"{childForeignKey} = {parentId}";
+
+                    GenerateChildTableTextBoxes();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error filtering child records: " + ex.Message);
+            }
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -131,22 +149,25 @@ namespace WinFormsApp1
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(44, 38);
+            dataGridView1.Location = new Point(51, 95);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(397, 395);
+            dataGridView1.RowHeadersWidth = 123;
+            dataGridView1.Size = new Size(628, 838);
             dataGridView1.TabIndex = 0;
+            dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
             // 
             // dataGridView2
             // 
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(560, 38);
+            dataGridView2.Location = new Point(862, 95);
             dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(397, 395);
+            dataGridView2.RowHeadersWidth = 123;
+            dataGridView2.Size = new Size(657, 838);
             dataGridView2.TabIndex = 1;
             // 
             // button1
             // 
-            button1.Location = new Point(790, 503);
+            button1.Location = new Point(1296, 1057);
             button1.Name = "button1";
             button1.Size = new Size(167, 61);
             button1.TabIndex = 2;
@@ -156,7 +177,7 @@ namespace WinFormsApp1
             // 
             // button2
             // 
-            button2.Location = new Point(560, 503);
+            button2.Location = new Point(944, 1057);
             button2.Name = "button2";
             button2.Size = new Size(167, 61);
             button2.TabIndex = 3;
@@ -166,24 +187,24 @@ namespace WinFormsApp1
             // 
             // panel1
             // 
-            panel1.Location = new Point(1074, 38);
+            panel1.Location = new Point(1671, 95);
             panel1.Name = "panel1";
-            panel1.Size = new Size(397, 395);
+            panel1.Size = new Size(667, 838);
             panel1.TabIndex = 4;
             // 
             // button3
-            //
-            button3.Location = new Point(1199, 503);
+            // 
+            button3.Location = new Point(2011, 1057);
             button3.Name = "button3";
             button3.Size = new Size(167, 61);
             button3.TabIndex = 5;
             button3.Text = "Add";
             button3.UseVisualStyleBackColor = true;
-            button3.Click += new EventHandler(button3_Click);
+            button3.Click += button3_Click;
             // 
             // Form1
             // 
-            ClientSize = new Size(1524, 608);
+            ClientSize = new Size(2500, 1314);
             Controls.Add(button3);
             Controls.Add(panel1);
             Controls.Add(button2);
@@ -245,7 +266,7 @@ namespace WinFormsApp1
 
             if (dataSet.Tables.Contains(childTable))
             {
-                int yPos = 10;
+                int yPos = 50;
 
                 foreach (DataColumn column in dataSet.Tables[childTable].Columns)
                 {
@@ -254,19 +275,22 @@ namespace WinFormsApp1
 
                     Label label = new Label();
                     label.Text = column.ColumnName + ":";
-                    label.Location = new System.Drawing.Point(10, yPos);
-                    label.Size = new System.Drawing.Size(120, 20);
+                    label.Location = new System.Drawing.Point(30, yPos);
+                    label.Size = new System.Drawing.Size(150, 30); 
+                    label.Font = new System.Drawing.Font(label.Font.FontFamily, 5f, FontStyle.Bold);
+                    label.AutoEllipsis = true;
                     panel1.Controls.Add(label);
 
                     TextBox textBox = new TextBox();
                     textBox.Name = column.ColumnName;
-                    textBox.Location = new System.Drawing.Point(140, yPos);
-                    textBox.Size = new System.Drawing.Size(200, 20);
+                    textBox.Location = new System.Drawing.Point(190, yPos);
+                    textBox.Size = new System.Drawing.Size(300, 30);
+                    textBox.Font = new System.Drawing.Font(textBox.Font.FontFamily, 8f); 
                     panel1.Controls.Add(textBox);
 
                     childTextBoxes[column.ColumnName] = textBox;
 
-                    yPos += 30;
+                    yPos += 100;
                 }
             }
         }

@@ -86,7 +86,6 @@ $(document).ready(function () {
           }
         })
         .catch((error) => {
-          console.error("Error updating recipe:", error);
           alert("Error updating recipe: " + error);
         });
     }
@@ -112,7 +111,6 @@ $(document).ready(function () {
           }
         })
         .catch((error) => {
-          console.error("Error deleting recipe:", error);
           alert("Error deleting recipe: " + error);
         });
     }
