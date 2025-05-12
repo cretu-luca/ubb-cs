@@ -7,6 +7,8 @@ CREATE TABLE LogTable (
     ExecutionDate DATETIME DEFAULT GETDATE()
 )
 
+DROP TABLE LogTable
+
 CREATE OR ALTER FUNCTION ValidateDate (
     @Date DATE
 ) RETURNS INT AS
@@ -62,15 +64,24 @@ BEGIN
             INSERT INTO Employee (Name, DepartmentID, PositionID)
             VALUES (@EmployeeName, @DepartmentID, @PositionID)
 
+            INSERT INTO LogTable (TypeOperation, TableOperation)
+            VALUES ('INSERT', 'Employee')
+
             DECLARE @EmployeeID INT = SCOPE_IDENTITY()
 
             INSERT INTO Project (ProjectName, StartDate, EndDate, SupplierID, SponsorshipID)
             VALUES (@ProjectName, @StartDate, @EndDate, @SupplierID, @SponsorshipID)
 
+            INSERT INTO LogTable (TypeOperation, TableOperation)
+            VALUES ('INSERT', 'Project')
+
             DECLARE @ProjectID INT = SCOPE_IDENTITY()
 
             INSERT INTO dbo.EmployeeProject (EmployeeID, ProjectID)
             VALUES (@EmployeeID, @ProjectID)
+
+            INSERT INTO LogTable (TypeOperation, TableOperation)
+            VALUES ('INSERT', 'EmployeeProject')
 
             COMMIT TRAN
             SELECT 'Transaction committed'
@@ -86,9 +97,22 @@ GO
 SELECT * FROM dbo.Employee
 SELECT * FROM dbo.Project
 SELECT * FROM dbo.EmployeeProject
+SELECT * FROM dbo.LogTable
+
+DELETE FROM dbo.EmployeeProject
+WHERE CityPlanning.dbo.EmployeeProject.EmployeeID = 6
+
+DELETE FROM dbo.Project
+WHERE CityPlanning.dbo.Project.ProjectID = 12
+
+DELETE FROM dbo.Employee
+WHERE CityPlanning.dbo.Employee.EmployeeID = 10
+
+DELETE FROM dbo.Employee
+WHERE CityPlanning.dbo.Employee.EmployeeID = 9
 
 EXEC EmployeeProjectInsertAtomic 'Bogdan', 1, 1, 'Cultura', '01-05-2025', '01-06-2025', 1, 1
-EXEC EmployeeProjectInsertAtomic 'Vasile', 1, 1, Ecologizare, '01-01-2019', '01-01-2020', 1, 1
+EXEC EmployeeProjectInsertAtomic 'Vasile', 1, 1, 'Ecologizare', '01-01-2019', '01-01-2020', 1, 1
 
 CREATE OR ALTER PROCEDURE EmployeeProjectInsertNonAtomic (
     @EmployeeName VARCHAR (50),
@@ -116,6 +140,9 @@ BEGIN
             INSERT INTO Employee (Name, DepartmentID, PositionID)
             VALUES (@EmployeeName, @DepartmentID, @PositionID)
 
+            INSERT INTO LogTable (TypeOperation, TableOperation)
+            VALUES ('INSERT', 'Employee')
+
             SET @EmployeeID = SCOPE_IDENTITY()
 
         COMMIT TRAN
@@ -140,6 +167,9 @@ BEGIN
             INSERT INTO Project (ProjectName, StartDate, EndDate, SupplierID, SponsorshipID)
             VALUES (@ProjectName, @StartDate, @EndDate, @SupplierID, @SponsorshipID)
 
+            INSERT INTO LogTable (TypeOperation, TableOperation)
+            VALUES ('INSERT', 'Project')
+
             SET @ProjectID = SCOPE_IDENTITY()
 
         COMMIT TRAN
@@ -162,6 +192,9 @@ BEGIN
 
             INSERT INTO dbo.EmployeeProject (EmployeeID, ProjectID)
             VALUES (@EmployeeID, @ProjectID)
+
+            INSERT INTO LogTable (TypeOperation, TableOperation)
+            VALUES ('INSERT', 'EmployeeProject')
 
         COMMIT TRAN
         SELECT 'EmployeeProject insert transaction committed'
