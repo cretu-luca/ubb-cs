@@ -1,29 +1,31 @@
 <form id="add-recipe-form">
-  <div id="text-and-input">
-    <label> Name: </label>
-    <input type="text" id="name" readonly />
-  </div>
+  <div id="recipe-form-content">
+    <div id="text-and-input">
+      <label> Name: </label>
+      <input type="text" id="name" />
+    </div>
 
-  <div id="text-and-input">
-    <label> Author: </label>
-    <input type="text" id="author" readonly />
-  </div>
+    <div id="text-and-input">
+      <label> Author: </label>
+      <input type="text" id="author" />
+    </div>
 
-  <div id="text-and-input">
-    <label> Type: </label>
-    <input type="text" id="type" readonly />
-  </div>
+    <div id="text-and-input">
+      <label> Type: </label>
+      <input type="text" id="type" />
+    </div>
 
-  <div id="text-and-input">
-    <label> Date created: </label>
-    <input type="date" id="date" readonly />
-  </div>
+    <div id="text-and-input">
+      <label> Date created: </label>
+      <input type="date" id="date" />
+    </div>
 
-  <div id="text-and-big-input">
-    <label> Instructions: </label>
-    <textarea id="instructions" readonly></textarea>
+    <div id="text-and-big-input">
+      <label> Instructions: </label>
+      <textarea id="instructions"></textarea>
+    </div>
   </div>
-
+  
   <div id="text-and-big-input">
     <div id="ingredients-and-update-button">
       <label> Ingredients: </label>
@@ -32,7 +34,9 @@
   </div>
 
   <div id="buttons-div">
-    <button id="update-button" type="button">Update</button>
-    <button id="delete-button" type="button">Delete</button>
+    <button id="update-button" type="button" (click)="onUpdateClick()">
+      Update
+    </button>
+    <button id="delete-button" type="button" (click)="onDeleteClick()">Delete</button>
   </div>
 </form>

@@ -1,0 +1,23 @@
+#filter-div {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+#filter-by-author,
+#filter-by-type {
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+}
+
+#filtering-with-history {
+  display: flex;
+  flex-direction: row;
+  margin-left: 65px;
+  margin-right: 65px;
+}

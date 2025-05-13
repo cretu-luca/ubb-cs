@@ -1,15 +1,12 @@
-<div id="filtering-with-history">
-  <div id="history">
-    <label> Last filter: </label>
-    <input type="text" id="history-input" readonly />
-  </div>
+<app-filtering-bar 
+  [authors]="authors" 
+  [types]="types" 
+  [lastFilter]="lastFilter"
+  (authorFilterChange)="onAuthorChange($event)"
+  (typeFilterChange)="onTypeChange($event)">
+</app-filtering-bar>
 
-  <div id="filter-div">
-    <select id="filter-by-author"></select>
-    <select id="filter-by-type"></select>
-  </div>
-</div>
-
-<div id="browsing-table-div">
-  <table id="browsing-table"></table>
-</div>
+<app-browsing-table 
+  [recipes]="recipes" 
+  (onRowClick)="onTableRowClick($event)">
+</app-browsing-table>

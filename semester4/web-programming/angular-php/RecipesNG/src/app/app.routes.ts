@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { AddRecipe } from './pages/AddRecipe/add-recipe';
+import { AddRecipe } from './pages/add-recipe/add-recipe';
 import { BrowsingComponent } from './pages/Browsing/browsing';
 import { DetailsComponent } from './pages/Details/details';
 
