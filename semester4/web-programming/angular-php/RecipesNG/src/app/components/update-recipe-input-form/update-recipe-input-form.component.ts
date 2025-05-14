@@ -14,7 +14,6 @@ export class UpdateRecipeInputFormComponent {
   @Input() ingredients: string = '';
   @Input() readOnly: boolean = true;
   @Output() recipeChange = new EventEmitter<any>();
-
   
   recipeName: string = '';
   recipeAuthor: string = '';
