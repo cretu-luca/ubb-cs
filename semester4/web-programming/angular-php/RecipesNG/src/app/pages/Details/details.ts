@@ -1,8 +1,8 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { RecipeInputFormComponent } from '../../components/recipe-input-form/recipe-input-form.component';
 import { HttpClient } from '@angular/common/http';
+import { UpdateRecipeInputFormComponent } from '../../components/update-recipe-input-form/update-recipe-input-form.component';
 
 interface Recipe {
   RecipeID: string;
@@ -21,14 +21,17 @@ interface ApiResponse {
 @Component({
   selector: 'recipe-details',
   standalone: true,
-  imports: [CommonModule, RecipeInputFormComponent],
+  imports: [CommonModule, UpdateRecipeInputFormComponent],
   templateUrl: './details.html',
-  styleUrl: './details.css'
+  styleUrls: ['./details.css']
 })
-export class DetailsComponent implements OnInit, AfterViewInit {
+export class DetailsComponent implements OnInit {
   recipeId: string = '';
+  recipe: Recipe | null = null;
   ingredients: string = '';
   editMode: boolean = false;
+  
+  @ViewChild(UpdateRecipeInputFormComponent) formComponent!: UpdateRecipeInputFormComponent;
   
   constructor(
     private route: ActivatedRoute, 
@@ -45,54 +48,15 @@ export class DetailsComponent implements OnInit, AfterViewInit {
     });
   }
   
-  ngAfterViewInit(): void {
-    this.setFormReadOnly(true);
-    const addIngredientButton = document.getElementById('add-ingredient-button') as HTMLButtonElement;
-    if (addIngredientButton) {
-      addIngredientButton.style.display = 'none';
-    }
-  }
-  
-  setFormReadOnly(isReadOnly: boolean): void {
-    // Using direct DOM manipulation
-    const nameInput = document.getElementById('name') as HTMLInputElement;
-    const authorInput = document.getElementById('author') as HTMLInputElement;
-    const typeInput = document.getElementById('type') as HTMLInputElement;
-    const dateInput = document.getElementById('date') as HTMLInputElement;
-    const instructionsInput = document.getElementById('instructions') as HTMLTextAreaElement;
-    
-    if (nameInput && authorInput && typeInput && dateInput && instructionsInput) {
-      nameInput.readOnly = isReadOnly;
-      authorInput.readOnly = isReadOnly;
-      typeInput.readOnly = isReadOnly;
-      dateInput.readOnly = isReadOnly;
-      instructionsInput.readOnly = isReadOnly;
-    }
-  }
-
   loadRecipeData(): void {
     this.http.get<ApiResponse>(`http://localhost:8000/API/recipes.php?action=getByID&id=${this.recipeId}`)
       .subscribe({
         next: (data) => {
           if (data.success && data.data) {
-            const recipe = data.data;
-            
-            // Using direct DOM manipulation
-            const nameInput = document.getElementById('name') as HTMLInputElement;
-            const authorInput = document.getElementById('author') as HTMLInputElement;
-            const typeInput = document.getElementById('type') as HTMLInputElement;
-            const dateInput = document.getElementById('date') as HTMLInputElement;
-            const instructionsInput = document.getElementById('instructions') as HTMLTextAreaElement;
-            
-            if (nameInput && authorInput && typeInput && dateInput && instructionsInput) {
-              nameInput.value = recipe.Name;
-              authorInput.value = recipe.Author;
-              typeInput.value = recipe.Type;
-              dateInput.value = recipe.Date;
-              instructionsInput.value = recipe.Instructions;
+            this.recipe = data.data;
+            if (this.recipe) {
+              this.loadIngredients(this.recipe.RecipeID);
             }
-            
-            this.loadIngredients(recipe.RecipeID);
           }
         },
         error: (error) => {
@@ -107,18 +71,11 @@ export class DetailsComponent implements OnInit, AfterViewInit {
     ).subscribe({
       next: (data) => {
         if (data.success && data.data) {
-          const ingredientsText = data.data
+          this.ingredients = data.data
             .map((ingredient: any) => 
               `${ingredient.Name}: ${ingredient.Quantity} ${ingredient.MeasurementUnit}`
             )
             .join("\n");
-            
-          // Set ingredients textarea value
-          const ingredientsTextarea = document.getElementById('ingredients') as HTMLTextAreaElement;
-          if (ingredientsTextarea) {
-            ingredientsTextarea.value = ingredientsText;
-            this.ingredients = ingredientsText;
-          }
         }
       },
       error: (error) => {
@@ -130,39 +87,11 @@ export class DetailsComponent implements OnInit, AfterViewInit {
   onUpdateClick(): void {
     if (!this.editMode) {
       this.editMode = true;
-      this.setFormReadOnly(false);
-      
-      // Update button text and color
-      const updateButton = document.getElementById('update-button') as HTMLButtonElement;
-      if (updateButton) {
-        updateButton.textContent = 'Save';
-        updateButton.style.color = 'red';
-      }
-      
-      // Show the add ingredient button in edit mode
-      const addIngredientButton = document.getElementById('add-ingredient-button') as HTMLButtonElement;
-      if (addIngredientButton) {
-        addIngredientButton.style.display = '';
-      }
     } else {
-      // Get form values directly from DOM
-      const nameInput = document.getElementById('name') as HTMLInputElement;
-      const authorInput = document.getElementById('author') as HTMLInputElement;
-      const typeInput = document.getElementById('type') as HTMLInputElement;
-      const dateInput = document.getElementById('date') as HTMLInputElement;
-      const instructionsInput = document.getElementById('instructions') as HTMLTextAreaElement;
-      
-      // Validate form
-      if (nameInput.value && authorInput.value && typeInput.value && dateInput.value && instructionsInput.value) {
-        const updatedRecipe = {
-          RecipeID: this.recipeId,
-          Name: nameInput.value,
-          Author: authorInput.value,
-          Type: typeInput.value,
-          Instructions: instructionsInput.value,
-          Date: dateInput.value
-        };
-
+      if (this.formComponent.isValid()) {
+        const updatedRecipe = this.formComponent.getFormData();
+        updatedRecipe.RecipeID = this.recipeId;
+        
         this.http.put<ApiResponse>(
           "http://localhost:8000/API/recipes.php?action=update",
           updatedRecipe
@@ -171,20 +100,7 @@ export class DetailsComponent implements OnInit, AfterViewInit {
             if (data.success) {
               alert("Recipe updated successfully!");
               this.editMode = false;
-              this.setFormReadOnly(true);
-              
-              // Reset button text and color
-              const updateButton = document.getElementById('update-button') as HTMLButtonElement;
-              if (updateButton) {
-                updateButton.textContent = 'Update';
-                updateButton.style.color = '';
-              }
-              
-              // Hide the add ingredient button in view mode
-              const addIngredientButton = document.getElementById('add-ingredient-button') as HTMLButtonElement;
-              if (addIngredientButton) {
-                addIngredientButton.style.display = 'none';
-              }
+              this.recipe = updatedRecipe;
             } else {
               alert("Failed to update recipe: " + (data.data || "Unknown error"));
             }
@@ -197,6 +113,12 @@ export class DetailsComponent implements OnInit, AfterViewInit {
       } else {
         alert("Please fill all required fields");
       }
+    }
+  }
+
+  onRecipeChange(updatedRecipe: Recipe): void {
+    if (this.editMode) {
+      this.recipe = updatedRecipe;
     }
   }
 
@@ -222,14 +144,10 @@ export class DetailsComponent implements OnInit, AfterViewInit {
   }
 
   onAddIngredientClick(): void {
-    // Get recipe name from DOM
-    const nameInput = document.getElementById('name') as HTMLInputElement;
-    const recipeName = nameInput ? nameInput.value : '';
-    
     this.router.navigate(['/add-ingredient'], { 
       queryParams: { 
         RecipeID: this.recipeId,
-        recipeName: recipeName
+        recipeName: this.recipe?.Name || ''
       }
     });
   }
