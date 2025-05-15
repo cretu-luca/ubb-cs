@@ -3,7 +3,7 @@ USE CityPlanning
 SELECT * FROM dbo.Project
 
 DELETE FROM dbo.Project
-WHERE ProjectID = 16
+WHERE ProjectID = 21
 
 INSERT INTO dbo.Project (ProjectName, StartDate, EndDate, SupplierID, SponsorshipID)
 VALUES ('Educatie', '01-01-2024', '01-01-2025', 1, 1)

@@ -18,7 +18,7 @@ namespace WinFormsApp1
         private Button button2;
         private System.ComponentModel.IContainer components = null;
 
-        SqlConnection conn = new SqlConnection("Data Source=np:\\\\.\\pipe\\LOCALDB#35324E14\\tsql\\query;" +
+        SqlConnection conn = new SqlConnection("Data Source=np:\\\\.\\pipe\\LOCALDB#A7DA0BDA\\tsql\\query;" +
             "Initial Catalog=CityPlanning;" +
             "Integrated Security=True");
         SqlDataAdapter city_data_adap = new SqlDataAdapter();
@@ -40,7 +40,8 @@ namespace WinFormsApp1
             }
             base.Dispose(disposing);
         }
-
+    
+        // safe code
         private void AddButtonClick(object sender, EventArgs e)
         {
             try
@@ -67,7 +68,35 @@ namespace WinFormsApp1
                 conn.Close();
             }
         }
+    /*
+        // vulnerable code 
+        private void AddButtonClick(object sender, EventArgs e)
+        {
+            try
+            {
+                string query = "Insert INTO Department (DepartmentName, EmployeesNumber, CityID) " +
+                     "VALUES ('" + textBox1.Text + "', " +
+                          textBox2.Text + ", '" +
+                          textBox3.Text + "')";
 
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Insert successful.");
+                conn.Close();
+
+                department_data_set.Clear();
+                department_data_adap.Fill(department_data_set);
+                dataGridView2.DataSource = department_data_set.Tables[0];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                conn.Close();
+            }
+        }
+    */
         private void DisplayDataButtonClick(object sender, EventArgs e)
         {
             city_data_adap.SelectCommand = new SqlCommand("Select * FROM City", conn);
