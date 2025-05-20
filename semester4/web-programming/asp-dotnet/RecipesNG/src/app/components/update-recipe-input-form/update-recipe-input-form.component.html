@@ -1,0 +1,35 @@
+<div id="recipe-form-content">
+  <div id="text-and-input">
+    <label> Name: </label>
+    <input type="text" id="name" [(ngModel)]="recipeName" [readOnly]="readOnly" (change)="updateRecipe()" />
+  </div>
+
+  <div id="text-and-input">
+    <label> Author: </label>
+    <input type="text" id="author" [(ngModel)]="recipeAuthor" [readOnly]="readOnly" (change)="updateRecipe()" />
+  </div>
+
+  <div id="text-and-input">
+    <label> Type: </label>
+    <input type="text" id="type" [(ngModel)]="recipeType" [readOnly]="readOnly" (change)="updateRecipe()" />
+  </div>
+
+  <div id="text-and-input">
+    <label> Date created: </label>
+    <input type="date" id="date" [(ngModel)]="recipeDate" [readOnly]="readOnly" (change)="updateRecipe()" />
+  </div>
+
+  <div id="text-and-big-input">
+    <label> Instructions: </label>
+    <textarea id="instructions" [(ngModel)]="recipeInstructions" [readOnly]="readOnly" (change)="updateRecipe()"></textarea>
+  </div>
+</div>
+
+<div id="text-and-big-input">
+  <div id="ingredients-and-update-button">
+    <label> Ingredients: </label>
+  </div>
+  <textarea id="ingredients" [value]="ingredients" readonly></textarea>
+</div>
+
+<ng-content></ng-content>

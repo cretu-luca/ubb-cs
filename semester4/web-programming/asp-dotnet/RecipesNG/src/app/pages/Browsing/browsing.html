@@ -1,0 +1,12 @@
+<app-filtering-bar 
+  [authors]="authors" 
+  [types]="types" 
+  [lastFilter]="lastFilter"
+  (authorFilterChange)="onAuthorChange($event)"
+  (typeFilterChange)="onTypeChange($event)">
+</app-filtering-bar>
+
+<app-browsing-table 
+  [recipes]="recipes" 
+  (onRowClick)="onTableRowClick($event)">
+</app-browsing-table>

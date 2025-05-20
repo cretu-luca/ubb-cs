@@ -1,13 +1,11 @@
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using asp_dotnet.Models;
 
 namespace asp_dotnet.Repository
 {
-    public class BaseRepository<T> : IRepository<T> where T : class
+    public class BaseRepository<T> : IBaseRepository<T> where T : class
     {
-        private ApplicationDatabaseContext context;
+        protected ApplicationDatabaseContext context;
         private DbSet<T> entities;
 
         public BaseRepository(ApplicationDatabaseContext context)

@@ -1,0 +1,15 @@
+<form id="add-recipe-form">
+  <app-update-recipe-input-form 
+    [recipe]="recipe" 
+    [ingredients]="ingredients" 
+    [readOnly]="!editMode"
+    (recipeChange)="onRecipeChange($event)">
+  </app-update-recipe-input-form>
+
+  <div id="buttons-div">
+    <button id="update-button" type="button" (click)="onUpdateClick()">
+      {{ editMode ? 'Save' : 'Update' }}
+    </button>
+    <button id="delete-button" type="button" (click)="onDeleteClick()">Delete</button>
+  </div>
+</form>

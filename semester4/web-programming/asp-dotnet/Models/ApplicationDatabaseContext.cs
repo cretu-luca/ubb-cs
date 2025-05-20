@@ -13,4 +13,5 @@ public class ApplicationDatabaseContext : DbContext
 
     public DbSet<Recipe> Recipe { get; set; } = null!;
     public DbSet<Ingredient> Ingredient { get; set; } = null!;
+    public DbSet<User> Users { get; set; } = null!; 
 }

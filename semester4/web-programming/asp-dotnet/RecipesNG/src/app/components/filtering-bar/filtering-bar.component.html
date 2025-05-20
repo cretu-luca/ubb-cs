@@ -1,0 +1,18 @@
+<div id="filtering-with-history">
+  <div id="history">
+    <label>Last filter:</label>
+    <input type="text" id="history-input" [value]="lastFilter" readonly />
+  </div>
+
+  <div id="filter-div">
+    <select id="filter-by-author" [(ngModel)]="selectedAuthor" (ngModelChange)="onAuthorChange()">
+      <option value="">All Authors</option>
+      <option *ngFor="let author of authors" [value]="author">{{ author }}</option>
+    </select>
+    
+    <select id="filter-by-type" [(ngModel)]="selectedType" (ngModelChange)="onTypeChange()">
+      <option value="">All Types</option>
+      <option *ngFor="let type of types" [value]="type">{{ type }}</option>
+    </select>
+  </div>
+</div>
