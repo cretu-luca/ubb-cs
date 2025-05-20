@@ -3,6 +3,7 @@ using asp_dotnet.Models;
 using asp_dotnet.Repository;
 using Microsoft.Extensions.DependencyInjection;
 using NSwag.AspNetCore;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,9 +13,27 @@ builder.Services.AddCors(options =>
     {
         policy.WithOrigins("http://localhost:4200")
               .AllowAnyHeader()
-              .AllowAnyMethod();
+              .AllowAnyMethod()
+              .AllowCredentials();
     });
 });
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.Cookie.Name = ".AspNetCore.Cookies";
+        options.Cookie.HttpOnly = true;
+        
+        options.Cookie.SecurePolicy = CookieSecurePolicy.None;
+        
+        options.Cookie.SameSite = SameSiteMode.None;
+        
+        options.Events.OnRedirectToLogin = context =>
+        {
+            context.Response.StatusCode = 401;
+            return Task.CompletedTask;
+        };
+    });
 
 builder.Services.AddControllers();
 
@@ -42,7 +61,12 @@ if (app.Environment.IsDevelopment())
 
 app.UseCors("AllowAngularApp");
 
-app.UseHttpsRedirection();
+if (!app.Environment.IsDevelopment())
+{
+    app.UseHttpsRedirection();
+}
+
+app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 

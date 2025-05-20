@@ -1,3 +1,7 @@
+<div class="error-message" *ngIf="errorMessage">
+  {{ errorMessage }}
+</div>
+
 <form id="add-recipe-form">
   <app-recipe-input-form></app-recipe-input-form>
   <button type="button" (click)="handleSubmit()"> Add Recipe </button>

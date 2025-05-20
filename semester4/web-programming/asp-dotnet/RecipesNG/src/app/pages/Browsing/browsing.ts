@@ -3,12 +3,7 @@ import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { BrowsingTableComponent } from '../../components/browsing-table/browsing-table.component';
 import { FilteringBarComponent } from '../../components/filtering-bar/filtering-bar.component';
-import { HttpClient } from '@angular/common/http';
-
-interface ApiResponse {
-  success: boolean;
-  data: any;
-}
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 interface Recipe {
   recipeID: string;
@@ -32,6 +27,7 @@ export class BrowsingComponent implements OnInit {
   recipes: Recipe[] = [];
   authors: string[] = [];
   types: string[] = [];
+  errorMessage: string = '';
 
   constructor(private router: Router, private http: HttpClient) {}
 
@@ -46,8 +42,12 @@ export class BrowsingComponent implements OnInit {
   }
 
   fetchAllRecipes(): void {
+    this.errorMessage = '';
+    
     this.http
-      .get<Recipe[]>('https://localhost:7269/Recipe/GetAll')
+      .get<Recipe[]>('https://localhost:7269/Recipe/GetAll', {
+        withCredentials: true
+      })
       .subscribe({
         next: (data) => {
           if (Array.isArray(data)) {
@@ -57,8 +57,9 @@ export class BrowsingComponent implements OnInit {
             this.recipes = [];
           }
         },
-        error: (_) => {
+        error: (error) => {
           this.recipes = [];
+          this.handleError(error);
         },
       });
   }
@@ -71,10 +72,12 @@ export class BrowsingComponent implements OnInit {
 
     this.lastFilter = this.currentFilter;
     this.currentFilter = author;
+    this.errorMessage = '';
 
     this.http
       .get<Recipe[]>(
-        `https://localhost:7269/Recipe/GetRecipesByAuthor/${author}`
+        `https://localhost:7269/Recipe/GetRecipesByAuthor/${author}`,
+        { withCredentials: true }
       )
       .subscribe({
         next: (data) => {
@@ -84,8 +87,9 @@ export class BrowsingComponent implements OnInit {
             this.recipes = [];
           }
         },
-        error: (_) => {
+        error: (error) => {
           this.recipes = [];
+          this.handleError(error);
         },
       });
   }
@@ -98,10 +102,12 @@ export class BrowsingComponent implements OnInit {
 
     this.lastFilter = this.currentFilter;
     this.currentFilter = type;
+    this.errorMessage = '';
 
     this.http
       .get<Recipe[]>(
-        `https://localhost:7269/Recipe/GetRecipesByType/${type}`
+        `https://localhost:7269/Recipe/GetRecipesByType/${type}`,
+        { withCredentials: true }
       )
       .subscribe({
         next: (data) => {
@@ -111,10 +117,19 @@ export class BrowsingComponent implements OnInit {
             this.recipes = [];
           }
         },
-        error: (_) => {
+        error: (error) => {
           this.recipes = [];
+          this.handleError(error);
         },
       });
+  }
+
+  private handleError(error: HttpErrorResponse): void {
+    if (error.status === 401) {
+      this.errorMessage = 'You need to be logged in to access this content.';
+    } else {
+      this.errorMessage = 'An error occurred. Please try again later.';
+    }
   }
 
   private extractFilters(data: Recipe[]): void {

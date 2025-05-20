@@ -13,11 +13,6 @@ interface Recipe {
   date: string;
 }
 
-interface ApiResponse {
-  success: boolean;
-  data: any;
-}
-
 @Component({
   selector: 'recipe-details',
   standalone: true,
@@ -100,7 +95,6 @@ export class DetailsComponent implements OnInit {
             this.recipe = data;
           },
           error: (error) => {
-            console.error("Error updating recipe:", error);
             alert("Error updating recipe. Please try again.");
           }
         });
@@ -126,19 +120,9 @@ export class DetailsComponent implements OnInit {
           this.router.navigate(['/browse']);
         },
         error: (error) => {
-          console.error("Error deleting recipe:", error);
           alert("Error deleting recipe. Please try again.");
         }
       });
     }
-  }
-
-  onAddIngredientClick(): void {
-    this.router.navigate(['/add-ingredient'], { 
-      queryParams: { 
-        recipeID: this.recipeId,
-        recipeName: this.recipe?.name || ''
-      }
-    });
   }
 } 

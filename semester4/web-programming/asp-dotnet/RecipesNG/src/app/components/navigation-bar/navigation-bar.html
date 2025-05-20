@@ -2,5 +2,8 @@
     <nav>
       <a routerLink="/add-recipe">Add recipe</a>
       <a routerLink="/browse">Browse recipes</a>
+      <button class="auth-button" (click)="loginOrLogout()">
+        {{ isLoggedIn ? 'Log out' : 'Log in' }}
+      </button>
     </nav>
 </header>

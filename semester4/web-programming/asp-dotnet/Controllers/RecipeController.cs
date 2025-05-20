@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace asp_dotnet.Controllers
 {
-    // [Authorize]
+    [Authorize]
     [Route("[controller]")]
     [ApiController]
     public class RecipeController : BaseController<Recipe>

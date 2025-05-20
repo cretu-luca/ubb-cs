@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace asp_dotnet.Controllers
 {
-    // [Authorize]
+    [Authorize]
     [Route("[controller]")]
     [ApiController]
     public class BaseController<T> : ControllerBase where T : class

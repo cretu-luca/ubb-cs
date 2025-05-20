@@ -1,8 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { RouterLink, Router } from '@angular/router';
 import { RecipeInputFormComponent } from '../../components/recipe-input-form/recipe-input-form.component';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 interface Recipe {
   recipeID: string;
@@ -23,27 +23,40 @@ interface Recipe {
 export class AddRecipe {
   @ViewChild(RecipeInputFormComponent)
   recipeFormComponent!: RecipeInputFormComponent;
+  errorMessage: string = '';
 
   constructor(private http: HttpClient) {}
 
   handleSubmit(): void {
+    this.errorMessage = '';
+    
     if (!this.recipeFormComponent.isValid()) {
-      alert('Please fill all fields');
+      this.errorMessage = 'Please fill all fields';
       return;
     }
 
     const recipe = this.recipeFormComponent.getFormData();
 
     this.http
-      .post<Recipe>('https://localhost:7269/Recipe/Create', recipe)
+      .post<Recipe>('https://localhost:7269/Recipe/Create', recipe, {
+        withCredentials: true
+      })
       .subscribe({
         next: (data) => {
           alert('Recipe added successfully!');
           this.recipeFormComponent.reset();
         },
         error: (error) => {
-          alert('Error adding recipe. Please try again.');
+          this.handleError(error);
         },
       });
+  }
+  
+  private handleError(error: HttpErrorResponse): void {
+    if (error.status === 401) {
+      this.errorMessage = 'You need to be logged in to add recipes.';
+    } else {
+      this.errorMessage = 'Error adding recipe. Please try again.';
+    }
   }
 }

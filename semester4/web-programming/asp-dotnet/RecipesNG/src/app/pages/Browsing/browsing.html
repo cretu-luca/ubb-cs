@@ -1,3 +1,7 @@
+<div class="error-message" *ngIf="errorMessage">
+  {{ errorMessage }}
+</div>
+
 <app-filtering-bar 
   [authors]="authors" 
   [types]="types" 
