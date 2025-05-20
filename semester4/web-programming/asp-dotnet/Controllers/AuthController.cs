@@ -1,9 +1,9 @@
-// Controllers/AccountController.cs
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using asp_dotnet.Models;
+using asp_dotnet.Repository;
 
 namespace asp_dotnet.Controllers
 {
@@ -11,26 +11,21 @@ namespace asp_dotnet.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly ApplicationDatabaseContext context;
+        private readonly IUserRepository userRepository;
 
-        public AuthController(ApplicationDatabaseContext context)
+        public AuthController(IUserRepository userRepository)
         {
-            this.context = context;
+            this.userRepository = userRepository;
         }
-
-        public class LoginModel
-        {
-            public string Username { get; set; }
-            public string Password { get; set; }
-        }
+        
+        public record LoginRequest(string Username, string Password);
 
         [HttpPost("Login")]
-        public async Task<IActionResult> Login([FromBody] LoginModel model)
+        public async Task<IActionResult> Login([FromBody] LoginRequest request)
         {
-            var user = context.Users.FirstOrDefault(u => 
-                u.Username == model.Username && u.Password == model.Password);
+            var user = userRepository.GetByUsername(request.Username);
 
-            if (user == null)
+            if (user == null || user.Password != request.Password)
             {
                 return Unauthorized(new { message = "Invalid credentials" });
             }
@@ -42,14 +37,6 @@ namespace asp_dotnet.Controllers
 
             var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
             var principal = new ClaimsPrincipal(identity);
-            
-            var cookieOptions = new CookieOptions
-            {
-                HttpOnly = true,
-                Expires = DateTime.UtcNow.AddDays(7),
-                SameSite = SameSiteMode.None,
-                Secure = false
-            };
 
             await HttpContext.SignInAsync(
                 CookieAuthenticationDefaults.AuthenticationScheme, 
@@ -57,8 +44,7 @@ namespace asp_dotnet.Controllers
                 new AuthenticationProperties
                 {
                     IsPersistent = true,
-                    ExpiresUtc = DateTimeOffset.UtcNow.AddDays(7),
-                    IssuedUtc = DateTimeOffset.UtcNow
+                    ExpiresUtc = DateTimeOffset.UtcNow.AddDays(7)
                 });
 
             return Ok(new { message = "Login successful" });

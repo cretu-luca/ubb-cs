@@ -11,7 +11,7 @@ namespace asp_dotnet.Repository
 
         public User? GetByUsername(string username)
         {
-            return context.Users.FirstOrDefault(u => u.Username == username);
+            return context.Users.FirstOrDefault(user => user.Username == username);
         }
     }
 } 

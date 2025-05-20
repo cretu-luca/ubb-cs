@@ -44,7 +44,9 @@ export class DetailsComponent implements OnInit {
   }
   
   loadRecipeData(): void {
-    this.http.get<Recipe>(`https://localhost:7269/Recipe/GetById/${this.recipeId}`)
+    this.http.get<Recipe>(`https://localhost:7269/Recipe/GetById/${this.recipeId}`, {
+      withCredentials: true
+    })
       .subscribe({
         next: (data) => {
           this.recipe = data;
@@ -60,7 +62,9 @@ export class DetailsComponent implements OnInit {
 
   loadIngredients(recipeId: string): void {
     this.http.get<any[]>(
-      `https://localhost:7269/Ingredient/GetIngredientsByRecipeId/${recipeId}`
+      `https://localhost:7269/Ingredient/GetIngredientsByRecipeId/${recipeId}`, {
+        withCredentials: true
+      }
     ).subscribe({
       next: (data) => {
         if (Array.isArray(data)) {
@@ -87,7 +91,8 @@ export class DetailsComponent implements OnInit {
         
         this.http.put<Recipe>(
           "https://localhost:7269/Recipe/Update",
-          updatedRecipe
+          updatedRecipe,
+          { withCredentials: true }
         ).subscribe({
           next: (data) => {
             alert("Recipe updated successfully!");
@@ -113,7 +118,8 @@ export class DetailsComponent implements OnInit {
   onDeleteClick(): void {
     if (confirm("Are you sure you want to delete this recipe?")) {
       this.http.delete(
-        `https://localhost:7269/Recipe/Delete/${this.recipeId}`
+        `https://localhost:7269/Recipe/Delete/${this.recipeId}`,
+        { withCredentials: true }
       ).subscribe({
         next: () => {
           alert("Recipe deleted successfully!");
