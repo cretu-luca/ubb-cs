@@ -29,12 +29,5 @@ namespace asp_dotnet.Controllers
         {
             return await this.recipeRepository.GetRecipesByType(type);
         }
-
-        [HttpGet("CheckAuth")]
-        [Authorize]
-        public IActionResult CheckAuth()
-        {
-            return Ok(new { authenticated = true });
-        }
     }
 }

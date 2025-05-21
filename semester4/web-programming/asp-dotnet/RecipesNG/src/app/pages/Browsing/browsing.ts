@@ -127,6 +127,7 @@ export class BrowsingComponent implements OnInit {
   private handleError(error: HttpErrorResponse): void {
     if (error.status === 401) {
       this.errorMessage = 'You need to be logged in to access this content.';
+      this.router.navigate(['/login']);
     } else {
       this.errorMessage = 'An error occurred. Please try again later.';
     }
