@@ -1,7 +1,7 @@
 {
   "mutation_rate": 0.1,
   "crossover_rate": 0.8,
-  "population_size": 15,
-  "generations": 10,
-  "bits_per_input": 8
+  "population_size": 30,
+  "generations": 25,
+  "bits_per_input": 16
 }
