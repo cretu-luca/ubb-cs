@@ -50,7 +50,7 @@ public class RouteController extends HttpServlet {
                     handleFinish(request, response, session);
                     break;
                 default:
-                    handleStart(request, response, session);
+                    showCurrentState(request, response, session);
             }
         } catch (SQLException e) {
             throw new ServletException("Database error", e);
@@ -63,14 +63,36 @@ public class RouteController extends HttpServlet {
         doGet(request, response);
     }
 
+    private void showCurrentState(HttpServletRequest request, HttpServletResponse response, HttpSession session) 
+            throws SQLException, ServletException, IOException {
+        
+        Integer currentCityId = (Integer) session.getAttribute("currentCityId");
+        List<Integer> journey = (List<Integer>) session.getAttribute("journey");
+        
+        if (currentCityId != null && journey != null) {
+            City currentCity = getCityById(currentCityId);
+            List<City> neighbors = getNeighboringCities(currentCityId);
+            
+            request.setAttribute("currentCity", currentCity);
+            request.setAttribute("neighbors", neighbors);
+            request.setAttribute("journey", getJourneyCities(journey));
+        } else {
+            List<City> cities = getAllCities();
+            request.setAttribute("cities", cities);
+        }
+        
+        request.getRequestDispatcher("/route.jsp").forward(request, response);
+    }
+
     private void handleStart(HttpServletRequest request, HttpServletResponse response, HttpSession session) 
             throws SQLException, ServletException, IOException {
         
-        List<City> cities = getAllCities();
-        request.setAttribute("cities", cities);
-        
         session.removeAttribute("currentCityId");
         session.removeAttribute("journey");
+        session.removeAttribute("currentJourneyId");
+
+        List<City> cities = getAllCities();
+        request.setAttribute("cities", cities);
         
         request.getRequestDispatcher("/route.jsp").forward(request, response);
     }
@@ -79,6 +101,7 @@ public class RouteController extends HttpServlet {
             throws SQLException, ServletException, IOException {
         
         int cityId = Integer.parseInt(request.getParameter("cityId"));
+        String username = (String) session.getAttribute("username");
         
         List<Integer> journey = (List<Integer>) session.getAttribute("journey");
         if (journey == null) {
@@ -87,6 +110,16 @@ public class RouteController extends HttpServlet {
         journey.add(cityId);
         session.setAttribute("journey", journey);
         session.setAttribute("currentCityId", cityId);
+        
+        Integer currentJourneyId = (Integer) session.getAttribute("currentJourneyId");
+        if (currentJourneyId == null) {
+            currentJourneyId = DatabaseConnection.getNextJourneyId(username);
+            session.setAttribute("currentJourneyId", currentJourneyId);
+        }
+        
+        int stepNumber = DatabaseConnection.getNextStepInJourney(username, currentJourneyId);
+        
+        DatabaseConnection.saveStep(username, cityId, stepNumber, currentJourneyId);
         
         City currentCity = getCityById(cityId);
         List<City> neighbors = getNeighboringCities(cityId);
@@ -102,9 +135,19 @@ public class RouteController extends HttpServlet {
             throws SQLException, ServletException, IOException {
         
         int stepIndex = Integer.parseInt(request.getParameter("step"));
+        String username = (String) session.getAttribute("username");
+        Integer currentJourneyId = (Integer) session.getAttribute("currentJourneyId");
         
         List<Integer> journey = (List<Integer>) session.getAttribute("journey");
-        if (journey != null && stepIndex < journey.size()) {
+        if (journey != null && stepIndex < journey.size() && currentJourneyId != null) {
+            int stepsToRemove = journey.size() - (stepIndex + 1);
+            
+            if (stepsToRemove > 0) {
+                int maxStep = DatabaseConnection.getMaxStepInJourney(username, currentJourneyId);
+                int deleteFromStep = maxStep - stepsToRemove + 1;
+                DatabaseConnection.deleteStepsFrom(username, currentJourneyId, deleteFromStep);
+            }
+            
             journey = journey.subList(0, stepIndex + 1);
             session.setAttribute("journey", journey);
             

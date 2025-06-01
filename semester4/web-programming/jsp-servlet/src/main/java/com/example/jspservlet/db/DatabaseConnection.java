@@ -52,4 +52,63 @@ public class DatabaseConnection {
             e.printStackTrace();
         }
     }
+
+    public static void saveStep(String username, int cityId, int step, int journeyId) throws SQLException {
+        ResultSet userResult = executeQuery("SELECT id FROM users WHERE username = ?", username);
+        if (!userResult.next()) {
+            throw new SQLException("User not found: " + username);
+        }
+        int userId = userResult.getInt("id");
+        
+        executeUpdate("INSERT INTO journey (journey_id, user_id, city_id, step) VALUES (?, ?, ?, ?)", 
+                     journeyId, userId, cityId, step);
+    }
+
+    public static void deleteStepsFrom(String username, int journeyId, int fromStep) throws SQLException {
+        ResultSet userResult = executeQuery("SELECT id FROM users WHERE username = ?", username);
+        if (!userResult.next()) {
+            throw new SQLException("User not found: " + username);
+        }
+        int userId = userResult.getInt("id");
+        
+        executeUpdate("DELETE FROM journey WHERE user_id = ? AND journey_id = ? AND step >= ?", 
+                     userId, journeyId, fromStep);
+    }
+
+    public static int getMaxJourneyId(String username) throws SQLException {
+        ResultSet userResult = executeQuery("SELECT id FROM users WHERE username = ?", username);
+        if (!userResult.next()) {
+            return 0;
+        }
+        int userId = userResult.getInt("id");
+        
+        ResultSet journeyResult = executeQuery("SELECT MAX(journey_id) FROM journey WHERE user_id = ?", userId);
+        if (journeyResult.next()) {
+            return journeyResult.getInt(1);
+        }
+        return 0;
+    }
+
+    public static int getNextJourneyId(String username) throws SQLException {
+        return getMaxJourneyId(username) + 1;
+    }
+    
+    public static int getMaxStepInJourney(String username, int journeyId) throws SQLException {
+        ResultSet userResult = executeQuery("SELECT id FROM users WHERE username = ?", username);
+        if (!userResult.next()) {
+            return 0;
+        }
+        int userId = userResult.getInt("id");
+        
+        ResultSet stepResult = executeQuery("SELECT MAX(step) FROM journey WHERE user_id = ? AND journey_id = ?", 
+                                          userId, journeyId);
+        if (stepResult.next()) {
+            return stepResult.getInt(1);
+        }
+        return 0;
+    }
+    
+    public static int getNextStepInJourney(String username, int journeyId) throws SQLException {
+        return getMaxStepInJourney(username, journeyId) + 1;
+    }
 } 

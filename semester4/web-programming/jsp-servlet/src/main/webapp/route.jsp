@@ -16,6 +16,18 @@
 <body>
     <h1>Transportation Route Planner</h1>
 
+    <%
+        String journeyAlert = (String) request.getAttribute("journeyAlert");
+        if (journeyAlert != null) {
+    %>
+        <script>
+            alert("<%= journeyAlert %>");
+            window.location.href = "route?action=start";
+        </script>
+    <%
+        }
+    %>
+
     <div class="section">
         <h3>Current Journey</h3>
         <%
