@@ -43,16 +43,6 @@ public class DatabaseConnection {
         }
     }
 
-    public static void close(ResultSet resultSet, PreparedStatement statement, Connection connection) {
-        try {
-            if (resultSet != null) resultSet.close();
-            if (statement != null) statement.close();
-            if (connection != null) connection.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
     public static void saveStep(String username, int cityId, int step, int journeyId) throws SQLException {
         ResultSet userResult = executeQuery("SELECT id FROM users WHERE username = ?", username);
         if (!userResult.next()) {

@@ -22,36 +22,10 @@ public class RouteController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
         
-        HttpSession session = request.getSession();
-        
-        if (session.getAttribute("username") == null) {
-            response.sendRedirect("login");
-            return;
-        }
-        
-        String action = request.getParameter("action");
-        
-        if (action == null) {
-            action = "start";
-        }
+        if (!isAuthenticated(request, response)) return;
         
         try {
-            switch (action) {
-                case "start":
-                    handleStart(request, response, session);
-                    break;
-                case "move":
-                    handleMove(request, response, session);
-                    break;
-                case "back":
-                    handleBack(request, response, session);
-                    break;
-                case "finish":
-                    handleFinish(request, response, session);
-                    break;
-                default:
-                    showCurrentState(request, response, session);
-            }
+            showCurrentState(request, response);
         } catch (SQLException e) {
             throw new ServletException("Database error", e);
         }
@@ -63,119 +37,34 @@ public class RouteController extends HttpServlet {
         doGet(request, response);
     }
 
-    private void showCurrentState(HttpServletRequest request, HttpServletResponse response, HttpSession session) 
+    private void showCurrentState(HttpServletRequest request, HttpServletResponse response) 
             throws SQLException, ServletException, IOException {
         
+        HttpSession session = request.getSession();
         Integer currentCityId = (Integer) session.getAttribute("currentCityId");
         List<Integer> journey = (List<Integer>) session.getAttribute("journey");
         
         if (currentCityId != null && journey != null) {
-            City currentCity = getCityById(currentCityId);
-            List<City> neighbors = getNeighboringCities(currentCityId);
-            
-            request.setAttribute("currentCity", currentCity);
-            request.setAttribute("neighbors", neighbors);
+            request.setAttribute("currentCity", getCityById(currentCityId));
+            request.setAttribute("neighbors", getNeighboringCities(currentCityId));
             request.setAttribute("journey", getJourneyCities(journey));
         } else {
-            List<City> cities = getAllCities();
-            request.setAttribute("cities", cities);
+            request.setAttribute("cities", getAllCities());
         }
         
         request.getRequestDispatcher("/route.jsp").forward(request, response);
     }
 
-    private void handleStart(HttpServletRequest request, HttpServletResponse response, HttpSession session) 
-            throws SQLException, ServletException, IOException {
-        
-        session.removeAttribute("currentCityId");
-        session.removeAttribute("journey");
-        session.removeAttribute("currentJourneyId");
-
-        List<City> cities = getAllCities();
-        request.setAttribute("cities", cities);
-        
-        request.getRequestDispatcher("/route.jsp").forward(request, response);
+    private boolean isAuthenticated(HttpServletRequest request, HttpServletResponse response) 
+            throws IOException {
+        HttpSession session = request.getSession();
+        if (session.getAttribute("username") == null) {
+            response.sendRedirect("login");
+            return false;
+        }
+        return true;
     }
 
-    private void handleMove(HttpServletRequest request, HttpServletResponse response, HttpSession session) 
-            throws SQLException, ServletException, IOException {
-        
-        int cityId = Integer.parseInt(request.getParameter("cityId"));
-        String username = (String) session.getAttribute("username");
-        
-        List<Integer> journey = (List<Integer>) session.getAttribute("journey");
-        if (journey == null) {
-            journey = new ArrayList<>();
-        }
-        journey.add(cityId);
-        session.setAttribute("journey", journey);
-        session.setAttribute("currentCityId", cityId);
-        
-        Integer currentJourneyId = (Integer) session.getAttribute("currentJourneyId");
-        if (currentJourneyId == null) {
-            currentJourneyId = DatabaseConnection.getNextJourneyId(username);
-            session.setAttribute("currentJourneyId", currentJourneyId);
-        }
-        
-        int stepNumber = DatabaseConnection.getNextStepInJourney(username, currentJourneyId);
-        
-        DatabaseConnection.saveStep(username, cityId, stepNumber, currentJourneyId);
-        
-        City currentCity = getCityById(cityId);
-        List<City> neighbors = getNeighboringCities(cityId);
-        
-        request.setAttribute("currentCity", currentCity);
-        request.setAttribute("neighbors", neighbors);
-        request.setAttribute("journey", getJourneyCities(journey));
-        
-        request.getRequestDispatcher("/route.jsp").forward(request, response);
-    }
-
-    private void handleBack(HttpServletRequest request, HttpServletResponse response, HttpSession session) 
-            throws SQLException, ServletException, IOException {
-        
-        int stepIndex = Integer.parseInt(request.getParameter("step"));
-        String username = (String) session.getAttribute("username");
-        Integer currentJourneyId = (Integer) session.getAttribute("currentJourneyId");
-        
-        List<Integer> journey = (List<Integer>) session.getAttribute("journey");
-        if (journey != null && stepIndex < journey.size() && currentJourneyId != null) {
-            int stepsToRemove = journey.size() - (stepIndex + 1);
-            
-            if (stepsToRemove > 0) {
-                int maxStep = DatabaseConnection.getMaxStepInJourney(username, currentJourneyId);
-                int deleteFromStep = maxStep - stepsToRemove + 1;
-                DatabaseConnection.deleteStepsFrom(username, currentJourneyId, deleteFromStep);
-            }
-            
-            journey = journey.subList(0, stepIndex + 1);
-            session.setAttribute("journey", journey);
-            
-            int currentCityId = journey.get(journey.size() - 1);
-            session.setAttribute("currentCityId", currentCityId);
-            
-            City currentCity = getCityById(currentCityId);
-            List<City> neighbors = getNeighboringCities(currentCityId);
-            
-            request.setAttribute("currentCity", currentCity);
-            request.setAttribute("neighbors", neighbors);
-            request.setAttribute("journey", getJourneyCities(journey));
-        }
-        
-        request.getRequestDispatcher("/route.jsp").forward(request, response);
-    }
-
-    private void handleFinish(HttpServletRequest request, HttpServletResponse response, HttpSession session) 
-            throws SQLException, ServletException, IOException {
-        
-        List<Integer> journey = (List<Integer>) session.getAttribute("journey");
-        if (journey != null) {
-            request.setAttribute("finalRoute", getJourneyCities(journey));
-        }
-        
-        request.getRequestDispatcher("/finish.jsp").forward(request, response);
-    }
-  
     private List<City> getAllCities() throws SQLException {
         List<City> cities = new ArrayList<>();
         ResultSet resultSet = DatabaseConnection.executeQuery("SELECT * FROM cities");

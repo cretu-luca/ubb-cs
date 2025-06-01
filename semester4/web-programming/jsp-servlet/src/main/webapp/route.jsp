@@ -10,7 +10,19 @@
         .section { margin: 20px 0; padding: 15px; border: 1px solid #ccc; }
         a { margin-right: 10px; text-decoration: none; color: inherit; }
         a:visited { color: inherit; }
-        .btn { padding: 8px 12px; background: #f0f0f0; color: black; border-radius: 3px; border: 1px solid #ccc; }
+        .btn { 
+            padding: 8px 12px; 
+            background: #f0f0f0; 
+            color: black; 
+            border-radius: 3px; 
+            border: 1px solid #ccc; 
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .btn:hover { background: #e0e0e0; }
     </style>
 </head>
 <body>
@@ -42,7 +54,10 @@
         %>
             <div>
                 Step <%= i + 1 %>: 
-                <a href="route?action=back&step=<%= i %>"><%= city.getName() %></a>
+                <form method="post" action="route/back" style="display: inline;">
+                    <input type="hidden" name="step" value="<%= i %>">
+                    <button type="submit" style="background: none; border: none; color: blue; text-decoration: underline; cursor: pointer; font-size: inherit;"><%= city.getName() %></button>
+                </form>
                 <%= i == journey.size() - 1 ? " (Current)" : "" %>
             </div>
         <%
@@ -84,9 +99,10 @@
             } else {
                 for (City city : cities) {
         %>
-            <a href="route?action=move&cityId=<%= city.getId() %>" class="btn">
-                <%= city.getName() %>
-            </a>
+            <form method="post" action="route/move" style="display: inline;">
+                <input type="hidden" name="cityId" value="<%= city.getId() %>">
+                <button type="submit" class="btn"><%= city.getName() %></button>
+            </form>
         <%
                 }
             }
@@ -97,11 +113,13 @@
         <%
             if (journey != null && !journey.isEmpty()) {
         %>
-            <a href="route?action=finish" class="btn">Finish Journey</a>
+            <a href="route/finish" class="btn">Finish Journey</a>
         <%
             }
         %>
-        <a href="route?action=start" class="btn">Start Over</a>
+        <form method="post" action="route/start" style="display: inline;">
+            <button type="submit" class="btn">Start Over</button>
+        </form>
     </div>
 
 </body>
