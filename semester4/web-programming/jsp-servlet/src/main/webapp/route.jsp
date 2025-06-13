@@ -34,7 +34,7 @@
     %>
         <script>
             alert("<%= journeyAlert %>");
-            window.location.href = "route?action=start";
+            window.location.href = "route";
         </script>
     <%
         }

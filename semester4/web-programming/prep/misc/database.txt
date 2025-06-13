@@ -1,0 +1,11 @@
+- connecting with root to msyql
+
+    mysql -u root
+
+- credentials
+
+    Host: localhost
+    Port: 3306
+    User: root
+    Password: (leave blank)
+    Database: (leave blank or choose a specific database)

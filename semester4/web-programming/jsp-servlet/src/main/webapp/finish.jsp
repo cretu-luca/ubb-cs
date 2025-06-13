@@ -42,7 +42,7 @@
     </div>
 
     <div>
-        <a href="route?action=start" class="btn">Plan New Journey</a>
+        <a href="../route" class="btn">Plan New Journey</a>
     </div>
 
 </body>

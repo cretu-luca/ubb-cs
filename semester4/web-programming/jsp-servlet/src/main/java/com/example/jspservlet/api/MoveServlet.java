@@ -39,7 +39,6 @@ public class MoveServlet extends HttpServlet {
             session.setAttribute("journey", journey);
             session.setAttribute("currentCityId", cityId);
             
-            // Handle journey tracking
             Integer currentJourneyId = (Integer) session.getAttribute("currentJourneyId");
             if (currentJourneyId == null) {
                 currentJourneyId = DatabaseConnection.getNextJourneyId(username);

@@ -1,0 +1,17 @@
+- create project 
+
+    ng new project-name
+
+-  create component
+
+    mkdir pages components
+    ng g c pages/component-name
+    ng g c components/component-name
+
+- run project 
+
+    ng serve
+
+- install cookie library 
+
+    npm install ngx-cookie-service@^19.0.0

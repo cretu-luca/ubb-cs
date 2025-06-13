@@ -35,14 +35,12 @@ public class BackServlet extends HttpServlet {
             if (journey != null && stepIndex < journey.size() && currentJourneyId != null) {
                 int stepsToRemove = journey.size() - (stepIndex + 1);
                 
-                // Remove steps from database
                 if (stepsToRemove > 0) {
                     int maxStep = DatabaseConnection.getMaxStepInJourney(username, currentJourneyId);
                     int deleteFromStep = maxStep - stepsToRemove + 1;
                     DatabaseConnection.deleteStepsFrom(username, currentJourneyId, deleteFromStep);
                 }
                 
-                // Update session
                 journey = journey.subList(0, stepIndex + 1);
                 session.setAttribute("journey", journey);
                 

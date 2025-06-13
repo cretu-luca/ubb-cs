@@ -23,7 +23,6 @@ public class StartJourneyServlet extends HttpServlet {
             return;
         }
 
-        // Clear journey session data
         session.removeAttribute("currentCityId");
         session.removeAttribute("journey");
         session.removeAttribute("currentJourneyId");
