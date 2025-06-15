@@ -1,0 +1,20 @@
+@page
+@model server_dotnet.Pages.MyProjectsModel
+
+<h2>My projects</h2>
+
+<ul>
+    @foreach (var project in Model.Projects)
+    {
+        <li>
+            <strong>@project.Name</strong> (ID: @project.Id) <br />
+            Description: @project.Description <br />
+            Members: @project.Members
+        </li>
+    }
+</ul>
+
+@if (!Model.Projects.Any())
+{
+    <p>No projects found for your user.</p>
+} 

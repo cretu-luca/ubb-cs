@@ -1,0 +1,30 @@
+@page
+@model server_dotnet.Pages.AssignModel
+
+<h2>Assign Users to Projects</h2>
+
+<form method="post">
+    <div>
+        <label>User Id:</label>
+        <input type="text" asp-for="UserId" required />
+    </div>
+
+    <div>
+        <label>Project Names (comma-separated):</label>
+        <input type="text" asp-for="ProjectNames" required />
+    </div>
+
+    <button type="submit">Assign</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.Message))
+{
+    <div>@Model.Message</div>
+}
+
+@if (!string.IsNullOrEmpty(TempData["Message"] as string))
+{
+    <div>@TempData["Message"]</div>
+}
+
+<p><a href="/AllProjects">Back to All Projects</a></p> 

@@ -1,0 +1,27 @@
+﻿@page
+@using WebApplication2.Models
+@model MyApp.Namespace.CoursesForStudentModel
+@{
+}
+
+@if (HttpContext.Session.GetString("username") != null)
+{
+    <p> view all the courses student is registered for: </p>
+    <form method="post">
+        <p> <input type="text" name="studentName"/> </p>
+        <button type="submit"> find </button>
+    </form>
+    
+    if (@Model.Courses.Any())
+    {
+        <p> courses for student: </p>
+        foreach (Course course in @Model.Courses)
+        {
+            <p> @course.CourseName </p>
+        }
+    }
+}
+else
+{
+    <p> you must sign in first. </p>
+}

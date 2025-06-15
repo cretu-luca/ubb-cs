@@ -1,3 +1,5 @@
+-- only the api
+
 - create dotnet api
 
     dotnet new webapi -n server
@@ -6,3 +8,24 @@
 
     dotnet add package Microsoft.EntityFrameworkCore --version 8.0.13
     dotnet add package Pomelo.EntityFrameworkCore.MySql --version 8.0.3
+    
+    dotnet add package Microsoft.EntityFrameworkCore.Design --version 8.0.13
+
+
+
+    ef cli tool - might be optional
+    
+    dotnet tool install --global dotnet-ef
+    export PATH="$PATH:/Users/cretuluca/.dotnet/tools"
+
+
+-- razor pages + api
+
+    dotnet new webapp -n server
+
+
+-- migrations 
+
+    dotnet ef migrations add Initial
+    dotnet ef database update
+

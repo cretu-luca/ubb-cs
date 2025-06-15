@@ -1,0 +1,10 @@
+﻿@page
+@model MyApp.Namespace.HomeModel
+@{
+}
+
+<p> home </p>
+@if (HttpContext.Session.GetString("username") != null)
+{
+    <p> Hi, @HttpContext.Session.GetString("username") </p>
+}

@@ -1,0 +1,60 @@
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddRazorPages();
+
+// this
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
+var app = builder.Build();
+
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error");
+    app.UseHsts();
+}
+
+// this
+app.MapGet("/", async context =>
+{
+    context.Response.Redirect("/Home");
+});
+
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+
+app.UseRouting();
+
+app.UseAuthorization();
+
+// this
+app.UseSession();
+app.MapRazorPages();
+
+app.Run();
+
+----------------------------------------------------
+
+# Entity Framework Core packages
+dotnet add package Microsoft.EntityFrameworkCore --version 8.0.13
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 8.0.13
+dotnet add package Microsoft.EntityFrameworkCore.Relational --version 8.0.13
+
+# MySQL provider
+dotnet add package Pomelo.EntityFrameworkCore.MySql --version 8.0.3
+
+dotnet ef migrations add Initial
+dotnet ef database update
+
+export PATH="$PATH:$HOME/.dotnet/tools"
+
+
+# Install the Entity Framework CLI tools (if not already installed)
+dotnet tool install --global dotnet-ef --version 8.0.13
+
+dotnet add package Microsoft.AspNetCore.SignalR.Client

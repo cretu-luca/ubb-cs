@@ -17,3 +17,31 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = /Users/cretuluca/uni/ubb-cs/semester4/web-programming/prep/models/software/server-dotnet
 build_property._RazorSourceGeneratorDebug = 
+
+[/Users/cretuluca/uni/ubb-cs/semester4/web-programming/prep/models/software/server-dotnet/Pages/AllDevelopers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWxsRGV2ZWxvcGVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/cretuluca/uni/ubb-cs/semester4/web-programming/prep/models/software/server-dotnet/Pages/AllProjects.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWxsUHJvamVjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/cretuluca/uni/ubb-cs/semester4/web-programming/prep/models/software/server-dotnet/Pages/Assign.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQXNzaWduLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/cretuluca/uni/ubb-cs/semester4/web-programming/prep/models/software/server-dotnet/Pages/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/cretuluca/uni/ubb-cs/semester4/web-programming/prep/models/software/server-dotnet/Pages/MyProjects.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTXlQcm9qZWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/cretuluca/uni/ubb-cs/semester4/web-programming/prep/models/software/server-dotnet/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/cretuluca/uni/ubb-cs/semester4/web-programming/prep/models/software/server-dotnet/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

@@ -43,3 +43,5 @@
 /Users/cretuluca/uni/ubb-cs/semester4/web-programming/prep/models/software/server-dotnet/obj/Debug/net8.0/server-dotnet.pdb
 /Users/cretuluca/uni/ubb-cs/semester4/web-programming/prep/models/software/server-dotnet/obj/Debug/net8.0/server-dotnet.genruntimeconfig.cache
 /Users/cretuluca/uni/ubb-cs/semester4/web-programming/prep/models/software/server-dotnet/obj/Debug/net8.0/ref/server-dotnet.dll
+/Users/cretuluca/uni/ubb-cs/semester4/web-programming/prep/models/software/server-dotnet/obj/Debug/net8.0/server-dotnet.RazorAssemblyInfo.cache
+/Users/cretuluca/uni/ubb-cs/semester4/web-programming/prep/models/software/server-dotnet/obj/Debug/net8.0/server-dotnet.RazorAssemblyInfo.cs

@@ -1,0 +1,23 @@
+﻿@page
+@using WebApplication2.Models
+@model MyApp.Namespace.AssignGradeModel
+@{
+}
+
+
+@if (HttpContext.Session.GetString("username") != null)
+{
+    <p> assign a grade for a course: </p>
+    <form method="post">
+        <p> <input type="text" name="studentName"/> </p>
+        <p> <input type="text" name="courseName"/> </p>
+        <p> <input type="number" name="grade"/> </p>
+        <button type="submit"> find </button>
+    </form>
+
+    <p> @Model.message </p>
+}
+else
+{
+    <p> you must sign in first. </p>
+}
