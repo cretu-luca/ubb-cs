@@ -1,0 +1,31 @@
+﻿@page
+@using WebApplication4.Models
+@model MyApp.Namespace.HotelModel
+@{
+}
+
+<p> hotels </p>
+
+<p> destination: @HttpContext.Session.GetString("destination"), date: @HttpContext.Session.GetString("date") </p>
+@if (@Model.Hotels.Any())
+{
+    <table>
+        
+        <tr> <th> Name </th> <th> Date </th> <th> City </th> <th> Rooms </th> </tr>
+        
+        @foreach (Hotel hotel in @Model.Hotels)
+        {
+            <form method="post"> 
+                <tr>
+                    <input type="hidden" name="id" value="@hotel.Id" />
+                    <td name="id"> @hotel.Id </td>
+                    <td> @hotel.Name </td>
+                    <td> @hotel.Date </td>
+                    <td> @hotel.City </td>
+                    <td> @hotel.AvailableRooms </td>
+                    <td> <button style="width: 80px; height: 25px;" type="submit"> reserve </button> </td>
+                </tr>
+            </form>
+        }
+    </table>
+}

@@ -1,0 +1,28 @@
+﻿@page
+@using WebApplication4.Models
+@model MyApp.Namespace.FlightModel
+@{
+}
+
+<p> destination: @HttpContext.Session.GetString("destination"), date: @HttpContext.Session.GetString("date") </p>
+@if (@Model.Flights.Any())
+{
+    <table>
+        
+        <tr> <th> Id </th> <th> Date </th> <th> Destination </th> <th> Seats </th> </tr>
+        
+        @foreach (Flight flight in @Model.Flights)
+        {
+            <form method="post"> 
+                <tr>
+                    <input type="hidden" name="id" value="@flight.Id" />
+                    <td name="id"> @flight.Id </td>
+                    <td> @flight.Date </td>
+                    <td> @flight.Destination </td>
+                    <td> @flight.AvailableSeats </td>
+                    <td> <button style="width: 80px; height: 25px;" type="submit"> reserve </button> </td>
+                </tr>
+            </form>
+        }
+    </table>
+}

@@ -1,0 +1,12 @@
+dotnet add package Microsoft.EntityFrameworkCore --version 8.0.13
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 8.0.13
+dotnet add package Microsoft.EntityFrameworkCore.Relational --version 8.0.13
+
+dotnet add package Pomelo.EntityFrameworkCore.MySql --version 8.0.3
+
+export PATH="$PATH:$HOME/.dotnet/tools"
+
+dotnet ef migrations add Initial
+dotnet ef database update
+
+dotnet new page --name Name --output Pages

@@ -1,0 +1,23 @@
+﻿@page
+@using WebApplication3.Models
+@model MyApp.Namespace.MemberOfModel
+@{
+}
+
+@if (@Model.Projects.Any())
+{
+    <table>
+        
+        <tr> <th> ProjectManagerId </th> <th> Name </th> <th> Description </th> <th> Members </th> </tr>
+        
+        @foreach (Project project in @Model.Projects)
+        {
+            <tr>
+                <td> @project.ProjectManagerId </td>
+                <td> @project.Name </td>
+                <td> @project.Description </td>
+                <td> @project.Members </td>
+            </tr>
+        }
+    </table>
+}

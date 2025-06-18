@@ -1,0 +1,25 @@
+﻿@page
+@using WebApplication3.Models
+@model MyApp.Namespace.SearchSkillsModel
+@{
+}
+
+<form method="post">
+    <p> skill: <input type="text" name="skill"/> </p>
+    <button type="submit"> search </button>
+</form>
+
+@if (@Model.Persons.Any())
+{
+    <table>
+        <tr> <th> Name </th> <th> Age </th> <th> Skills </th> </tr>
+        @foreach (SoftwareDeveloper person in @Model.Persons)
+        {
+            <tr>
+                <td> @person.Name </td>
+                <td> @person.Age </td>
+                <td> @person.Skills </td>
+            </tr>
+        }
+    </table>
+}

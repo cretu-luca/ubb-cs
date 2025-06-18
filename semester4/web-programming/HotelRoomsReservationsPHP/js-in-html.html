@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Ajax Examples</title>
+</head>
+<body>
+    <h2>Example 1: Send single value, get response</h2>
+    <input type="text" id="userNameInput" placeholder="Enter your name">
+    <button onclick="sendNameToServer()">Send Name</button>
+    <div id="serverResponseDiv"></div>
+
+    <hr>
+
+    <h2>Example 2: Send multiple values</h2>
+    <input type="number" id="firstNumberInput" placeholder="First number">
+    <input type="number" id="secondNumberInput" placeholder="Second number">
+    <button onclick="sendNumbersToServer()">Calculate Sum</button>
+    <div id="calculationResultDiv"></div>
+
+    <hr>
+
+    <h2>Example 3: Send form data</h2>
+    <select id="userAgeSelect">
+        <option value="18">18</option>
+        <option value="25">25</option>
+        <option value="35">35</option>
+    </select>
+    <input type="text" id="userCityInput" placeholder="Your city">
+    <button onclick="sendFormDataToServer()">Send Form</button>
+    <div id="formResponseDiv"></div>
+
+    <script>
+        // Example 1: Simple single value
+        function sendNameToServer() {
+            const userNameFromInput = document.getElementById('userNameInput').value;
+            const responseContainer = document.getElementById('serverResponseDiv');
+            
+            fetch('simple_server.php', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                body: 'userName=' + userNameFromInput
+            })
+            .then(serverResponse => serverResponse.text())
+            .then(dataFromServer => {
+                responseContainer.innerHTML = dataFromServer;
+            });
+        }
+
+        // Example 2: Multiple values
+        function sendNumbersToServer() {
+            const firstNumberFromInput = document.getElementById('firstNumberInput').value;
+            const secondNumberFromInput = document.getElementById('secondNumberInput').value;
+            const calculationContainer = document.getElementById('calculationResultDiv');
+            
+            const dataToSendToServer = 'firstNumber=' + firstNumberFromInput + 
+                                     '&secondNumber=' + secondNumberFromInput + 
+                                     '&action=calculate';
+            
+            fetch('simple_server.php', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                body: dataToSendToServer
+            })
+            .then(serverResponse => serverResponse.text())
+            .then(calculationResultFromServer => {
+                calculationContainer.innerHTML = calculationResultFromServer;
+            });
+        }
+
+        // Example 3: Form data with multiple fields
+        function sendFormDataToServer() {
+            const userAgeFromSelect = document.getElementById('userAgeSelect').value;
+            const userCityFromInput = document.getElementById('userCityInput').value;
+            const formResponseContainer = document.getElementById('formResponseDiv');
+            
+            const formDataToSend = 'userAge=' + userAgeFromSelect + 
+                                  '&userCity=' + userCityFromInput + 
+                                  '&action=processForm';
+            
+            fetch('simple_server.php', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                body: formDataToSend
+            })
+            .then(serverResponse => serverResponse.text())
+            .then(processedDataFromServer => {
+                formResponseContainer.innerHTML = processedDataFromServer;
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+﻿@page
+@model MyApp.Namespace.GuestsInADayModel
+@{
+}
+
+<form method="post"> 
+    <input type="datetime-local" name="date"/>
+    <button type="submit"> search </button>
+</form>
+
+<p> @Model.NumberOfGuests </p>
+

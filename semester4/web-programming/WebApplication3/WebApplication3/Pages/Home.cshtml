@@ -1,0 +1,13 @@
+﻿@page
+@model MyApp.Namespace.HomeModel
+@{
+}
+
+@if (HttpContext.Session.GetString("username") != null)
+{
+    <p> hei @HttpContext.Session.GetString("username") </p>
+}
+else
+{
+    <p> you are not logged in. </p>
+}

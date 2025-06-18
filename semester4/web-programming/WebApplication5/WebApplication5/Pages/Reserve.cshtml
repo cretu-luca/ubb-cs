@@ -1,0 +1,37 @@
+﻿@page
+@using WebApplication5.Model
+@model MyApp.Namespace.ReserveModel
+@{
+}
+
+<form asp-page-handler="LoadRooms">
+    <input type="datetime-local" name="checkInDate" />
+    <input type="datetime-local" name="checkOutDate" />
+    <p> guests: <input type="text" name="guests"/> </p>  
+    <button type="submit"> get rooms </button>
+</form>
+
+@if (Model.Rooms.Any())
+{
+    <table>
+        
+        <tr> <th> RoomNumber </th> <th> Capacity </th> <th> BasePrice </th> </tr>
+        
+        @foreach (HotelRoom room in @Model.Rooms)
+        {
+            int @price = @room.BasePrice + @room.BasePrice * @Model.percentageToAdd / 100; 
+            <form asp-page-handler="ReserveClicked"> 
+                <tr>
+                    <input type="hidden" name="id" value="@room.Id"/>
+                    <td name="id"> @room.Id </td>
+                    <td> @room.RoomNumber </td>
+                    <td> @room.Capacity </td>
+                    <td> @price </td>
+                    <td> <button style="width: 80px; height: 25px;" type="submit"> reserve </button> </td>
+                </tr>
+            </form>
+        }
+    </table>
+}
+
+<p> @Model.message </p>

@@ -1,0 +1,21 @@
+﻿@page
+@using WebApplication5.Model
+@model MyApp.Namespace.AllModel
+@{
+}
+
+<table>
+    <tr> <th> UserId </th> <th> RoomId </th> <th> CheckInDate </th> <th> CheckOutDate </th> <th> NumberOfGuests </th> <th> TotalPrice </th> </tr>
+        
+    @foreach (Reservation reservation in @Model.Reservations)
+    {
+        <tr>
+            <td> @reservation.UserId </td>
+            <td> @reservation.RoomId </td>
+            <td> @reservation.CheckInDate </td>
+            <td> @reservation.CheckOutDate </td>
+            <td> @reservation.NumberOfGuests </td>
+            <td> @reservation.TotalPrice </td>
+        </tr>
+    }
+</table>

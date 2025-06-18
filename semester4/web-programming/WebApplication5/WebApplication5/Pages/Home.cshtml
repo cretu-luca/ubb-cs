@@ -1,0 +1,13 @@
+﻿@page
+@model MyApp.Namespace.HomeModel
+@{
+}
+
+@if (HttpContext.Session.GetString("username").Any())
+{
+    <p> hei, @HttpContext.Session.GetString("username"). </p>
+}
+
+<a href="Reserve"> reserve </a>
+<a href="All"> All </a>
+<a href="GuestsInADay"> GuestsInADay </a>
