@@ -11,9 +11,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 @WebServlet("/all")
 public class All extends HttpServlet {
@@ -31,23 +29,64 @@ public class All extends HttpServlet {
         String productId = request.getParameter("productId");
 
         if (Objects.equals(action, "addToOrder")) {
-            //
-            List<MyOrder> allOrders = DbManager.findAll(MyOrder.class);
 
-            // List<MyOrder> last3 = allOrders.subList(allOrders.size() - Math.min(allOrders.size(), 3), allOrders.size());
+            request.getSession().setAttribute("notDyversifying", false);
 
-
-
-            //
             List<MyProduct> allProducts = DbManager.findAll(MyProduct.class);
-
             MyProduct productToAdd = null;
+
+            String category = "";
 
             for (MyProduct myProduct: allProducts) {
                 if (myProduct.Id == Integer.parseInt(productId)) {
                     productToAdd = myProduct;
+                    category = myProduct.Name.split("-")[0];
                 }
             }
+
+            //
+            List<MyOrder> allOrders = DbManager.findAll(MyOrder.class);
+            List<MyOrder> last3 = allOrders.subList(allOrders.size() - Math.min(allOrders.size(), 3), allOrders.size());
+            List<Integer> Ids = new ArrayList<>();
+            Set<Integer> invalidOrders = new HashSet<>();
+
+            for (MyOrder oneOrder: last3) {
+                Ids.add(oneOrder.Id);
+            }
+
+            List<MyOrderItem> allOrderItems = DbManager.findAll(MyOrderItem.class);
+            for (MyOrderItem myOrderItem: allOrderItems) {
+                int orderItemID = myOrderItem.ProductId;
+                int orderId = myOrderItem.OrderId;
+
+                if (Ids.contains(orderId)) {
+                    // System.out.println(orderId);
+                    // System.out.println("is one of last 3 orders");
+
+                    // one of last 3 orders
+                    MyProduct foundProduct = DbManager.findById(MyProduct.class, orderItemID);
+
+                    String productCategory = foundProduct.Name.split("-")[0];
+                    if (Objects.equals(productCategory, category)) {
+                        invalidOrders.add(orderId);
+
+                        // System.out.println(foundProduct.Name);
+                        // System.out.println("appears in last 3");
+                    }
+                }
+            }
+
+            System.out.println(category);
+            System.out.println("appeared");
+            System.out.println(invalidOrders.size());
+
+            // System.out.println(invalidOrders.size());
+
+            if (invalidOrders.size() == 3) {
+                request.getSession().setAttribute("notDyversifying", true);
+            }
+
+            //
 
             List<MyProduct> orderProducts = (List<MyProduct>) request.getSession().getAttribute("orderProducts");
             orderProducts.add(productToAdd);
@@ -119,6 +158,9 @@ public class All extends HttpServlet {
 
                 DbManager.save(orderItem);
             }
+
+            List<MyProduct> fuckingFinally = new ArrayList<>();
+            request.getSession().setAttribute("orderProducts", fuckingFinally);
 
             request.getSession().setAttribute("finalPrice", initialPrice);
         }

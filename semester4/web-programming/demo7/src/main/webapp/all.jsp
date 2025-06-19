@@ -37,6 +37,12 @@
         %>
     </table>
 
+<% if (request.getSession().getAttribute("notDyversifying") != null && (boolean) request.getSession().getAttribute("notDyversifying") == true) {
+%>
+<p> category appears in last 3 orders.  </p>
+<%
+    }
+%>
 
 <p> current order: </p>
     <table>
