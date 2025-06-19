@@ -8,7 +8,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
+            dgvBrands = new DataGridView();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -17,82 +17,84 @@
             textBox3 = new TextBox();
             AddButton = new Button();
             button2 = new Button();
-            dataGridView2 = new DataGridView();
+            dgvCoffees = new DataGridView();
             button1 = new Button();
             button3 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            textBox4 = new TextBox();
+            label4 = new Label();
+            ((System.ComponentModel.ISupportInitialize)dgvBrands).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCoffees).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgvBrands
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(33, 161);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 123;
-            dataGridView1.Size = new Size(718, 650);
-            dataGridView1.TabIndex = 0;
-            dataGridView1.CellClick += dataGridView1_CellClick;
+            dgvBrands.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvBrands.Location = new Point(33, 161);
+            dgvBrands.Name = "dgvBrands";
+            dgvBrands.RowHeadersWidth = 123;
+            dgvBrands.Size = new Size(718, 650);
+            dgvBrands.TabIndex = 0;
+            dgvBrands.CellClick += dataGridView1_CellClick;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15F);
-            label1.Location = new Point(1625, 218);
+            label1.Location = new Point(1581, 230);
             label1.Name = "label1";
-            label1.Size = new Size(169, 28);
+            label1.Size = new Size(194, 81);
             label1.TabIndex = 1;
-            label1.Text = "DepartmentName";
+            label1.Text = "Name";
             label1.Click += label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15F);
-            label2.Location = new Point(1625, 397);
+            label2.Location = new Point(1581, 397);
             label2.Name = "label2";
-            label2.Size = new Size(178, 28);
+            label2.Size = new Size(224, 81);
             label2.TabIndex = 2;
-            label2.Text = "EmployeesNumber";
+            label2.Text = "Weigth";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 15F);
-            label3.Location = new Point(1625, 588);
+            label3.Location = new Point(1581, 576);
             label3.Name = "label3";
-            label3.Size = new Size(65, 28);
+            label3.Size = new Size(275, 81);
             label3.TabIndex = 3;
-            label3.Text = "CityID";
+            label3.Text = "Available";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(1879, 218);
+            textBox1.Location = new Point(1866, 230);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(357, 106);
+            textBox1.Size = new Size(597, 106);
             textBox1.TabIndex = 5;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(1879, 397);
+            textBox2.Location = new Point(1866, 397);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(357, 106);
+            textBox2.Size = new Size(597, 106);
             textBox2.TabIndex = 6;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(1879, 588);
+            textBox3.Location = new Point(1866, 565);
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(357, 106);
+            textBox3.Size = new Size(597, 106);
             textBox3.TabIndex = 7;
             // 
             // AddButton
             // 
             AddButton.Font = new Font("Segoe UI", 11F);
-            AddButton.Location = new Point(1951, 857);
+            AddButton.Location = new Point(2184, 974);
             AddButton.Name = "AddButton";
             AddButton.Size = new Size(239, 102);
             AddButton.TabIndex = 9;
@@ -111,15 +113,15 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += DisplayDataButtonClick;
             // 
-            // dataGridView2
+            // dgvCoffees
             // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(846, 161);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 123;
-            dataGridView2.Size = new Size(700, 650);
-            dataGridView2.TabIndex = 11;
-            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
+            dgvCoffees.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCoffees.Location = new Point(846, 161);
+            dgvCoffees.Name = "dgvCoffees";
+            dgvCoffees.RowHeadersWidth = 123;
+            dgvCoffees.Size = new Size(700, 650);
+            dgvCoffees.TabIndex = 11;
+            dgvCoffees.CellContentClick += dataGridView2_CellContentClick;
             // 
             // button1
             // 
@@ -141,12 +143,32 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(1866, 742);
+            textBox4.Multiline = true;
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(597, 106);
+            textBox4.TabIndex = 14;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 15F);
+            label4.Location = new Point(1590, 754);
+            label4.Name = "label4";
+            label4.Size = new Size(241, 81);
+            label4.TabIndex = 15;
+            label4.Text = "BrandId";
+            // 
             // Form1
             // 
-            ClientSize = new Size(2270, 979);
+            ClientSize = new Size(2490, 1360);
+            Controls.Add(label4);
+            Controls.Add(textBox4);
             Controls.Add(button3);
             Controls.Add(button1);
-            Controls.Add(dataGridView2);
+            Controls.Add(dgvCoffees);
             Controls.Add(button2);
             Controls.Add(AddButton);
             Controls.Add(textBox3);
@@ -155,16 +177,18 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvBrands);
             Name = "Form1";
             Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvBrands).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCoffees).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
-        private DataGridView dataGridView2;
+        private DataGridView dgvCoffees;
         private Button button1;
         private Button button3;
+        private TextBox textBox4;
+        private Label label4;
     }
 }

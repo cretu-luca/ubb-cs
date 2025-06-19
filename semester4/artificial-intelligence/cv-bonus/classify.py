@@ -3,18 +3,15 @@ import face_recognition
 import pickle
 import numpy as np
 from ultralytics import YOLO
-from collections import deque
+from collections import deque, Counter
 
 class Classifier:
     def __init__(self):
         self.yolo = YOLO("yolov8n-seg.pt")
         
-        try:
-            with open("encodings/face_encodings.pkl", "rb") as f:
-                self.encodings = pickle.load(f)
-        except:
-            self.encodings = []
-        
+        with open("encodings/face_encodings.pkl", "rb") as f:
+            self.encodings = pickle.load(f)
+    
         self.history = deque(maxlen=10)
         self.classes = ["person", "dog", "cat"]
     
@@ -25,7 +22,8 @@ class Classifier:
         
         if results[0].boxes is not None:
             boxes = results[0].boxes
-            if hasattr(results[0], 'masks') and results[0].masks is not None:
+            
+            if results[0].masks is not None:
                 masks = results[0].masks.data.cpu().numpy()
             
             for i, box in enumerate(boxes):
@@ -47,22 +45,20 @@ class Classifier:
         
         owner_found = False
         unknown_found = False
-        
         face_labels = []
         
         for encoding in face_encs:
-            if self.encodings:
-                matches = face_recognition.compare_faces(self.encodings, encoding, tolerance=0.6)
-                if any(matches):
-                    owner_found = True
-                    face_labels.append("Luca (Owner)")
-                else:
-                    unknown_found = True
-                    face_labels.append("Unknown")
+            matches = face_recognition.compare_faces(
+                self.encodings, encoding, tolerance=0.4
+            )
+            
+            if any(matches):
+                owner_found = True
+                face_labels.append("Luca (Owner)")
             else:
                 unknown_found = True
                 face_labels.append("Unknown")
-        
+    
         pets_found = any(det['class'] in self.classes for det in detections)
         
         if owner_found:
@@ -76,38 +72,56 @@ class Classifier:
         
         self.history.append(classification)
         if len(self.history) >= 5:
-            from collections import Counter
             classification = Counter(list(self.history)[-5:]).most_common(1)[0][0]
         
         return classification, detections, masks, face_locs, face_labels
     
     def draw_results(self, frame, classification, detections, masks, face_locs, face_labels):
-        colors = {'person': (255, 0, 0), 'dog': (255, 0, 255), 'cat': (0, 255, 255)}
+        class_colors = {
+            'person': (255, 0, 0),
+            'dog': (255, 0, 255),
+            'cat': (0, 255, 255)
+        }
         
-        for det in detections:
-            if det['class'] in colors:
-                color = colors[det['class']]
-                x1, y1, x2, y2 = det['bbox']
+        for detection in detections:
+            class_name = detection['class']
+            
+            if class_name in class_colors:
+                color = class_colors[class_name]
+                x1, y1, x2, y2 = detection['bbox']
+                confidence = detection['confidence']
                 
-                cv2.rectangle(frame, (x1, y1), (x2, y2), color, 3)
-                cv2.putText(frame, f"{det['class']}: {det['confidence']:.2f}", 
-                           (x1, y1 - 15), cv2.FONT_HERSHEY_SIMPLEX, 1.2, color, 3)
+                cv2.rectangle(frame, (x1, y1), (x2, y2), color, thickness=3)
                 
-                if det['mask_id'] is not None and det['mask_id'] < len(masks):
-                    mask = cv2.resize(masks[det['mask_id']], (frame.shape[1], frame.shape[0]))
-                    mask_colored = np.zeros_like(frame)
-                    mask_colored[mask > 0.5] = color
-                    frame = cv2.addWeighted(frame, 0.7, mask_colored, 0.3, 0)
+                label_text = f"{class_name}: {confidence:.2f}"
+                cv2.putText(frame, label_text, (x1, y1 - 15), 
+                           cv2.FONT_HERSHEY_SIMPLEX, 1.2, color, thickness=3)
+
+                mask_id = detection['mask_id']
+                if mask_id is not None and mask_id < len(masks):
+                    mask = cv2.resize(masks[mask_id], (frame.shape[1], frame.shape[0]))
+                    
+                    mask_overlay = np.zeros_like(frame)
+                    mask_overlay[mask > 0.5] = color
+                    
+                    frame = cv2.addWeighted(frame, 0.7, mask_overlay, 0.3, 0)
         
         for i, (top, right, bottom, left) in enumerate(face_locs):
-            rect_color = (0, 255, 0) if face_labels[i] == "Luca (Owner)" else (0, 0, 255)
-            cv2.rectangle(frame, (left, top), (right, bottom), rect_color, 3)
+            face_label = face_labels[i]
             
-            label = face_labels[i]
-            cv2.putText(frame, label, (left, top - 10), cv2.FONT_HERSHEY_SIMPLEX, 1.2, rect_color, 3)
+            if face_label == "Luca (Owner)":
+                face_color = (0, 255, 0)
+            else:
+                face_color = (0, 0, 255)
+            
+            cv2.rectangle(frame, (left, top), (right, bottom), face_color, thickness=3)
+            
+            cv2.putText(frame, face_label, (left, top - 10), 
+                       cv2.FONT_HERSHEY_SIMPLEX, 1.2, face_color, thickness=3)
 
-        cv2.putText(frame, f"Status: {classification}", 
-            (10, 40), cv2.FONT_HERSHEY_SIMPLEX, 1.2, (255, 255, 255), 3)
+        status_text = f"Status: {classification}"
+        cv2.putText(frame, status_text, (10, 40), 
+                   cv2.FONT_HERSHEY_SIMPLEX, 1.2, (255, 255, 255), thickness=3)
         
         return frame
     

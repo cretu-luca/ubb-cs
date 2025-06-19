@@ -7,7 +7,7 @@ namespace WinFormsApp1
 {
     public partial class Form1 : Form
     {
-        private DataGridView dataGridView1;
+        private DataGridView dgvBrands;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -18,14 +18,15 @@ namespace WinFormsApp1
         private Button button2;
         private System.ComponentModel.IContainer components = null;
 
-        SqlConnection conn = new SqlConnection("Data Source=np:\\\\.\\pipe\\LOCALDB#A7DA0BDA\\tsql\\query;" +
-            "Initial Catalog=CityPlanning;" +
+        SqlConnection conn = new SqlConnection("Data Source=np:\\\\.\\pipe\\LOCALDB#A2BB0E06\\tsql\\query;" +
+            "Initial Catalog=CoffeeDB;" +
             "Integrated Security=True");
-        SqlDataAdapter city_data_adap = new SqlDataAdapter();
-        SqlDataAdapter department_data_adap = new SqlDataAdapter();
-        DataSet city_data_set = new DataSet();
-        DataSet department_data_set = new DataSet();
-        int selectedCityID;
+
+        SqlDataAdapter parent_adapter = new SqlDataAdapter();
+        SqlDataAdapter child_adapter = new SqlDataAdapter();
+        DataSet parent_dataset = new DataSet();
+        DataSet child_dataset = new DataSet();
+        int selected;
 
         public Form1()
         {
@@ -41,26 +42,29 @@ namespace WinFormsApp1
             base.Dispose(disposing);
         }
     
-        // safe code
         private void AddButtonClick(object sender, EventArgs e)
         {
             try
             {
-                department_data_adap.InsertCommand = new SqlCommand("Insert INTO Department (DepartmentName, EmployeesNumber, CityID)" +
-                    "VALUES (@DepartmentNameParam, @EmployeesNumberParam, @CityID)", conn);
+                child_adapter.InsertCommand = new SqlCommand("Insert INTO Coffees (CoffeeName, CoffeeWeight, isAvailable, BrandId)" +
+                    "VALUES (@Param1, @Param2, @Param3, @Param4)", conn);
 
-                department_data_adap.InsertCommand.Parameters.Add("@DepartmentNameParam", SqlDbType.VarChar).Value = textBox1.Text;
-                department_data_adap.InsertCommand.Parameters.Add("@EmployeesNumberParam", SqlDbType.Int).Value = Int32.Parse(textBox2.Text);
-                department_data_adap.InsertCommand.Parameters.Add("@CityID", SqlDbType.Int).Value = Int32.Parse(textBox3.Text);
+                child_adapter.InsertCommand.Parameters.Add("@Param1", SqlDbType.VarChar).Value = textBox1.Text;
+                child_adapter.InsertCommand.Parameters.Add("@Param2", SqlDbType.Int).Value = Int32.Parse(textBox2.Text);
+                child_adapter.InsertCommand.Parameters.Add("@Param3", SqlDbType.Int).Value = Int32.Parse(textBox3.Text);
+                child_adapter.InsertCommand.Parameters.Add("@Param4", SqlDbType.Int).Value = Int32.Parse(textBox4.Text);
+
+                // child_adapter.InsertCommand.Parameters.Add("@Param3", SqlDbType.VarChar).Value = textBox1.Text;
+                // child_adapter.InsertCommand.Parameters.Add("@Param4", SqlDbType.Int).Value = Int32.Parse(textBox3.Text);
 
                 conn.Open();
-                department_data_adap.InsertCommand.ExecuteNonQuery();
+                child_adapter.InsertCommand.ExecuteNonQuery();
                 MessageBox.Show("Insert successful.");
                 conn.Close();
 
-                department_data_set.Clear();
-                department_data_adap.Fill(department_data_set);
-                dataGridView2.DataSource = department_data_set.Tables[0];
+                child_dataset.Clear();
+                child_adapter.Fill(child_dataset);
+                dgvCoffees.DataSource = child_dataset.Tables[0]; 
             }
             catch (Exception ex)
             {
@@ -68,75 +72,47 @@ namespace WinFormsApp1
                 conn.Close();
             }
         }
-    /*
-        // vulnerable code 
-        private void AddButtonClick(object sender, EventArgs e)
-        {
-            try
-            {
-                string query = "Insert INTO Department (DepartmentName, EmployeesNumber, CityID) " +
-                     "VALUES ('" + textBox1.Text + "', " +
-                          textBox2.Text + ", '" +
-                          textBox3.Text + "')";
 
-                SqlCommand cmd = new SqlCommand(query, conn);
-
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Insert successful.");
-                conn.Close();
-
-                department_data_set.Clear();
-                department_data_adap.Fill(department_data_set);
-                dataGridView2.DataSource = department_data_set.Tables[0];
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                conn.Close();
-            }
-        }
-    */
         private void DisplayDataButtonClick(object sender, EventArgs e)
         {
-            city_data_adap.SelectCommand = new SqlCommand("Select * FROM City", conn);
-            city_data_set.Clear();
-            city_data_adap.Fill(city_data_set);
-            dataGridView1.DataSource = city_data_set.Tables[0];
+            parent_adapter.SelectCommand = new SqlCommand("Select * FROM Brands", conn);
+            parent_dataset.Clear();
+            parent_adapter.Fill(parent_dataset);
+            dgvBrands.DataSource = parent_dataset.Tables[0];
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            dataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView2.MultiSelect = false;
+            dgvCoffees.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvCoffees.MultiSelect = false;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && dataGridView1.Rows[e.RowIndex].Cells["CityID"].Value != DBNull.Value)
+            if (e.RowIndex >= 0 && dgvBrands.Rows[e.RowIndex].Cells["Id"].Value != DBNull.Value)
             {
-                selectedCityID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["CityID"].Value);
-                LoadDepartment(selectedCityID);
+                selected = Convert.ToInt32(dgvBrands.Rows[e.RowIndex].Cells["Id"].Value);
+                LoadChildTable(selected);
             }
         }
 
-        private void LoadDepartment(int selectedCityID)
+        private void LoadChildTable(int selectedId)
         {
-            department_data_adap = new SqlDataAdapter("SELECT * FROM Department WHERE CityID = @CityID", conn);
-            department_data_adap.SelectCommand.Parameters.AddWithValue("CityID", selectedCityID);
+            child_adapter = new SqlDataAdapter("SELECT * FROM Coffees WHERE BrandId = @Param", conn);
+            child_adapter.SelectCommand.Parameters.AddWithValue("Param", selectedId);
 
-            department_data_set.Clear();
-            department_data_adap.Fill(department_data_set);
-            dataGridView2.DataSource = department_data_set.Tables[0];
+            child_dataset.Clear();
+            child_adapter.Fill(child_dataset);
+            dgvCoffees.DataSource = child_dataset.Tables[0];
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                SqlCommandBuilder builder = new SqlCommandBuilder(department_data_adap);
-                department_data_adap.Update(department_data_set.Tables[0]);
-                LoadDepartment(selectedCityID);
+                SqlCommandBuilder builder = new SqlCommandBuilder(child_adapter);
+                child_adapter.Update(child_dataset.Tables[0]);
+                LoadChildTable(selected);
             }
             catch (Exception ex)
             {
@@ -146,20 +122,20 @@ namespace WinFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (dataGridView2.SelectedRows.Count > 0)
+            if (dgvCoffees.SelectedRows.Count > 0)
             {
-                int recordId = Convert.ToInt32(dataGridView2.SelectedRows[0].Cells[0].Value);
+                int recordId = Convert.ToInt32(dgvCoffees.SelectedRows[0].Cells[0].Value);
 
                 try
                 {
-                    SqlCommand deleteCommand = new SqlCommand("DELETE FROM Department WHERE DepartmentID = @id", conn);
+                    SqlCommand deleteCommand = new SqlCommand("DELETE FROM Coffees WHERE Id = @id", conn);
                     deleteCommand.Parameters.AddWithValue("id", recordId);
 
                     conn.Open();
                     deleteCommand.ExecuteNonQuery();
                     conn.Close();
 
-                    LoadDepartment(selectedCityID);
+                    LoadChildTable(selected);
                 }
                 catch (Exception ex)
                 {

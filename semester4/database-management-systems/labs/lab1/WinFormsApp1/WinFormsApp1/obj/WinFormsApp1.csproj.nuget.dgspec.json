@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "X:\\ubb-cs\\semester4\\database-management-systems\\labs\\lab1\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {}
+    "Y:\\ubb-cs\\semester4\\database-management-systems\\labs\\lab1\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {}
   },
   "projects": {
-    "X:\\ubb-cs\\semester4\\database-management-systems\\labs\\lab1\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {
+    "Y:\\ubb-cs\\semester4\\database-management-systems\\labs\\lab1\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "X:\\ubb-cs\\semester4\\database-management-systems\\labs\\lab1\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+        "projectUniqueName": "Y:\\ubb-cs\\semester4\\database-management-systems\\labs\\lab1\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
         "projectName": "WinFormsApp1",
-        "projectPath": "X:\\ubb-cs\\semester4\\database-management-systems\\labs\\lab1\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+        "projectPath": "Y:\\ubb-cs\\semester4\\database-management-systems\\labs\\lab1\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
         "packagesPath": "C:\\Users\\cretuluca\\.nuget\\packages\\",
-        "outputPath": "X:\\ubb-cs\\semester4\\database-management-systems\\labs\\lab1\\WinFormsApp1\\WinFormsApp1\\obj\\",
+        "outputPath": "Y:\\ubb-cs\\semester4\\database-management-systems\\labs\\lab1\\WinFormsApp1\\WinFormsApp1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
